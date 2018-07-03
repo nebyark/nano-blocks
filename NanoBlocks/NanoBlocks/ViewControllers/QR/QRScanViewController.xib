@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRScanViewController" customModule="NanoBlocks" customModuleProvider="target">
+            <connections>
+                <outlet property="blurView" destination="wsr-Jc-5v8" id="cGY-Av-RB8"/>
+                <outlet property="boundaryImageView" destination="X9t-nQ-c0u" id="lyj-fK-kMY"/>
+                <outlet property="qrImageView" destination="7s2-PW-Inu" id="0Es-Ct-RBj"/>
+                <outlet property="qrIndicatorView" destination="DW5-3a-XOK" id="Quf-1N-kus"/>
+                <outlet property="qrScanTipLabel" destination="6Jk-cO-N64" id="yfX-bd-aCu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsr-Jc-5v8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qlH-Fx-8j3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place scanning reticle over QR code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jk-cO-N64">
+                                <rect key="frame" x="88" y="584" width="200" height="33.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="N5S-cz-XVR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_address_l" translatesAutoresizingMaskIntoConstraints="NO" id="7s2-PW-Inu">
+                                <rect key="frame" x="162" y="514" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G8e-Kb-2Wm"/>
+                                    <constraint firstAttribute="width" secondItem="7s2-PW-Inu" secondAttribute="height" multiplier="1:1" id="nlt-j2-Zb0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6Jk-cO-N64" firstAttribute="centerY" secondItem="qlH-Fx-8j3" secondAttribute="centerY" multiplier="1.8" id="A2Q-ZO-fQe"/>
+                            <constraint firstItem="7s2-PW-Inu" firstAttribute="centerX" secondItem="qlH-Fx-8j3" secondAttribute="centerX" id="TCK-bS-YPv"/>
+                            <constraint firstItem="6Jk-cO-N64" firstAttribute="centerX" secondItem="qlH-Fx-8j3" secondAttribute="centerX" id="oWx-LM-H5B"/>
+                            <constraint firstItem="6Jk-cO-N64" firstAttribute="top" secondItem="7s2-PW-Inu" secondAttribute="bottom" constant="20" id="pyQ-d2-8ho"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_qr_reticle" translatesAutoresizingMaskIntoConstraints="NO" id="X9t-nQ-c0u">
+                    <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="8uM-aq-dXm"/>
+                        <constraint firstAttribute="width" secondItem="X9t-nQ-c0u" secondAttribute="height" multiplier="1:1" id="95I-Io-CbO"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DW5-3a-XOK">
+                    <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="X9t-nQ-c0u" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Cpq-pT-bfS"/>
+                <constraint firstItem="DW5-3a-XOK" firstAttribute="width" secondItem="X9t-nQ-c0u" secondAttribute="width" id="Iwq-Up-WM1"/>
+                <constraint firstAttribute="bottom" secondItem="wsr-Jc-5v8" secondAttribute="bottom" id="TYj-WM-i8D"/>
+                <constraint firstItem="X9t-nQ-c0u" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xm0-De-p7t"/>
+                <constraint firstItem="wsr-Jc-5v8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gfn-Lj-6H0"/>
+                <constraint firstItem="DW5-3a-XOK" firstAttribute="height" secondItem="X9t-nQ-c0u" secondAttribute="height" id="lgX-6u-0uz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wsr-Jc-5v8" secondAttribute="trailing" id="mkb-uy-ZKL"/>
+                <constraint firstItem="DW5-3a-XOK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="q03-fW-WRL"/>
+                <constraint firstItem="DW5-3a-XOK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tyc-0Y-QTA"/>
+                <constraint firstItem="wsr-Jc-5v8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z2e-DA-eW8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="scan_address_l" width="43" height="43"/>
+        <image name="scan_qr_reticle" width="400" height="400"/>
+    </resources>
+</document>

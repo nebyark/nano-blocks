@@ -1,0 +1,11 @@
+framework module Sodium {
+  umbrella header "Sodium.h"
+
+  export *
+  module * { export * }
+}
+
+module Sodium.Swift {
+    header "Sodium-Swift.h"
+    requires objc
+}

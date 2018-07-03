@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountsViewController" customModule="Nano_Wallet" customModuleProvider="target">
+            <connections>
+                <outlet property="currencyTapBox" destination="Q4x-UJ-jIX" id="yEB-8P-Awx"/>
+                <outlet property="sortButton" destination="rPt-KM-N6c" id="1lh-Fn-OWU"/>
+                <outlet property="tableView" destination="5Zm-Rh-gGL" id="89g-ID-y8H"/>
+                <outlet property="totalBalanceLabel" destination="Y3b-7c-wKZ" id="xZx-Qv-CZM"/>
+                <outlet property="totalBalanceTitleLabel" destination="S9a-fI-IXp" id="4ZZ-px-ALy"/>
+                <outlet property="unitsLabel" destination="o5k-Vc-Zbf" id="WQs-Tr-8X3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL BALANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-fI-IXp">
+                    <rect key="frame" x="132.5" y="125.5" width="111" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3b-7c-wKZ">
+                    <rect key="frame" x="175" y="142.5" width="25" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NANO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5k-Vc-Zbf">
+                    <rect key="frame" x="204" y="167.5" width="40" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPt-KM-N6c">
+                    <rect key="frame" x="10" y="240.5" width="140" height="25"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="LOWEST BALANCE" image="down">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Zm-Rh-gGL">
+                    <rect key="frame" x="10" y="276" width="355" height="391"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4x-UJ-jIX">
+                    <rect key="frame" x="70" y="126" width="235" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="59" id="Cih-qh-a7R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.765869140625" blue="0.74305555555555558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="S9a-fI-IXp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5Eh-kB-UQ9"/>
+                <constraint firstItem="5Zm-Rh-gGL" firstAttribute="top" secondItem="rPt-KM-N6c" secondAttribute="bottom" constant="10" id="Bav-Ld-vpb"/>
+                <constraint firstItem="o5k-Vc-Zbf" firstAttribute="leading" secondItem="Y3b-7c-wKZ" secondAttribute="trailing" constant="4" id="EHe-8p-JYb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Zm-Rh-gGL" secondAttribute="bottom" id="Hh2-lP-JD7"/>
+                <constraint firstItem="rPt-KM-N6c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="VQx-ls-7wR"/>
+                <constraint firstItem="S9a-fI-IXp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.4" id="VYi-p8-wcC"/>
+                <constraint firstItem="Y3b-7c-wKZ" firstAttribute="top" secondItem="S9a-fI-IXp" secondAttribute="bottom" id="Vrt-7f-raK"/>
+                <constraint firstItem="Y3b-7c-wKZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WXx-bG-K27"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q4x-UJ-jIX" secondAttribute="trailing" constant="70" id="Zd7-30-qJC"/>
+                <constraint firstItem="Q4x-UJ-jIX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dnj-ic-im7"/>
+                <constraint firstItem="o5k-Vc-Zbf" firstAttribute="baseline" secondItem="Y3b-7c-wKZ" secondAttribute="baseline" id="hwO-As-dAd"/>
+                <constraint firstItem="rPt-KM-N6c" firstAttribute="top" secondItem="Y3b-7c-wKZ" secondAttribute="bottom" constant="50" id="jJS-pg-Qff"/>
+                <constraint firstItem="5Zm-Rh-gGL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jkl-vQ-j8h"/>
+                <constraint firstItem="5Zm-Rh-gGL" firstAttribute="leading" secondItem="rPt-KM-N6c" secondAttribute="leading" id="mHj-5R-9Js"/>
+                <constraint firstItem="Q4x-UJ-jIX" firstAttribute="top" secondItem="S9a-fI-IXp" secondAttribute="bottom" constant="-16.5" id="plA-6r-JFq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="78.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down" width="25" height="25"/>
+    </resources>
+</document>

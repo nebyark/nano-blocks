@@ -1,0 +1,146 @@
+
+/*Localizable.strings
+ NanoWallet
+ 
+ Created by Ben Kray on 4/6/18.
+ Copyright © 2018 Planar Form. All rights reserved.
+ 
+ COMMON*/
+"nano-blocks" = "ナノ";
+"seed" = "シード";
+"passphrase" = "パスフレーズ";
+"lowest-balance" = "最低残高";
+"total-balance" = "合計残高";
+"send" = "送信する";
+"receive" = "受信";
+"share" = "シェア";
+"request-amount" = "リクエスト金額";
+"cancel" = "キャンセル";
+
+/*LANDING PAGE*/
+"welcome-1" = "ナノブロックスへようこそ。続行するには、新しいウォレットの作成、または既存のウォレットをインポートしてください。";
+"welcome-2" = "各ウォレットには複数のアカウントが関連付けられている場合があります。";
+"new-wallet" = "新規ウォレット";
+"import-wallet" = "ウォレットのインポート";
+
+/*IMPORT WALLET*/
+"import-wallet-cap" = "ウォレットのインポート";
+"import-wallet-subtitle" = "対応するシードから、既存のウォレットをインポートする事が出来ます。";
+
+/*SEED*/
+"seed-subtitle" = "ウォレットのシードを入力してください";
+
+/*ACCOUNT*/
+"accounts" = "アカウント";
+"latest-sort" = "新しいほうから";
+"oldest-sort" = "古いほうから";
+"smallest-sort" = "小さいほうから";
+"largest-sort" = "大きいほうから";
+"received-filter" = "受信した";
+"sent-filter" = "送信済み";
+"edit-name" = "アカウント名の編集";
+"edit-representative" = "代表の編集";
+"repair-account" = "アカウント修正";
+
+/*SEND*/
+"enter-name" = "名前を入力";
+"send-to-arg" = "送る：";
+"enter-amount" = "金額を入力する";
+"recipient" = "受信者";
+"enter-address" = "住所を入力する";
+"scan-qr" = "QRコードの読み取り";
+"available-balance-arg" = "利用可能残高: %@";
+"enter-address-search-msg" = "アドレスの検索";
+"unknown" = "不明";
+"insufficient-funds" = "不十分な預金";
+
+/*CONFIRM TX*/
+"balance" = "残高";
+"confirm" = "確認する";
+
+/*SETTINGS*/
+"settings" = "設定";
+"currency" = "通貨";
+"address-book" = "アドレス帳";
+"console" = "コンソール";
+
+/*SECURITY*/
+"security" = "セキュリティ";
+"about" = "ページ情報";
+"clear-wallet-data" = "ウォレットデータを消去";
+"clear-wallet-data-title" = "ウォレットデータを消去してもよろしいですか？";
+"clear-wallet-data-msg" = "すべてのウォレットデータは、シードを含めて破棄されます。将来このウォレットを回収したい場合は、シードを他の場所に保管しておいてください。";
+"require-biometrics-send" = "送信時にバイオメトリクスを要求する";
+"require-biometrics-launch" = "ロンチ時にバイオメトリクスを要求する";
+"change-password" = "パスワードの変更";
+"show-seed" = "シード表示";
+"authenticate" = "認証";
+"password" = "パスワード";
+"password-info" = "パスワード情報";
+"password-info-msg" = "ウォレットの暗号化と複合化、または権限のないユーザーがアプリをアクセス出来ないようパスワードが必要です。";
+"seed-backup-msg" = "ウォレットのシードは下にあります。シードをバックアップし、それを平文として保存しない事をお勧めします。";
+
+/*CONSOLE*/
+"export" = "エクスポート";
+"clear" = "クリア";
+
+/*ADDRESS BOOK*/
+"new-entry" = "新規項目";
+"name" = "名前";
+"address" = "アドレス";
+"save" = "保存する";
+"search" = "検索";
+
+/*QR SCAN*/
+"qr-scan-tip" = "スキャンレチクルをQRコードの上に置く";
+
+/*BANNER*/
+"address-copied-clipboard" = "クリップボードにアドレスがコピーされました";
+"arg-copied-clipboard" = "%@ がクリップボードにコピーされました";
+"please-enter-amount" = "金額を入力してください";
+"no-pastable-item" = "ペーストするものが見つかりませんでした";
+"seed-copied" = "シードがクリップボードにコピーされました(1分で除去されます)";
+"weak-password" = "あなたのパスワードが'トップ10k弱いパスワード'リストに入っていました。違うのを決めてください。";
+"enter-password-both-field" = "両方のフィールドにパスワードを入力してください";
+"password-mismatch" = "パスワードが一致していません";
+"no-password-entered" = "パスワードを入力してません";
+"unable-to-authenticate" = "認証出来ません";
+"dev-address-copied" = "デヴェロッパーアドレスがクリップボードにコピーされました";
+"send-cancelled" = "送信キャンセルされました";
+"proof-of-work-error" = "実証済みの作業エラー";
+"send-error-arg" = "エラー送信: %@";
+"invalid-nano-address" = "無効なナノアドレス";
+"no-name-provided" = "名前が提供されてません";
+"address-already-exists" = "ナノアドレスはもう存在しています";
+"no-cam-access" = "カメラにアクセスが出来ません";
+"arg-entry-saved" = "%@アドレスブックに保存されました";
+"enter-recipient-address" = "受信者のアドレスを入力してください";
+"opening-account" = "アカウント開設";
+"open-account-error-arg" = "アカウント開設エラー: %@";
+"receive-error-arg" = "受信エラー: %@";
+"arg-pending-receivables" = "%@ 保留中の未収金";
+"arg-pending-receivable" = "%@保留中の未収金";
+"no-rep-change" = "代理人の変更は行われません";
+"change-rep-error-arg" = "代理人変更エラー:%@";
+"rep-changed" = "代理人変更";
+"seed-set-error" = "ウォレットシードの設定中にエラーが発生しました";
+"pending-receivable-for-arg" = "%@の未収金";
+"new-encrypt-error" = "新しいパスワードでウォレットを暗号化する際にエラーが発生しました";
+"password-change-success" = "ウォレットのパスワードが変更されました";
+"enter-amount-title" = "金額を入力";
+"reset-password" = "パスワードのリセット";
+"enter-address-title" = "アドレスを入力";
+"confirm-password" = "パスワード確認";
+"blog" = "ブログ";
+"twitter" = "Twitter";
+"dev-donation-address" = "開発者の寄付住所";
+
+/*Add Account*/
+"add-account" = "アカウントの追加";
+
+/*Create Password*/
+"create-password" = "パスワードの作成";
+
+/*No account name provided*/
+"no-account-name-provided" = "アカウント名が提供されてません";
+

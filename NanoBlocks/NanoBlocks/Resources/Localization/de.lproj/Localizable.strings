@@ -1,0 +1,147 @@
+
+/*Localizable.strings
+ NanoWallet
+ 
+ Created by Ben Kray on 4/6/18.
+ Copyright © 2018 Planar Form. All rights reserved.
+ 
+ COMMON*/
+/*Fuzzy*/
+"nano-blocks" = "Nano Blocks";
+"seed" = "Seed";
+"passphrase" = "Kennwort";
+"lowest-balance" = "Kleinster Betrag";
+"total-balance" = "Gesamtsaldo";
+"send" = "Senden";
+"receive" = "Empfangen";
+"share" = "Teilen";
+"request-amount" = "Betrag anfordern";
+"cancel" = "Abbruch";
+
+/*LANDING PAGE*/
+"welcome-1" = "Willkommen zum Nano Blocks. Um fortzufahren, können Sie ein neues Wallet erstellen, oder ein bereits bestehendes importieren.";
+"welcome-2" = "Jedem Wallet können mehrere Konten zugeordnet sein.";
+"new-wallet" = "Neues Wallet";
+"import-wallet" = "Wallet importieren";
+
+/*IMPORT WALLET*/
+"import-wallet-cap" = "Wallet importieren";
+"import-wallet-subtitle" = "Sie können ein bereits bestehendes Wallet über den dazugehörigen Seed importieren.";
+
+/*SEED*/
+"seed-subtitle" = "Geben Sie den Seed Ihres Wallets ein.";
+
+/*ACCOUNT*/
+"accounts" = "Konten";
+"latest-sort" = "Neueste zuerst";
+"oldest-sort" = "Älteste zuerst";
+"smallest-sort" = "Kleinste zuerst";
+"largest-sort" = "Größte zuerst";
+"received-filter" = "Erhalten";
+"sent-filter" = "Gesendet";
+"edit-name" = "Kontonamen bearbeiten";
+"edit-representative" = "Representative bearbeiten";
+"repair-account" = "Account reparieren";
+
+/*SEND*/
+"enter-name" = "Namen eingeben";
+"send-to-arg" = "Senden an: %@";
+"enter-amount" = "Betrag eingeben";
+"recipient" = "Empfänger";
+"enter-address" = "Adresse eingeben";
+"scan-qr" = "QR Code scannen";
+"available-balance-arg" = "Verfügbarer Betrag : %@";
+"enter-address-search-msg" = "Suchen Sie nach einer Adresse, oder tragen Sie diese manuell im unteren Feld ein.";
+"unknown" = "Unbekannt";
+"insufficient-funds" = "Unzureichender Kontostand";
+
+/*CONFIRM TX*/
+"balance" = "Kontostand";
+"confirm" = "Bestätigen";
+
+/*SETTINGS*/
+"settings" = "Einstellungen";
+"currency" = "Währung";
+"address-book" = "Adressbuch";
+"console" = "Konsole";
+
+/*SECURITY*/
+"security" = "Sicherheit";
+"about" = "Über";
+"clear-wallet-data" = "Wallet löschen";
+"clear-wallet-data-title" = "Sind Sie sicher, dass das Wallet gelöscht werden soll?";
+"clear-wallet-data-msg" = "Das gesamte Wallet wird einschließlich des Seeds gelöscht. Wenn Sie das Wallet in Zukunft wiederherstellen möchten, stellen Sie sicher, dass die den Seed woanders sicher verwahrt haben.";
+"require-biometrics-send" = "Biometrie benötigt beim Senden";
+"require-biometrics-launch" = "Biometrie benötigt beim Start";
+"change-password" = "Kennwort ändern";
+"show-seed" = "Zeige Seed";
+"authenticate" = "Authentifizierung";
+"password" = "Kennwort";
+"password-info" = "Kennwort Info";
+"password-info-msg" = "Es ist ein Kennwort erforderlich um das Wallet ver- und entschlüsseln zu können und um den Zugriff von nicht autorisierten Benutzern auf diese App zu verhindern.";
+"seed-backup-msg" = "Hier ist der Seed Ihres Wallets. Es wird dringend empfohlen diesen zu sichern und niemals im Klartext zu verwahren.";
+
+/*CONSOLE*/
+"export" = "Export";
+"clear" = "Löschen";
+
+/*ADDRESS BOOK*/
+"new-entry" = "Neuer Eintrag";
+"name" = "Name";
+"address" = "Adresse";
+"save" = "Speichern";
+"search" = "Suche";
+
+/*QR SCAN*/
+"qr-scan-tip" = "Legen Sie das Fadenkreuz des Scanners über den QR-Code";
+
+/*BANNER*/
+"address-copied-clipboard" = "Adresse in die Zwischenablage kopiert";
+"arg-copied-clipboard" = "%@ in die Zwischenablage kopiert";
+"please-enter-amount" = "Bitte geben Sie einen Betrag ein";
+"no-pastable-item" = "Konnte nichts zum Einfügen finden";
+"seed-copied" = "Seed in die Zwischenablage kopiert (Wird in einer Minute entfernt)";
+"weak-password" = "Ihr Kennwort wurde in der Liste der 'Top der 10k schwächsten Kennwörter\" gefunden. Bitte wählen Sie ein anderes";
+"enter-password-both-field" = "Bitte geben Sie das Kennwort in beide Felder ein";
+"password-mismatch" = "Die Kennwörter stimmen nicht überein";
+"no-password-entered" = "Kein Kennwort eingegeben";
+"unable-to-authenticate" = "Authentifizierungsfehler";
+"dev-address-copied" = "Adresse des Entwicklers in die Zwischenablage kopiert";
+"send-cancelled" = "Sendevorgang abgebrochen";
+"proof-of-work-error" = "\"Proof of work\" Fehler";
+"send-error-arg" = "Sendefehler: %@";
+"invalid-nano-address" = "Ungültige Nano Adresse";
+"no-name-provided" = "Kein Name angegeben";
+"address-already-exists" = "Nano Adresse existiert bereits";
+"no-cam-access" = "Kein Zugriff auf Kamera gewährt";
+"arg-entry-saved" = "'%@' im Adressbuch gespeichert";
+"enter-recipient-address" = "Bitte geben Sie eine Empfängeradresse ein";
+"opening-account" = "Öffne Konto";
+"open-account-error-arg" = "Konto Eröffnungsfehler: %@";
+"receive-error-arg" = "Empfangsfehler: %@";
+"arg-pending-receivables" = "%@ ausstehender Empfang";
+"arg-pending-receivable" = "%@ ausstehender Empfang";
+"no-rep-change" = "Keine Änderung an der Representative vorzunehmen";
+"change-rep-error-arg" = "Change Rep Fehler: %@";
+"rep-changed" = "Representative geändert";
+"seed-set-error" = "Beim Setzen des Wallet Seeds ist ein Fehler aufgetreten";
+"pending-receivable-for-arg" = "Ausstehender Empfang für %@";
+"new-encrypt-error" = "Fehler beim Verschlüsseln des Wallets mit neuen Kennwort";
+"password-change-success" = "Wallet Kennwort wurde geändert";
+"enter-amount-title" = "Betrag eingeben";
+"reset-password" = "Kennwort zurücksetzen";
+"enter-address-title" = "Adresse eingeben";
+"confirm-password" = "Bestätige Kennwort";
+"blog" = "Blog";
+"twitter" = "Twitter";
+"dev-donation-address" = "Spendeadresse des Entwicklers";
+
+/*Add Account*/
+"add-account" = "Konto hinzufügen";
+
+/*Create Password*/
+"create-password" = "Kennwort erstellen";
+
+/*No account name provided*/
+"no-account-name-provided" = "No account name provided";
+

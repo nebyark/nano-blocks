@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountInfoEntity" representedClassName="AccountInfoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="balance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blockCount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frontier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="modifiedTimestamp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openBlock" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pending" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="representative" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="representativeBlock" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TransactionEntity" inverseName="accountInfo" inverseEntity="TransactionEntity" syncable="YES"/>
+    </entity>
+    <entity name="TransactionEntity" representedClassName="TransactionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blockHash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="accountInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountInfoEntity" inverseName="transactions" inverseEntity="AccountInfoEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AccountInfoEntity" positionX="115" positionY="188" width="128" height="240"/>
+        <element name="TransactionEntity" positionX="-63" positionY="-18" width="128" height="133"/>
+    </elements>
+</model>

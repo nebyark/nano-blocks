@@ -1,0 +1,137 @@
+/* 
+  Localizable.strings
+  NanoWallet
+
+  Created by Ben Kray on 4/6/18.
+  Copyright © 2018 Planar Form. All rights reserved.
+*/
+
+"nano-blocks" = "Nano Blocks";
+"seed" = "Clé privée";
+"passphrase" = "Phrase secrète";
+"lowest-balance" = "Le plus petit solde";
+"total-balance" = "Solde total";
+"send" = "Envoyer";
+"receive" = "Recevoir";
+"share" = "Partager";
+"request-amount" = "Demander un montant";
+"cancel" = "Annuler";
+
+/*LANDING PAGE*/
+"welcome-1" = "Bienvenue dans le portefeuille Nano. Pour continuer, vous devez créer un nouveau portefeuille ou en importer un existant.";
+"welcome-2" = "Chaque portefeuille peut avoir de multiple comptes associés avec lui.";
+"new-wallet" = "Nouveau portefeuille";
+"import-wallet" = "Importation du portefeuille";
+
+/*IMPORT WALLET*/
+"import-wallet-cap" = "Importation du Portefeuille";
+"import-wallet-subtitle" = "Vous pouvez importer un portefeuille déjà existant à partir de votre clé privée";
+
+/*SEED*/
+"seed-subtitle" = "Veuillez s'il vous plaît entrer la clé privé de votre portefeuille.";
+
+/*ACCOUNT*/
+"accounts" = "Comptes";
+"latest-sort" = "Les plus récents en premier";
+"oldest-sort" = "Les plus anciens en premier";
+"smallest-sort" = "Les plus petits montants en premier";
+"largest-sort" = "Les plus grands montants en premier";
+"received-filter" = "Reçu";
+"sent-filter" = "Envoyé";
+"edit-name" = "Éditer le nom du compte";
+"edit-representative" = "Éditer le représentant";
+"repair-account" = "Réparer le compte";
+
+/*SEND*/
+"enter-name" = "Entrer le nom";
+"send-to-arg" = "Envoyer à: %@";
+"enter-amount" = "Entrer le montant";
+"recipient" = "Destinataire";
+"enter-address" = "Entrer l'adresse";
+"scan-qr" = "Scanner le QR code";
+"available-balance-arg" = "Solde disponible : %@";
+"enter-address-search-msg" = "Chercher une adresse ou ajouter en une dans le champ ci-dessous";
+"unknown" = "Inconnu";
+"insufficient-funds" = "Fonds insuffisants";
+
+/*CONFIRM TX*/
+"balance" = "Solde";
+"confirm" = "Confirmer";
+
+/*SETTINGS*/
+"settings" = "Réglages";
+"currency" = "Devise";
+"address-book" = "Carnet d'adresses";
+"console" = "Console";
+
+/*SECURITY*/
+"security" = "Sécurité";
+"about" = "À propos";
+"clear-wallet-data" = "Effacer les données du portefeuille";
+"clear-wallet-data-title" = "Êtes-vous sûr de vouloir effacer les données du portefeuille?";
+"clear-wallet-data-msg" = "Toutes les données vont être détruites y compris la clé privée. Si vous souhaitez restaurer ce portefeuille dans le futur, assurez-vous d'enregistrer votre clé privée ailleurs.";
+"require-biometrics-send" = "Exiger la vérification biométrique pour envoyer";
+"require-biometrics-launch" = "Exiger la vérification biométrique à l'ouverture de l'application";
+"change-password" = "Changer le mot de passe";
+"show-seed" = "Voir la clé privée";
+"authenticate" = "S'authentifier";
+"password" = "Mot de passe";
+"password-info" = "Mot de passe info";
+"password-info-msg" = "Un mot de passe est requis pour encrypter/décrypter le portefeuille si bien qu'il prévient les utilisateurs non autorisés d'accéder à cette application.";
+"seed-backup-msg" = "Voici ci-dessous votre clé privée. Il est fortement recommandé de sauvegarder votre clé privée et de ne jamais la stocker sous forme initiale avec le texte visible.";
+
+/*CONSOLE*/
+"export" = "Exporter";
+"clear" = "Effacer";
+
+/*ADDRESS BOOK*/
+"new-entry" = "Nouvelle entrée";
+"name" = "Nom";
+"address" = "Adresse";
+"save" = "Sauvegarder";
+"search" = "Chercher";
+
+/*QR SCAN*/
+"qr-scan-tip" = "Placer la fenêtre du scan au-dessus du QR code";
+
+/*BANNER*/
+"address-copied-clipboard" = "Adresse copié dans le presse-papiers";
+"arg-copied-clipboard" = "%@ copié dans le presse-papiers";
+"please-enter-amount" = "Veuillez s'il vous plaît entrer un montant";
+"no-pastable-item" = "Nous n'avons rien trouvé à copier";
+"seed-copied" = "Clé privée copié dans le presse-papiers(elle sera supprimé dans 1 minute)";
+"weak-password" = "Votre mot de passe a été trouvé dans le \"top 10000 de la liste des mots de passe vulnérables\". S'il vous plaît choisissez en un autre";
+"enter-password-both-field" = "Veuillez s'il vous plaît entrer les mots de passe dans les deux champs";
+"password-mismatch" = "Les mots de passe ne correspondent pas";
+"no-password-entered" = "Pas de mot de passe entré";
+"unable-to-authenticate" = "Impossible à authentifier";
+"dev-address-copied" = "Adresse du développeur copié dans le presse-papiers";
+"send-cancelled" = "Envoyer \"supprimé\"";
+"proof-of-work-error" = "Erreur de preuve de travail";
+"send-error-arg" = "Erreur d'envoi: %@";
+"invalid-nano-address" = "Adresse Nano non valide";
+"no-name-provided" = "Aucun nom fourni";
+"address-already-exists" = "L'adresse Nano existe déjà";
+"no-cam-access" = "Pas d'accès à la caméra fournie";
+"arg-entry-saved" = "'%@' sauvegardé dans le carnet d'adresses";
+"enter-recipient-address" = "Veuillez s'il vous plaît entrer une adresse pour le destinataire";
+"opening-account" = "Ouverture de compte";
+"open-account-error-arg" = "Erreur de compte ouvert: %@";
+"receive-error-arg" = "Recevoir une erreur: %@";
+"arg-pending-receivables" = "%@ attente de recevabilité";
+"arg-pending-receivable" = "%@ attente de recevabilité";
+"no-rep-change" = "Pas de changement représentatif à faire";
+"change-rep-error-arg" = "Erreur de changement de représentant: %@";
+"rep-changed" = "Représentant changé";
+"seed-set-error" = "Une erreur s'est produite lors de la configuration de la clé privée de votre portefeuille";
+"pending-receivable-for-arg" = "Attente de recevabilité à %@";
+"new-encrypt-error" = "Erreur lors du cryptage du portefeuille avec le nouveau mot de passe";
+"password-change-success" = "Le mot de passe du portefeuille a été changé";
+"enter-amount-title" = "Entrer le montant";
+"reset-password" = "Réinitialiser le mot de passe";
+"enter-address-title" = "Entrer l'adresse";
+"confirm-password" = "Confirmez le mot de passe";
+"blog" = "Blog";
+"twitter" = "Twitter";
+"dev-donation-address" = "Adresse de donation du développeur";
+"add-account" = "Ajouter un Compte";

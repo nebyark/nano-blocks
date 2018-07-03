@@ -1,0 +1,145 @@
+
+/*Localizable.strings
+ NanoWallet
+ 
+ Created by Ben Kray on 4/6/18.
+ Copyright © 2018 Planar Form. All rights reserved.
+ 
+ COMMON*/
+"nano-blocks" = "Nano Bloques";
+"seed" = "Semilla";
+"passphrase" = "Frase de contraseña";
+"lowest-balance" = "Balance Minimo";
+"total-balance" = "Balance Total";
+"send" = "Enviar";
+"receive" = "Recibir";
+"share" = "Compartir";
+"request-amount" = "Solicitar Cantidad";
+"cancel" = "Cancelar";
+
+/*LANDING PAGE*/
+"welcome-1" = "Bienvenido a Nano Bloques. Para continuar, puede crear una nueva billetera o importar una billetera existente.";
+"welcome-2" = "Cada billetera puede tener multiples cuentas asociadas.";
+"new-wallet" = "Billetera nueva";
+"import-wallet" = "Importar billetera";
+
+/*IMPORT WALLET*/
+"import-wallet-cap" = "Importar Billetera";
+"import-wallet-subtitle" = "Puede importar una billetera existente utilizando la semilla correspondiente.";
+
+/*SEED*/
+"seed-subtitle" = "Por favor introduzca la semilla de su billetera.";
+
+/*ACCOUNT*/
+"accounts" = "Cuentas";
+"latest-sort" = "Mas reciente primero";
+"oldest-sort" = "Mas antiguas primero.";
+"smallest-sort" = "Mas pequeño primero";
+"largest-sort" = "Mas grande primero";
+"received-filter" = "Recibido";
+"sent-filter" = "Enviado";
+"edit-name" = "Editar el nombre de la cuenta";
+"edit-representative" = "Editar representante";
+"repair-account" = "Reparar cuenta";
+
+/*SEND*/
+"enter-name" = "Introducir nombre";
+"send-to-arg" = "Enviar a: %@";
+"enter-amount" = "Ingresar cantidad";
+"recipient" = "Destinatario";
+"enter-address" = "Introducir direccion";
+"scan-qr" = "Escanear codigo QR";
+"available-balance-arg" = "Balance disponible: %@";
+"enter-address-search-msg" = "Buscar una direccion, o añadir una manualmente en el campo de abajo.";
+"unknown" = "Desconocido";
+"insufficient-funds" = "Balance insuficiente";
+
+/*CONFIRM TX*/
+"balance" = "Balance";
+"confirm" = "Confirmar";
+
+/*SETTINGS*/
+"settings" = "Configuracion";
+"currency" = "Moneda";
+"address-book" = "Directorio";
+"console" = "Consola";
+
+/*SECURITY*/
+"security" = "Seguridad";
+"about" = "Sobre";
+"clear-wallet-data" = "Borrar datos de la billetera";
+"clear-wallet-data-title" = "Esta seguro que quiere eliminar los datos de la billetera?";
+"clear-wallet-data-msg" = "Todos los datos de la billetera seran eliminados, incluyendo la semilla. Si desea recuperar esta billetera en el futuro, asegurese de que guarda la semilla en algun lugar seguro.";
+"require-biometrics-send" = "Solicitar confirmacion biometrica para enviar.";
+"require-biometrics-launch" = "Solicitar confirmacion biometrica al abrir";
+"change-password" = "Cambiar contraseña";
+"show-seed" = "Mostrar semilla";
+"authenticate" = "Autentificar";
+"password" = "Contraseña";
+"password-info" = "Informacion de contraseña";
+"password-info-msg" = "Una contraseña es necesaria para encriptar/desencriptar la billetera, asi como para prevenir el acceso de usuarios no autorizados a esta aplicacion.";
+"seed-backup-msg" = "Debajo esta la semilla de su billetera. Es altamente recomendable que usted guarde su semilla y se asegure de no guardarla como texto plano.";
+
+/*CONSOLE*/
+"export" = "Exportar";
+"clear" = "Limpiar";
+
+/*ADDRESS BOOK*/
+"new-entry" = "Nueva entrada";
+"name" = "Nombre";
+"address" = "Direccion";
+"save" = "Guardar";
+"search" = "Buscar";
+
+/*QR SCAN*/
+"qr-scan-tip" = "Coloque la retina de escaneo sobre el codigo QR.";
+
+/*BANNER*/
+"address-copied-clipboard" = "Direccion copiada en el portapapeles.";
+"arg-copied-clipboard" = "%@ copiado en el portapapeles.";
+"please-enter-amount" = "Por favor, entre una cantidad";
+"no-pastable-item" = "No se pudo encontrar nada que pegar";
+"seed-copied" = "Semilla copiada en el portapapeles. (sera eliminada en 1 minuto)";
+"weak-password" = "Su contraseña fue encontrada en el 'Top 10 de Contraseñas debiles' . Por favor elija otra.";
+"enter-password-both-field" = "Por favor introduzca la contraseña en ambos campos.";
+"password-mismatch" = "La contraseña no coincide";
+"no-password-entered" = "No ha insertado ninguna contraseña";
+"unable-to-authenticate" = "Imposible confirmar autenticidad.";
+"dev-address-copied" = "Direccion del desarrollador copiada en el portapapeles.";
+"send-cancelled" = "Envio cancelado";
+"proof-of-work-error" = "Error en la prueba de trabajo";
+"send-error-arg" = "Error de envio %@";
+"invalid-nano-address" = "Direccion Nano incorrecta.";
+"no-name-provided" = "Ningun nombre proporcionado";
+"address-already-exists" = "La Nano direccion ya existe";
+"no-cam-access" = "No ha proporcionado acceso a la camara";
+"arg-entry-saved" = "'%@' guardada en la libreta de direcciones";
+"enter-recipient-address" = "Por favor entre la direccion del beneficiario.";
+"opening-account" = "Abriendo cuenta";
+"open-account-error-arg" = "Error al abrir la cuenta %@";
+"receive-error-arg" = "Error en el recibo %@";
+"arg-pending-receivables" = "%@ pendientes de recibir";
+"arg-pending-receivable" = "%@ pendiente de recibir";
+"no-rep-change" = "Ningun representante ha sido configurado/creado";
+"change-rep-error-arg" = "Error en el cambio de representante %@";
+"rep-changed" = "Representante cambiado";
+"seed-set-error" = "Ha ocurrido un error mientras configuraba la semilla de su billetera";
+"pending-receivable-for-arg" = "Recibo pendiente de %@";
+"new-encrypt-error" = "Error al encriptar la billetera con la nueva contraseña";
+"password-change-success" = "La contraseña de la billetera ha sido cambiada";
+"enter-amount-title" = "Introducir cantidad";
+"reset-password" = "Cambiar contraseña";
+"enter-address-title" = "Introducir direccion";
+"confirm-password" = "Confirmar contraseña";
+"blog" = "Blog";
+"twitter" = "Twitter";
+"dev-donation-address" = "Direccion de donaciones al desarrollador";
+
+/*Add Account*/
+"add-account" = "Add Account";
+
+/*Create Password*/
+"create-password" = "Create Password";
+
+/*No account name provided*/
+"no-account-name-provided" = "No account name provided";

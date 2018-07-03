@@ -1,0 +1,145 @@
+
+/*Localizable.strings
+ NanoWallet
+ 
+ Created by Ben Kray on 4/6/18.
+ Copyright © 2018 Planar Form. All rights reserved.
+ 
+ COMMON*/
+"nano-blocks" = "Nano Blocks";
+"seed" = "Frö";
+"passphrase" = "Lösenordsfras";
+"lowest-balance" = "Lägsta Saldo";
+"total-balance" = "Totalt Saldo";
+"send" = "Skicka";
+"receive" = "Ta Emot";
+"share" = "Dela";
+"request-amount" = "Efterfråga Belopp";
+"cancel" = "Avbryt";
+
+/*LANDING PAGE*/
+"welcome-1" = "Välkommen till Nano Blocks. För att fortsätta så kan du antingen skapa en ny plånbok eller importera en existerande.";
+"welcome-2" = "Varje plånbok kan ha flera konton kopplade till sig.";
+"new-wallet" = "Ny plånbok";
+"import-wallet" = "Importera plånbok";
+
+/*IMPORT WALLET*/
+"import-wallet-cap" = "Importera plånbok";
+"import-wallet-subtitle" = "Du kan importera en redan existerande plånbok från dess motsvarande frö.";
+
+/*SEED*/
+"seed-subtitle" = "Var god ange din plånboks frö.";
+
+/*ACCOUNT*/
+"accounts" = "Konton";
+"latest-sort" = "Senaste Först";
+"oldest-sort" = "Äldsta Först";
+"smallest-sort" = "Minsta Först";
+"largest-sort" = "Störst Först";
+"received-filter" = "Mottaget";
+"sent-filter" = "Skickat";
+"edit-name" = "Ändra Kontonamn";
+"edit-representative" = "Ändra Representant";
+"repair-account" = "Reparera Konto";
+
+/*SEND*/
+"enter-name" = "Ange namn";
+"send-to-arg" = "Skicka till: %@";
+"enter-amount" = "Ange belopp";
+"recipient" = "Mottagare";
+"enter-address" = "Ange adress";
+"scan-qr" = "Scanna QR-kod";
+"available-balance-arg" = "Tillgängligt Belopp: %@";
+"enter-address-search-msg" = "Sök efter en adress, eller lägg till en manuellt i fältet nedan.";
+"unknown" = "Okänd";
+"insufficient-funds" = "Otillräckligt kapital";
+
+/*CONFIRM TX*/
+"balance" = "Saldo";
+"confirm" = "Bekräfta";
+
+/*SETTINGS*/
+"settings" = "Inställningar";
+"currency" = "Valuta";
+"address-book" = "Adressbok";
+"console" = "Konsoll";
+
+/*SECURITY*/
+"security" = "Säkerhet";
+"about" = "Om";
+"clear-wallet-data" = "Rensa Plånboksdata";
+"clear-wallet-data-title" = "Är du säker på att du vill rensa plånboksdata?";
+"clear-wallet-data-msg" = "All plånboksdata kommer att rensas, inklusive dess frö. Om du vill återskapa den här plånboken i framtiden, se då till att du har sparat ditt frö någon annanstans.";
+"require-biometrics-send" = "Kräv biometri vid skicka";
+"require-biometrics-launch" = "Kräv biometri vid uppstart";
+"change-password" = "Ändra lösenord";
+"show-seed" = "Visa frö";
+"authenticate" = "Autentisera";
+"password" = "Lösenord";
+"password-info" = "Lösenordsinfo";
+"password-info-msg" = "Ett lösenord behövs för att kryptera/dekryptera plånboken, men även för att förhindra obehöriga användare att använda appen.";
+"seed-backup-msg" = "Nedan är din plånboks frö. Det är starkt rekommenderat att du säkerhetskopierar ditt frö och aldrig sparar det i klartext.";
+
+/*CONSOLE*/
+"export" = "Exportera";
+"clear" = "Rensa";
+
+/*ADDRESS BOOK*/
+"new-entry" = "Ny Post";
+"name" = "Namn";
+"address" = "Adress";
+"save" = "Spara";
+"search" = "Sök";
+
+/*QR SCAN*/
+"qr-scan-tip" = "Placera scannerns hårkors över QR-koden";
+
+/*BANNER*/
+"address-copied-clipboard" = "Adress kopierad till urklipp";
+"arg-copied-clipboard" = "%@ kopierat till urklipp";
+"please-enter-amount" = "Var god ange ett belopp";
+"no-pastable-item" = "Kunde inte hitta något att klistra in";
+"seed-copied" = "Frö kopierat till urklipp (tas bort efter 1 minut)";
+"weak-password" = "Ditt lösenord hittades i listan 'Top 10k svaga lösenord'. Var god välj ett annat.";
+"enter-password-both-field" = "Var god ange lösenord i båda fälten.";
+"password-mismatch" = "Lösenord matchar inte";
+"no-password-entered" = "Inget lösenord angavs";
+"unable-to-authenticate" = "Misslyckad autentiering";
+"dev-address-copied" = "Utvecklaradress kopierad till urklipp";
+"send-cancelled" = "Skicka avbruten";
+"proof-of-work-error" = "Fel med Proof-of-work";
+"send-error-arg" = "Fel med Skicka: %@";
+"invalid-nano-address" = "Ogiltig Nano-adress";
+"no-name-provided" = "Inget namn angett";
+"address-already-exists" = "Nano-adress existerar redan";
+"no-cam-access" = "Ingen access till kamera angett";
+"arg-entry-saved" = "'%@' sparad i adressboken";
+"enter-recipient-address" = "Vad god ange en mottagaradress";
+"opening-account" = "Öppnar konto";
+"open-account-error-arg" = "Fel med Öppna Konto: %@";
+"receive-error-arg" = "Fel i Mottagning: %@";
+"arg-pending-receivables" = "%@ pågående inbetalningar";
+"arg-pending-receivable" = "%@ pågående inbetalning";
+"no-rep-change" = "Ingen ändring av representant att utföra";
+"change-rep-error-arg" = "Fel med Ändra Rep: %@";
+"rep-changed" = "Representant ändrad";
+"seed-set-error" = "Ett fel inträffade medan din plånboks frö sattes.";
+"pending-receivable-for-arg" = "Pågående inbetalning för %@";
+"new-encrypt-error" = "Fel när plånboken krypterades med nytt lösenord";
+"password-change-success" = "Plånbokens lösenord har ändrats";
+"enter-amount-title" = "Ange Belopp";
+"reset-password" = "Återställ Lösenord";
+"enter-address-title" = "Ange Adress";
+"confirm-password" = "Bekräfta Lösenord";
+"blog" = "Blog";
+"twitter" = "Twitter";
+"dev-donation-address" = "Donationsadress för Utvecklare";
+
+/*Add Account*/
+"add-account" = "Add Account";
+
+/*Create Password*/
+"create-password" = "Create Password";
+
+/*No account name provided*/
+"no-account-name-provided" = "No account name provided";

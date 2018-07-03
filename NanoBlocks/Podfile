@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'NanoBlocks' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NanoBlocks
+  pod 'Alamofire', '~> 4.6.0'
+  pod 'RealmSwift', '~> 3.1.1'
+  pod 'NotificationBannerSwift'
+  pod 'Moya', '~> 11.0'
+  pod 'lottie-ios'
+  pod 'SSZipArchive'
+  pod 'CocoaMQTT'
+end
+
+target 'NanoBlocksTests' do
+  use_frameworks!
+  pod 'RealmSwift', '~> 3.1.1'
+end

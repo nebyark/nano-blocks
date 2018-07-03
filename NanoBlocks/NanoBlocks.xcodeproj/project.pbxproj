@@ -1,0 +1,1505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A70E8E032094F91B00372394 /* EnterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70E8E022094F91B00372394 /* EnterAddressViewController.swift */; };
+		A70E8E062097B7FF00372394 /* DataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70E8E052097B7FF00372394 /* DataExporter.swift */; };
+		A71CEB9E2054AE2F00FF6B54 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CEB9C2054AE2F00FF6B54 /* LockViewController.swift */; };
+		A71CEB9F2054AE2F00FF6B54 /* LockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71CEB9D2054AE2F00FF6B54 /* LockViewController.xib */; };
+		A71CEBA42054EB0E00FF6B54 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CEBA22054EB0E00FF6B54 /* AboutViewController.swift */; };
+		A726C2811FFCD5D400E73C18 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726C27F1FFCD5D400E73C18 /* AccountTableViewCell.swift */; };
+		A726C2821FFCD5D400E73C18 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A726C2801FFCD5D400E73C18 /* AccountTableViewCell.xib */; };
+		A72BC4ED20A5731000AE3C4A /* BlockHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72BC4EC20A5731000AE3C4A /* BlockHandler.swift */; };
+		A72EBDA31FFCCF4200407E6D /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EBDA11FFCCF4200407E6D /* AccountsViewController.swift */; };
+		A72EBDA41FFCCF4200407E6D /* AccountsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72EBDA21FFCCF4200407E6D /* AccountsViewController.xib */; };
+		A730652220438B8400A49C03 /* EnterAddressEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A730652120438B8400A49C03 /* EnterAddressEntryViewModel.swift */; };
+		A73065242045321E00A49C03 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73065232045321E00A49C03 /* URLHandler.swift */; };
+		A731BE5A20183FAB00CA96CD /* AddressBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A731BE5920183FAB00CA96CD /* AddressBookCoordinator.swift */; };
+		A73229CE20AEBD8F00CACB3A /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73229CD20AEBD8F00CACB3A /* DisclaimerViewController.swift */; };
+		A7329814200756A300B21C8D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7329812200756A300B21C8D /* AccountViewController.swift */; };
+		A732981720075B7100B21C8D /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A732981620075B7100B21C8D /* AccountViewController.xib */; };
+		A732981A20086B4D00B21C8D /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732981820086B4D00B21C8D /* TransactionTableViewCell.swift */; };
+		A732981B20086B4D00B21C8D /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A732981920086B4D00B21C8D /* TransactionTableViewCell.xib */; };
+		A732981F2008769200B21C8D /* AccountsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732981E2008769200B21C8D /* AccountsCoordinator.swift */; };
+		A73298222009AFAF00B21C8D /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73298212009AFAF00B21C8D /* Block.swift */; };
+		A73298242009F22B00B21C8D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73298232009F22B00B21C8D /* AccountViewModel.swift */; };
+		A73298262009F29B00B21C8D /* AccountHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73298252009F29B00B21C8D /* AccountHistory.swift */; };
+		A7329828200A078A00B21C8D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7329827200A078A00B21C8D /* Common.swift */; };
+		A732982A200A0A6D00B21C8D /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7329829200A0A6D00B21C8D /* AccountsViewModel.swift */; };
+		A732982C200AA2E300B21C8D /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732982B200AA2E300B21C8D /* AccountInfo.swift */; };
+		A732982F200ACEB000B21C8D /* PoW.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732982E200ACEB000B21C8D /* PoW.swift */; };
+		A73AC9E9203FDFE200ED24E9 /* RequestAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73AC9E7203FDFE200ED24E9 /* RequestAmountViewController.swift */; };
+		A73AC9EA203FDFE200ED24E9 /* RequestAmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73AC9E8203FDFE200ED24E9 /* RequestAmountViewController.xib */; };
+		A73EBBB31FFF606F00F77B4D /* CreateWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73EBBB21FFF606F00F77B4D /* CreateWalletCoordinator.swift */; };
+		A73FAAF2204F3FF90087E025 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73FAAF0204F3FF90087E025 /* SwitchTableViewCell.swift */; };
+		A73FAAF3204F3FF90087E025 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73FAAF1204F3FF90087E025 /* SwitchTableViewCell.xib */; };
+		A73FAAF5204FC0B50087E025 /* RtChk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73FAAF4204FC0B50087E025 /* RtChk.swift */; };
+		A74361E71FE64F9100054078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74361E61FE64F9100054078 /* AppDelegate.swift */; };
+		A74361EE1FE64F9100054078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74361ED1FE64F9100054078 /* Assets.xcassets */; };
+		A74361F11FE64F9100054078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74361EF1FE64F9100054078 /* LaunchScreen.storyboard */; };
+		A74361FB1FE6572800054078 /* Foundaton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74361FA1FE6572800054078 /* Foundaton+Extensions.swift */; };
+		A74362201FE66DEB00054078 /* WalletUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743621F1FE66DEB00054078 /* WalletUtil.swift */; };
+		A74362231FE734F300054078 /* BitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74362221FE734F300054078 /* BitArray.swift */; };
+		A7463AAB2071E9E3008A8197 /* IncomingBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7463AAA2071E9E3008A8197 /* IncomingBlock.swift */; };
+		A749FCF02089980000AB7D9C /* BlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FCEF2089980000AB7D9C /* BlockInfo.swift */; };
+		A749FD12208AF09200AB7D9C /* Swift-Big-Number-Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD11208AF09200AB7D9C /* Swift-Big-Number-Core.swift */; };
+		A749FD16208DBA8C00AB7D9C /* BlockInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD14208DBA8C00AB7D9C /* BlockInfoViewController.swift */; };
+		A749FD19208EE4AF00AB7D9C /* BlockInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD18208EE4AF00AB7D9C /* BlockInfoViewModel.swift */; };
+		A749FD1B20918D6700AB7D9C /* NanoNodeNinjaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD1A20918D6700AB7D9C /* NanoNodeNinjaService.swift */; };
+		A749FD1D2091935E00AB7D9C /* VerifiedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD1C2091935E00AB7D9C /* VerifiedAccount.swift */; };
+		A749FD1E2094E34000AB7D9C /* EnterAmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A768B995201F037500620B62 /* EnterAmountViewController.xib */; };
+		A74FCD88206CB846001C9725 /* StateBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FCD87206CB846001C9725 /* StateBlock.swift */; };
+		A74FCD8A206CD2D9001C9725 /* PubSubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FCD89206CD2D9001C9725 /* PubSubService.swift */; };
+		A753FBD22060F2FB00E88B77 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753FBD12060F2FB00E88B77 /* NetworkAdapter.swift */; };
+		A753FBD4206104EC00E88B77 /* CanoeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753FBD3206104EC00E88B77 /* CanoeService.swift */; };
+		A768B993201EF02000620B62 /* ReceiveCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768B992201EF02000620B62 /* ReceiveCoordinator.swift */; };
+		A768B996201F037500620B62 /* EnterAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768B994201F037500620B62 /* EnterAmountViewController.swift */; };
+		A768B99B201F0ABB00620B62 /* NumpadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768B999201F0ABB00620B62 /* NumpadCollectionViewCell.swift */; };
+		A768B99C201F0ABB00620B62 /* NumpadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A768B99A201F0ABB00620B62 /* NumpadCollectionViewCell.xib */; };
+		A768B9A12021170400620B62 /* ConfirmTxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768B99F2021170400620B62 /* ConfirmTxViewController.swift */; };
+		A768B9A22021170400620B62 /* ConfirmTxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A768B9A02021170400620B62 /* ConfirmTxViewController.xib */; };
+		A768B9A4202194B300620B62 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768B9A3202194B300620B62 /* Banner.swift */; };
+		A768B9A720225DAC00620B62 /* TxInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768B9A620225DAC00620B62 /* TxInfo.swift */; };
+		A768B9A92022E10800620B62 /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768B9A82022E10800620B62 /* AccountCoordinator.swift */; };
+		A76AC7A9202980A900C7CEE8 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7A8202980A900C7CEE8 /* PersistentStore.swift */; };
+		A76AC7AC202A549E00C7CEE8 /* SimpleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7AB202A549E00C7CEE8 /* SimpleBlock.swift */; };
+		A76AC7AF202AC0CA00C7CEE8 /* EnterAddressEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7AD202AC0CA00C7CEE8 /* EnterAddressEntryViewController.swift */; };
+		A76AC7B0202AC0CA00C7CEE8 /* EnterAddressEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76AC7AE202AC0CA00C7CEE8 /* EnterAddressEntryViewController.xib */; };
+		A76AC7B4202AD7C000C7CEE8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7B2202AD7C000C7CEE8 /* SettingsViewController.swift */; };
+		A76AC7B8202AD8C200C7CEE8 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7B6202AD8C200C7CEE8 /* SettingsTableViewCell.swift */; };
+		A76AC7B9202AD8C200C7CEE8 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76AC7B7202AD8C200C7CEE8 /* SettingsTableViewCell.xib */; };
+		A76AC7BB202ADB2100C7CEE8 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7BA202ADB2100C7CEE8 /* SettingsCoordinator.swift */; };
+		A76AC7C220301D8500C7CEE8 /* CurrencySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7C020301D8500C7CEE8 /* CurrencySelectViewController.swift */; };
+		A76AC7C320301D8500C7CEE8 /* CurrencySelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76AC7C120301D8500C7CEE8 /* CurrencySelectViewController.xib */; };
+		A76AC7C62030239C00C7CEE8 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7C52030239C00C7CEE8 /* Currency.swift */; };
+		A76AC7C82030C59D00C7CEE8 /* CurrencySelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76AC7C72030C59D00C7CEE8 /* CurrencySelectViewModel.swift */; };
+		A76D2735204E986000615B7A /* NanoBlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76D2734204E986000615B7A /* NanoBlocksTests.swift */; };
+		A78854DF200F12FA00C9565B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78854DE200F12FA00C9565B /* Networking.swift */; };
+		A79116ED2015758A00890432 /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79116EB2015758A00890432 /* QRScanViewController.swift */; };
+		A79116EE2015758A00890432 /* QRScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79116EC2015758A00890432 /* QRScanViewController.xib */; };
+		A79116F020157A4800890432 /* SendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79116EF20157A4800890432 /* SendCoordinator.swift */; };
+		A79116F62017264000890432 /* AddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79116F42017264000890432 /* AddressBookViewController.swift */; };
+		A79116F72017264000890432 /* AddressBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79116F52017264000890432 /* AddressBookViewController.xib */; };
+		A79116FA20172FB100890432 /* AddressItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79116F820172FB100890432 /* AddressItemTableViewCell.swift */; };
+		A79116FB20172FB100890432 /* AddressItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79116F920172FB100890432 /* AddressItemTableViewCell.xib */; };
+		A79116FD2017398300890432 /* AddressBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79116FC2017398300890432 /* AddressBookViewModel.swift */; };
+		A79116FF20173C4400890432 /* AddressEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79116FE20173C4400890432 /* AddressEntry.swift */; };
+		A7975A8E20787D6100B2995D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7975A9020787D6100B2995D /* Localizable.strings */; };
+		A7B1B24520140D0F009E5CB0 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B1B24320140D0F009E5CB0 /* SendViewController.swift */; };
+		A7B1B24620140D0F009E5CB0 /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B1B24420140D0F009E5CB0 /* SendViewController.xib */; };
+		A7B327F52001D4AA00E0E360 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F32001D4AA00E0E360 /* StartViewController.swift */; };
+		A7B327F62001D4AA00E0E360 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B327F42001D4AA00E0E360 /* StartViewController.xib */; };
+		A7B327F82002A43500E0E360 /* LeftAlignedIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */; };
+		A7B327FA200331BD00E0E360 /* TransparentNavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F9200331BD00E0E360 /* TransparentNavigationTransition.swift */; };
+		A7B327FE2003327B00E0E360 /* ImportWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327FC2003327B00E0E360 /* ImportWalletViewController.swift */; };
+		A7B327FF2003327B00E0E360 /* ImportWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B327FD2003327B00E0E360 /* ImportWalletViewController.xib */; };
+		A7B32801200333C500E0E360 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B32800200333C500E0E360 /* AppStyle.swift */; };
+		A7B3280620033C1300E0E360 /* SeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3280420033C1300E0E360 /* SeedViewController.swift */; };
+		A7B3280720033C1300E0E360 /* SeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B3280520033C1300E0E360 /* SeedViewController.xib */; };
+		A7B3280A2004990F00E0E360 /* ImportPassphraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B328082004990F00E0E360 /* ImportPassphraseViewController.swift */; };
+		A7B3280B2004990F00E0E360 /* ImportPassphraseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B328092004990F00E0E360 /* ImportPassphraseViewController.xib */; };
+		A7B3280E20049D4B00E0E360 /* PassphraseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3280C20049D4B00E0E360 /* PassphraseCollectionViewCell.swift */; };
+		A7B3280F20049D4B00E0E360 /* PassphraseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B3280D20049D4B00E0E360 /* PassphraseCollectionViewCell.xib */; };
+		A7B858EA2032CC6E00698FAE /* CurrencyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B858E92032CC6E00698FAE /* CurrencyAPI.swift */; };
+		A7B858EE20338B6200698FAE /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B858EC20338B6200698FAE /* ConsoleViewController.swift */; };
+		A7B858EF20338B6200698FAE /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B858ED20338B6200698FAE /* ConsoleViewController.xib */; };
+		A7B858F120338D8100698FAE /* TransparentNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B858F020338D8100698FAE /* TransparentNavViewController.swift */; };
+		A7B858F32033F34E00698FAE /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B858F22033F34E00698FAE /* UserSettings.swift */; };
+		A7B858F72033F7D700698FAE /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B858F52033F7D700698FAE /* SecurityViewController.swift */; };
+		A7B858FE203408E200698FAE /* PasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B858FC203408E200698FAE /* PasscodeViewController.xib */; };
+		A7BC508720A2DD12006B2810 /* NanoBlocksSecureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC508620A2DD12006B2810 /* NanoBlocksSecureTests.swift */; };
+		A7E216C120DCE5EA003B8FCA /* TitleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E216C020DCE5EA003B8FCA /* TitleTableViewController.swift */; };
+		A7EAC9D0209B9CDA00EE1F14 /* Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EAC9CF209B9CDA00EE1F14 /* Secure.swift */; };
+		A7EAC9D220A2D7E600EE1F14 /* KeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EAC9D120A2D7E600EE1F14 /* KeyPair.swift */; };
+		A7EB8F5520662C72004463FC /* nano_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = A7EB8F5420662C72004463FC /* nano_loading.json */; };
+		A7EB8F5720662D75004463FC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB8F5620662D75004463FC /* LoadingView.swift */; };
+		A7EB8F5B20664B0C004463FC /* weak_pw.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7EB8F5A20664B0C004463FC /* weak_pw.txt */; };
+		A7EB8F5D20664BA1004463FC /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB8F5C20664BA1004463FC /* PasswordChecker.swift */; };
+		A7EB8F6120684645004463FC /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB8F5F20684645004463FC /* PasswordViewController.swift */; };
+		A7EB8F6220684645004463FC /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EB8F6020684645004463FC /* PasswordViewController.xib */; };
+		A7EB8F64206880A8004463FC /* nano_loading_complete.json in Resources */ = {isa = PBXBuildFile; fileRef = A7EB8F63206880A8004463FC /* nano_loading_complete.json */; };
+		A7EF84161FED7D6800C74035 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EF84151FED7D6800C74035 /* Sodium.framework */; };
+		A7EF84181FED7D7D00C74035 /* Sodium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7EF84151FED7D6800C74035 /* Sodium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7EF841B1FED8A5000C74035 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF841A1FED8A5000C74035 /* Keychain.swift */; };
+		A7EF841E1FED915000C74035 /* WalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF841D1FED915000C74035 /* WalletManager.swift */; };
+		A7EF84241FEDAE2D00C74035 /* BIP39.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84231FEDAE2D00C74035 /* BIP39.swift */; };
+		A7EF84271FEDCC8300C74035 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84261FEDCC8300C74035 /* Coordinator.swift */; };
+		A7EF84291FEDCC9F00C74035 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84281FEDCC9E00C74035 /* AppCoordinator.swift */; };
+		A7EF84311FEE43C300C74035 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84301FEE43C300C74035 /* UIKit+Extensions.swift */; };
+		A7EF84351FEE453700C74035 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84331FEE453700C74035 /* ReceiveViewController.swift */; };
+		A7EF84361FEE453700C74035 /* ReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EF84341FEE453700C74035 /* ReceiveViewController.xib */; };
+		A7EF843B1FF0D45A00C74035 /* Lincoln.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF843A1FF0D45A00C74035 /* Lincoln.swift */; };
+		A7F88F382069852800CDB7AB /* EnterAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F88F362069852800CDB7AB /* EnterAddressViewController.xib */; };
+		A7F88F3A2069F26200CDB7AB /* EnterAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F88F392069F26200CDB7AB /* EnterAddressViewModel.swift */; };
+		A7F88F3D2069F80900CDB7AB /* EnterAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F88F3B2069F80900CDB7AB /* EnterAddressTableViewCell.swift */; };
+		A7F88F3E2069F80900CDB7AB /* EnterAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F88F3C2069F80900CDB7AB /* EnterAddressTableViewCell.xib */; };
+		A7F88F40206A34FD00CDB7AB /* toggle.json in Resources */ = {isa = PBXBuildFile; fileRef = A7F88F3F206A34FD00CDB7AB /* toggle.json */; };
+		B5DA4B9DA32F5691359BC3DE /* Pods_NanoBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0370E4B7BC9FAA56ECE73C /* Pods_NanoBlocks.framework */; };
+		EDAA4E138873847434739752 /* Pods_NanoBlocksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB71C051E62F6E99E1BB05AF /* Pods_NanoBlocksTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A76D2737204E986000615B7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74361DB1FE64F9100054078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A74361E21FE64F9100054078;
+			remoteInfo = NanoWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A7EF84191FED7D7D00C74035 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A7EF84181FED7D7D00C74035 /* Sodium.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0FCBF9050B355F6BFF6E7104 /* Pods-GenesisWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisWallet/Pods-GenesisWallet.release.xcconfig"; sourceTree = "<group>"; };
+		1C040B25385B8D2588C0376E /* Pods_NanoWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		230E436E94AB58C7573ED697 /* Pods-NanoWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoWalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NanoWalletTests/Pods-NanoWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		23F5581ECB86384B9E38413C /* Pods-NanoBlocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoBlocks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks.debug.xcconfig"; sourceTree = "<group>"; };
+		3A7F45F405FF60CF71071B39 /* Pods-GenesisWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisWalletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisWalletTests/Pods-GenesisWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		522873356B808384C150F662 /* Pods-NanoBlocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoBlocks.release.xcconfig"; path = "Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks.release.xcconfig"; sourceTree = "<group>"; };
+		5E0370E4B7BC9FAA56ECE73C /* Pods_NanoBlocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoBlocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		604437DB03B55B241DB81390 /* Pods-NanoBlocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoBlocksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests.release.xcconfig"; sourceTree = "<group>"; };
+		8852DFE8524A0EC56A7995CE /* Pods-NanoWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-NanoWallet/Pods-NanoWallet.release.xcconfig"; sourceTree = "<group>"; };
+		8DE79A2ADD6F5F6D00CCE145 /* Pods-NanoWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoWalletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NanoWalletTests/Pods-NanoWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		981E7C7309DD8C9E8F46969C /* Pods-GenesisWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisWallet/Pods-GenesisWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		9A542ACEB0DA1C591A7DECFA /* Pods-GenesisWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisWalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisWalletTests/Pods-GenesisWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		A076B94CE64CD2FFBD0AB498 /* Pods-NanoBlocksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoBlocksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A70E8E022094F91B00372394 /* EnterAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterAddressViewController.swift; sourceTree = "<group>"; };
+		A70E8E052097B7FF00372394 /* DataExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExporter.swift; sourceTree = "<group>"; };
+		A70E8E0720982F7700372394 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A70E8E0820982F7800372394 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A70E8E092098301500372394 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A70E8E0A2098301500372394 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A71CEB9C2054AE2F00FF6B54 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		A71CEB9D2054AE2F00FF6B54 /* LockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockViewController.xib; sourceTree = "<group>"; };
+		A71CEBA22054EB0E00FF6B54 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A726C27F1FFCD5D400E73C18 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		A726C2801FFCD5D400E73C18 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
+		A72BC4EC20A5731000AE3C4A /* BlockHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHandler.swift; sourceTree = "<group>"; };
+		A72EBDA11FFCCF4200407E6D /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		A72EBDA21FFCCF4200407E6D /* AccountsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountsViewController.xib; sourceTree = "<group>"; };
+		A730652120438B8400A49C03 /* EnterAddressEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressEntryViewModel.swift; sourceTree = "<group>"; };
+		A73065232045321E00A49C03 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
+		A731BE5920183FAB00CA96CD /* AddressBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookCoordinator.swift; sourceTree = "<group>"; };
+		A73229CD20AEBD8F00CACB3A /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
+		A73229CF20B6238B00CACB3A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A73229D020B6238B00CACB3A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A73229D120B623B400CACB3A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A73229D220B623B400CACB3A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A7329812200756A300B21C8D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A732981620075B7100B21C8D /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		A732981820086B4D00B21C8D /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		A732981920086B4D00B21C8D /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		A732981E2008769200B21C8D /* AccountsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCoordinator.swift; sourceTree = "<group>"; };
+		A73298212009AFAF00B21C8D /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		A73298232009F22B00B21C8D /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		A73298252009F29B00B21C8D /* AccountHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHistory.swift; sourceTree = "<group>"; };
+		A7329827200A078A00B21C8D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		A7329829200A0A6D00B21C8D /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		A732982B200AA2E300B21C8D /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		A732982E200ACEB000B21C8D /* PoW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoW.swift; sourceTree = "<group>"; };
+		A73AC9E7203FDFE200ED24E9 /* RequestAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAmountViewController.swift; sourceTree = "<group>"; };
+		A73AC9E8203FDFE200ED24E9 /* RequestAmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestAmountViewController.xib; sourceTree = "<group>"; };
+		A73EBBB21FFF606F00F77B4D /* CreateWalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletCoordinator.swift; sourceTree = "<group>"; };
+		A73FAAF0204F3FF90087E025 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		A73FAAF1204F3FF90087E025 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
+		A73FAAF4204FC0B50087E025 /* RtChk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtChk.swift; sourceTree = "<group>"; };
+		A74361E31FE64F9100054078 /* Nano Blocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nano Blocks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74361E61FE64F9100054078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A74361ED1FE64F9100054078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A74361F01FE64F9100054078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A74361F21FE64F9100054078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74361FA1FE6572800054078 /* Foundaton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundaton+Extensions.swift"; sourceTree = "<group>"; };
+		A743621F1FE66DEB00054078 /* WalletUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUtil.swift; sourceTree = "<group>"; };
+		A74362221FE734F300054078 /* BitArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitArray.swift; sourceTree = "<group>"; };
+		A7463AAA2071E9E3008A8197 /* IncomingBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingBlock.swift; sourceTree = "<group>"; };
+		A749FCEF2089980000AB7D9C /* BlockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfo.swift; sourceTree = "<group>"; };
+		A749FD11208AF09200AB7D9C /* Swift-Big-Number-Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift-Big-Number-Core.swift"; sourceTree = "<group>"; };
+		A749FD14208DBA8C00AB7D9C /* BlockInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoViewController.swift; sourceTree = "<group>"; };
+		A749FD18208EE4AF00AB7D9C /* BlockInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoViewModel.swift; sourceTree = "<group>"; };
+		A749FD1A20918D6700AB7D9C /* NanoNodeNinjaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoNodeNinjaService.swift; sourceTree = "<group>"; };
+		A749FD1C2091935E00AB7D9C /* VerifiedAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedAccount.swift; sourceTree = "<group>"; };
+		A74FCD87206CB846001C9725 /* StateBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBlock.swift; sourceTree = "<group>"; };
+		A74FCD89206CD2D9001C9725 /* PubSubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubSubService.swift; sourceTree = "<group>"; };
+		A753FBD12060F2FB00E88B77 /* NetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		A753FBD3206104EC00E88B77 /* CanoeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanoeService.swift; sourceTree = "<group>"; };
+		A768B992201EF02000620B62 /* ReceiveCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCoordinator.swift; sourceTree = "<group>"; };
+		A768B994201F037500620B62 /* EnterAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAmountViewController.swift; sourceTree = "<group>"; };
+		A768B995201F037500620B62 /* EnterAmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterAmountViewController.xib; sourceTree = "<group>"; };
+		A768B999201F0ABB00620B62 /* NumpadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadCollectionViewCell.swift; sourceTree = "<group>"; };
+		A768B99A201F0ABB00620B62 /* NumpadCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumpadCollectionViewCell.xib; sourceTree = "<group>"; };
+		A768B99F2021170400620B62 /* ConfirmTxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTxViewController.swift; sourceTree = "<group>"; };
+		A768B9A02021170400620B62 /* ConfirmTxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmTxViewController.xib; sourceTree = "<group>"; };
+		A768B9A3202194B300620B62 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		A768B9A620225DAC00620B62 /* TxInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxInfo.swift; sourceTree = "<group>"; };
+		A768B9A82022E10800620B62 /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
+		A76AC7A8202980A900C7CEE8 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		A76AC7AB202A549E00C7CEE8 /* SimpleBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBlock.swift; sourceTree = "<group>"; };
+		A76AC7AD202AC0CA00C7CEE8 /* EnterAddressEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressEntryViewController.swift; sourceTree = "<group>"; };
+		A76AC7AE202AC0CA00C7CEE8 /* EnterAddressEntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterAddressEntryViewController.xib; sourceTree = "<group>"; };
+		A76AC7B2202AD7C000C7CEE8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A76AC7B6202AD8C200C7CEE8 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		A76AC7B7202AD8C200C7CEE8 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		A76AC7BA202ADB2100C7CEE8 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		A76AC7C020301D8500C7CEE8 /* CurrencySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectViewController.swift; sourceTree = "<group>"; };
+		A76AC7C120301D8500C7CEE8 /* CurrencySelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencySelectViewController.xib; sourceTree = "<group>"; };
+		A76AC7C52030239C00C7CEE8 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		A76AC7C72030C59D00C7CEE8 /* CurrencySelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectViewModel.swift; sourceTree = "<group>"; };
+		A76D2732204E986000615B7A /* NanoBlocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoBlocksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76D2734204E986000615B7A /* NanoBlocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBlocksTests.swift; sourceTree = "<group>"; };
+		A76D2736204E986000615B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A78854DE200F12FA00C9565B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A79116EB2015758A00890432 /* QRScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
+		A79116EC2015758A00890432 /* QRScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRScanViewController.xib; sourceTree = "<group>"; };
+		A79116EF20157A4800890432 /* SendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinator.swift; sourceTree = "<group>"; };
+		A79116F42017264000890432 /* AddressBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookViewController.swift; sourceTree = "<group>"; };
+		A79116F52017264000890432 /* AddressBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressBookViewController.xib; sourceTree = "<group>"; };
+		A79116F820172FB100890432 /* AddressItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemTableViewCell.swift; sourceTree = "<group>"; };
+		A79116F920172FB100890432 /* AddressItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressItemTableViewCell.xib; sourceTree = "<group>"; };
+		A79116FC2017398300890432 /* AddressBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookViewModel.swift; sourceTree = "<group>"; };
+		A79116FE20173C4400890432 /* AddressEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEntry.swift; sourceTree = "<group>"; };
+		A7975A8920787D0800B2995D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A7975A8A20787D0E00B2995D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A7975A8F20787D6100B2995D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A7975A9120787D6300B2995D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A7975A9220787D6400B2995D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A7B1B24320140D0F009E5CB0 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		A7B1B24420140D0F009E5CB0 /* SendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
+		A7B327F32001D4AA00E0E360 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		A7B327F42001D4AA00E0E360 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedIconButton.swift; sourceTree = "<group>"; };
+		A7B327F9200331BD00E0E360 /* TransparentNavigationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationTransition.swift; sourceTree = "<group>"; };
+		A7B327FC2003327B00E0E360 /* ImportWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportWalletViewController.swift; sourceTree = "<group>"; };
+		A7B327FD2003327B00E0E360 /* ImportWalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImportWalletViewController.xib; sourceTree = "<group>"; };
+		A7B32800200333C500E0E360 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		A7B3280420033C1300E0E360 /* SeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedViewController.swift; sourceTree = "<group>"; };
+		A7B3280520033C1300E0E360 /* SeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeedViewController.xib; sourceTree = "<group>"; };
+		A7B328082004990F00E0E360 /* ImportPassphraseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPassphraseViewController.swift; sourceTree = "<group>"; };
+		A7B328092004990F00E0E360 /* ImportPassphraseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImportPassphraseViewController.xib; sourceTree = "<group>"; };
+		A7B3280C20049D4B00E0E360 /* PassphraseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A7B3280D20049D4B00E0E360 /* PassphraseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassphraseCollectionViewCell.xib; sourceTree = "<group>"; };
+		A7B858E92032CC6E00698FAE /* CurrencyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPI.swift; sourceTree = "<group>"; };
+		A7B858EC20338B6200698FAE /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
+		A7B858ED20338B6200698FAE /* ConsoleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
+		A7B858F020338D8100698FAE /* TransparentNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavViewController.swift; sourceTree = "<group>"; };
+		A7B858F22033F34E00698FAE /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		A7B858F52033F7D700698FAE /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		A7B858FB203408E200698FAE /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		A7B858FC203408E200698FAE /* PasscodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasscodeViewController.xib; sourceTree = "<group>"; };
+		A7BC508620A2DD12006B2810 /* NanoBlocksSecureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBlocksSecureTests.swift; sourceTree = "<group>"; };
+		A7E216C020DCE5EA003B8FCA /* TitleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewController.swift; sourceTree = "<group>"; };
+		A7EAC9CF209B9CDA00EE1F14 /* Secure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secure.swift; sourceTree = "<group>"; };
+		A7EAC9D120A2D7E600EE1F14 /* KeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPair.swift; sourceTree = "<group>"; };
+		A7EB8F5420662C72004463FC /* nano_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nano_loading.json; sourceTree = "<group>"; };
+		A7EB8F5620662D75004463FC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A7EB8F5A20664B0C004463FC /* weak_pw.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weak_pw.txt; sourceTree = "<group>"; };
+		A7EB8F5C20664BA1004463FC /* PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
+		A7EB8F5F20684645004463FC /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		A7EB8F6020684645004463FC /* PasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
+		A7EB8F63206880A8004463FC /* nano_loading_complete.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nano_loading_complete.json; sourceTree = "<group>"; };
+		A7EF84151FED7D6800C74035 /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sodium.framework; sourceTree = "<group>"; };
+		A7EF841A1FED8A5000C74035 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		A7EF841D1FED915000C74035 /* WalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManager.swift; sourceTree = "<group>"; };
+		A7EF841F1FEDAD5C00C74035 /* BIP39Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BIP39Words.plist; sourceTree = "<group>"; };
+		A7EF84231FEDAE2D00C74035 /* BIP39.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIP39.swift; sourceTree = "<group>"; };
+		A7EF84261FEDCC8300C74035 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A7EF84281FEDCC9E00C74035 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A7EF84301FEE43C300C74035 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		A7EF84331FEE453700C74035 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		A7EF84341FEE453700C74035 /* ReceiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiveViewController.xib; sourceTree = "<group>"; };
+		A7EF843A1FF0D45A00C74035 /* Lincoln.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lincoln.swift; sourceTree = "<group>"; };
+		A7F88F362069852800CDB7AB /* EnterAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EnterAddressViewController.xib; path = NanoBlocks/ViewControllers/EnterAddress/EnterAddressViewController.xib; sourceTree = SOURCE_ROOT; };
+		A7F88F392069F26200CDB7AB /* EnterAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressViewModel.swift; sourceTree = "<group>"; };
+		A7F88F3B2069F80900CDB7AB /* EnterAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressTableViewCell.swift; sourceTree = "<group>"; };
+		A7F88F3C2069F80900CDB7AB /* EnterAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterAddressTableViewCell.xib; sourceTree = "<group>"; };
+		A7F88F3F206A34FD00CDB7AB /* toggle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = toggle.json; sourceTree = "<group>"; };
+		AFDA3F28B104EE0B1750C5D6 /* Pods_NanoWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60CFC699E67796611315C50 /* Pods_GenesisWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB71C051E62F6E99E1BB05AF /* Pods_NanoBlocksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanoBlocksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F144C85B4600EC2BE12E50C1 /* Pods_GenesisWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F740B82EE7FDCDB05E898FF2 /* Pods-NanoWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanoWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NanoWallet/Pods-NanoWallet.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A74361E01FE64F9100054078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7EF84161FED7D6800C74035 /* Sodium.framework in Frameworks */,
+				B5DA4B9DA32F5691359BC3DE /* Pods_NanoBlocks.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76D272F204E986000615B7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDAA4E138873847434739752 /* Pods_NanoBlocksTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A71CEBA02054AE4000FF6B54 /* LockWallet */ = {
+			isa = PBXGroup;
+			children = (
+				A71CEB9C2054AE2F00FF6B54 /* LockViewController.swift */,
+				A71CEB9D2054AE2F00FF6B54 /* LockViewController.xib */,
+			);
+			path = LockWallet;
+			sourceTree = "<group>";
+		};
+		A71CEBA12054EAFE00FF6B54 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				A71CEBA22054EB0E00FF6B54 /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		A72EBDA51FFCCF4700407E6D /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				A72EBDA11FFCCF4200407E6D /* AccountsViewController.swift */,
+				A72EBDA21FFCCF4200407E6D /* AccountsViewController.xib */,
+				A726C27F1FFCD5D400E73C18 /* AccountTableViewCell.swift */,
+				A726C2801FFCD5D400E73C18 /* AccountTableViewCell.xib */,
+				A7329829200A0A6D00B21C8D /* AccountsViewModel.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		A73229CC20AEBD7300CACB3A /* Disclaimer */ = {
+			isa = PBXGroup;
+			children = (
+				A73229CD20AEBD8F00CACB3A /* DisclaimerViewController.swift */,
+			);
+			path = Disclaimer;
+			sourceTree = "<group>";
+		};
+		A73298112007568300B21C8D /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				A73298232009F22B00B21C8D /* AccountViewModel.swift */,
+				A7329812200756A300B21C8D /* AccountViewController.swift */,
+				A732981620075B7100B21C8D /* AccountViewController.xib */,
+				A732981820086B4D00B21C8D /* TransactionTableViewCell.swift */,
+				A732981920086B4D00B21C8D /* TransactionTableViewCell.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		A73298202009AF9800B21C8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A768B9A620225DAC00620B62 /* TxInfo.swift */,
+				A73298212009AFAF00B21C8D /* Block.swift */,
+				A73298252009F29B00B21C8D /* AccountHistory.swift */,
+				A74FCD87206CB846001C9725 /* StateBlock.swift */,
+				A7463AAA2071E9E3008A8197 /* IncomingBlock.swift */,
+				A749FCEF2089980000AB7D9C /* BlockInfo.swift */,
+				A749FD1C2091935E00AB7D9C /* VerifiedAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A732982D200ACE9000B21C8D /* Nano */ = {
+			isa = PBXGroup;
+			children = (
+				A74362241FE75F1E00054078 /* Wallet */,
+				A76AC7AA2029819700C7CEE8 /* RealmModel */,
+				A73298202009AF9800B21C8D /* Model */,
+				A732982E200ACEB000B21C8D /* PoW.swift */,
+			);
+			path = Nano;
+			sourceTree = "<group>";
+		};
+		A73AC9E6203FDFCB00ED24E9 /* RequestAmount */ = {
+			isa = PBXGroup;
+			children = (
+				A73AC9E7203FDFE200ED24E9 /* RequestAmountViewController.swift */,
+				A73AC9E8203FDFE200ED24E9 /* RequestAmountViewController.xib */,
+			);
+			path = RequestAmount;
+			sourceTree = "<group>";
+		};
+		A73EBBAD1FFF5C9000F77B4D /* Create Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				A7B327FB2003324200E0E360 /* ImportWallet */,
+				A7B327F32001D4AA00E0E360 /* StartViewController.swift */,
+				A7B327F42001D4AA00E0E360 /* StartViewController.xib */,
+			);
+			path = "Create Wallet";
+			sourceTree = "<group>";
+		};
+		A74361DA1FE64F9000054078 = {
+			isa = PBXGroup;
+			children = (
+				A74361E51FE64F9100054078 /* NanoBlocks */,
+				A76D2733204E986000615B7A /* NanoBlocksTests */,
+				A74361E41FE64F9100054078 /* Products */,
+				E0B00724D99D613F8805D676 /* Pods */,
+				BC2D2D92EB3EDF33FB7F1287 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A74361E41FE64F9100054078 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A74361E31FE64F9100054078 /* Nano Blocks.app */,
+				A76D2732204E986000615B7A /* NanoBlocksTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A74361E51FE64F9100054078 /* NanoBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				A732982D200ACE9000B21C8D /* Nano */,
+				A7EF84371FF0D13500C74035 /* Networking */,
+				A7EF84211FEDAD6800C74035 /* Resources */,
+				A74362211FE734E600054078 /* ThirdParty */,
+				A7EF841C1FED8A5B00C74035 /* Utilities */,
+				A7EF842A1FEDCD4C00C74035 /* ViewControllers */,
+				A7EF84251FEDCC5000C74035 /* Coordinators */,
+				A74361E61FE64F9100054078 /* AppDelegate.swift */,
+				A74361ED1FE64F9100054078 /* Assets.xcassets */,
+				A74361EF1FE64F9100054078 /* LaunchScreen.storyboard */,
+				A74361F21FE64F9100054078 /* Info.plist */,
+			);
+			path = NanoBlocks;
+			sourceTree = "<group>";
+		};
+		A74362211FE734E600054078 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				A7EF84151FED7D6800C74035 /* Sodium.framework */,
+				A74362221FE734F300054078 /* BitArray.swift */,
+				A749FD11208AF09200AB7D9C /* Swift-Big-Number-Core.swift */,
+				A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		A74362241FE75F1E00054078 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				A743621F1FE66DEB00054078 /* WalletUtil.swift */,
+				A7EF841D1FED915000C74035 /* WalletManager.swift */,
+				A7EF84231FEDAE2D00C74035 /* BIP39.swift */,
+				A7EAC9D120A2D7E600EE1F14 /* KeyPair.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		A749FD13208DBA6B00AB7D9C /* BlockInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A749FD14208DBA8C00AB7D9C /* BlockInfoViewController.swift */,
+				A749FD18208EE4AF00AB7D9C /* BlockInfoViewModel.swift */,
+			);
+			path = BlockInfo;
+			sourceTree = "<group>";
+		};
+		A768B998201F037D00620B62 /* EnterAmount */ = {
+			isa = PBXGroup;
+			children = (
+				A768B994201F037500620B62 /* EnterAmountViewController.swift */,
+				A768B995201F037500620B62 /* EnterAmountViewController.xib */,
+				A768B999201F0ABB00620B62 /* NumpadCollectionViewCell.swift */,
+				A768B99A201F0ABB00620B62 /* NumpadCollectionViewCell.xib */,
+			);
+			path = EnterAmount;
+			sourceTree = "<group>";
+		};
+		A768B99E202116DB00620B62 /* ConfirmTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				A768B99F2021170400620B62 /* ConfirmTxViewController.swift */,
+				A768B9A02021170400620B62 /* ConfirmTxViewController.xib */,
+			);
+			path = ConfirmTransaction;
+			sourceTree = "<group>";
+		};
+		A76AC7AA2029819700C7CEE8 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				A79116FE20173C4400890432 /* AddressEntry.swift */,
+				A732982B200AA2E300B21C8D /* AccountInfo.swift */,
+				A76AC7AB202A549E00C7CEE8 /* SimpleBlock.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		A76AC7B1202AD7B100C7CEE8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A76AC7B2202AD7C000C7CEE8 /* SettingsViewController.swift */,
+				A76AC7B6202AD8C200C7CEE8 /* SettingsTableViewCell.swift */,
+				A76AC7B7202AD8C200C7CEE8 /* SettingsTableViewCell.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A76AC7C420301D8B00C7CEE8 /* CurrencySelect */ = {
+			isa = PBXGroup;
+			children = (
+				A76AC7C020301D8500C7CEE8 /* CurrencySelectViewController.swift */,
+				A76AC7C120301D8500C7CEE8 /* CurrencySelectViewController.xib */,
+				A76AC7C72030C59D00C7CEE8 /* CurrencySelectViewModel.swift */,
+			);
+			path = CurrencySelect;
+			sourceTree = "<group>";
+		};
+		A76D2733204E986000615B7A /* NanoBlocksTests */ = {
+			isa = PBXGroup;
+			children = (
+				A76D2734204E986000615B7A /* NanoBlocksTests.swift */,
+				A7BC508620A2DD12006B2810 /* NanoBlocksSecureTests.swift */,
+				A76D2736204E986000615B7A /* Info.plist */,
+			);
+			path = NanoBlocksTests;
+			sourceTree = "<group>";
+		};
+		A79116EA2015757600890432 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				A79116EB2015758A00890432 /* QRScanViewController.swift */,
+				A79116EC2015758A00890432 /* QRScanViewController.xib */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		A79116F32017262900890432 /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				A79116FC2017398300890432 /* AddressBookViewModel.swift */,
+				A79116F42017264000890432 /* AddressBookViewController.swift */,
+				A79116F52017264000890432 /* AddressBookViewController.xib */,
+				A79116F820172FB100890432 /* AddressItemTableViewCell.swift */,
+				A79116F920172FB100890432 /* AddressItemTableViewCell.xib */,
+				A76AC7AD202AC0CA00C7CEE8 /* EnterAddressEntryViewController.swift */,
+				A76AC7AE202AC0CA00C7CEE8 /* EnterAddressEntryViewController.xib */,
+				A730652120438B8400A49C03 /* EnterAddressEntryViewModel.swift */,
+			);
+			path = AddressBook;
+			sourceTree = "<group>";
+		};
+		A7975A8B20787D1F00B2995D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A7975A9020787D6100B2995D /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		A7B1B24220140CFA009E5CB0 /* Send */ = {
+			isa = PBXGroup;
+			children = (
+				A7B1B24320140D0F009E5CB0 /* SendViewController.swift */,
+				A7B1B24420140D0F009E5CB0 /* SendViewController.xib */,
+			);
+			path = Send;
+			sourceTree = "<group>";
+		};
+		A7B327FB2003324200E0E360 /* ImportWallet */ = {
+			isa = PBXGroup;
+			children = (
+				A7B327FC2003327B00E0E360 /* ImportWalletViewController.swift */,
+				A7B327FD2003327B00E0E360 /* ImportWalletViewController.xib */,
+				A7B3280420033C1300E0E360 /* SeedViewController.swift */,
+				A7B3280520033C1300E0E360 /* SeedViewController.xib */,
+				A7B328082004990F00E0E360 /* ImportPassphraseViewController.swift */,
+				A7B328092004990F00E0E360 /* ImportPassphraseViewController.xib */,
+				A7B3280C20049D4B00E0E360 /* PassphraseCollectionViewCell.swift */,
+				A7B3280D20049D4B00E0E360 /* PassphraseCollectionViewCell.xib */,
+			);
+			path = ImportWallet;
+			sourceTree = "<group>";
+		};
+		A7B858EB20338B4C00698FAE /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				A7B858EC20338B6200698FAE /* ConsoleViewController.swift */,
+				A7B858ED20338B6200698FAE /* ConsoleViewController.xib */,
+			);
+			path = Console;
+			sourceTree = "<group>";
+		};
+		A7B858F42033F7C500698FAE /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				A7B858F52033F7D700698FAE /* SecurityViewController.swift */,
+				A73FAAF0204F3FF90087E025 /* SwitchTableViewCell.swift */,
+				A73FAAF1204F3FF90087E025 /* SwitchTableViewCell.xib */,
+				A7E216C020DCE5EA003B8FCA /* TitleTableViewController.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		A7B858FA203408CD00698FAE /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				A7B858FB203408E200698FAE /* PasscodeViewController.swift */,
+				A7B858FC203408E200698FAE /* PasscodeViewController.xib */,
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		A7EB8F5320662C54004463FC /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A7EB8F63206880A8004463FC /* nano_loading_complete.json */,
+				A7EB8F5420662C72004463FC /* nano_loading.json */,
+				A7F88F3F206A34FD00CDB7AB /* toggle.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		A7EB8F5E20684620004463FC /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				A7EB8F5F20684645004463FC /* PasswordViewController.swift */,
+				A7EB8F6020684645004463FC /* PasswordViewController.xib */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		A7EF841C1FED8A5B00C74035 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A7B327F9200331BD00E0E360 /* TransparentNavigationTransition.swift */,
+				A74361FA1FE6572800054078 /* Foundaton+Extensions.swift */,
+				A7EF841A1FED8A5000C74035 /* Keychain.swift */,
+				A7EF84301FEE43C300C74035 /* UIKit+Extensions.swift */,
+				A7EF843A1FF0D45A00C74035 /* Lincoln.swift */,
+				A7B32800200333C500E0E360 /* AppStyle.swift */,
+				A7329827200A078A00B21C8D /* Common.swift */,
+				A768B9A3202194B300620B62 /* Banner.swift */,
+				A76AC7A8202980A900C7CEE8 /* PersistentStore.swift */,
+				A76AC7C52030239C00C7CEE8 /* Currency.swift */,
+				A7B858F22033F34E00698FAE /* UserSettings.swift */,
+				A73065232045321E00A49C03 /* URLHandler.swift */,
+				A73FAAF4204FC0B50087E025 /* RtChk.swift */,
+				A7EB8F5620662D75004463FC /* LoadingView.swift */,
+				A7EB8F5C20664BA1004463FC /* PasswordChecker.swift */,
+				A70E8E052097B7FF00372394 /* DataExporter.swift */,
+				A7EAC9CF209B9CDA00EE1F14 /* Secure.swift */,
+				A72BC4EC20A5731000AE3C4A /* BlockHandler.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A7EF84211FEDAD6800C74035 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7EB8F5320662C54004463FC /* Animations */,
+				A7975A8B20787D1F00B2995D /* Localization */,
+				A7EB8F5A20664B0C004463FC /* weak_pw.txt */,
+				A7EF841F1FEDAD5C00C74035 /* BIP39Words.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A7EF84251FEDCC5000C74035 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A7EF84281FEDCC9E00C74035 /* AppCoordinator.swift */,
+				A7EF84261FEDCC8300C74035 /* Coordinator.swift */,
+				A73EBBB21FFF606F00F77B4D /* CreateWalletCoordinator.swift */,
+				A732981E2008769200B21C8D /* AccountsCoordinator.swift */,
+				A768B9A82022E10800620B62 /* AccountCoordinator.swift */,
+				A79116EF20157A4800890432 /* SendCoordinator.swift */,
+				A768B992201EF02000620B62 /* ReceiveCoordinator.swift */,
+				A731BE5920183FAB00CA96CD /* AddressBookCoordinator.swift */,
+				A76AC7BA202ADB2100C7CEE8 /* SettingsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A7EF842A1FEDCD4C00C74035 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A73229CC20AEBD7300CACB3A /* Disclaimer */,
+				A749FD13208DBA6B00AB7D9C /* BlockInfo */,
+				A768B998201F037D00620B62 /* EnterAmount */,
+				A7F88F342069850000CDB7AB /* EnterAddress */,
+				A7EB8F5E20684620004463FC /* Password */,
+				A71CEBA12054EAFE00FF6B54 /* About */,
+				A71CEBA02054AE4000FF6B54 /* LockWallet */,
+				A73AC9E6203FDFCB00ED24E9 /* RequestAmount */,
+				A7B858FA203408CD00698FAE /* Passcode */,
+				A7B858F42033F7C500698FAE /* Security */,
+				A7B858EB20338B4C00698FAE /* Console */,
+				A76AC7C420301D8B00C7CEE8 /* CurrencySelect */,
+				A76AC7B1202AD7B100C7CEE8 /* Settings */,
+				A768B99E202116DB00620B62 /* ConfirmTransaction */,
+				A79116F32017262900890432 /* AddressBook */,
+				A79116EA2015757600890432 /* QR */,
+				A7B1B24220140CFA009E5CB0 /* Send */,
+				A7EF84321FEE44E000C74035 /* Receive */,
+				A73298112007568300B21C8D /* Account */,
+				A72EBDA51FFCCF4700407E6D /* Accounts */,
+				A73EBBAD1FFF5C9000F77B4D /* Create Wallet */,
+				A7B858F020338D8100698FAE /* TransparentNavViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A7EF84321FEE44E000C74035 /* Receive */ = {
+			isa = PBXGroup;
+			children = (
+				A7EF84331FEE453700C74035 /* ReceiveViewController.swift */,
+				A7EF84341FEE453700C74035 /* ReceiveViewController.xib */,
+			);
+			path = Receive;
+			sourceTree = "<group>";
+		};
+		A7EF84371FF0D13500C74035 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A78854DE200F12FA00C9565B /* Networking.swift */,
+				A7B858E92032CC6E00698FAE /* CurrencyAPI.swift */,
+				A753FBD12060F2FB00E88B77 /* NetworkAdapter.swift */,
+				A753FBD3206104EC00E88B77 /* CanoeService.swift */,
+				A74FCD89206CD2D9001C9725 /* PubSubService.swift */,
+				A749FD1A20918D6700AB7D9C /* NanoNodeNinjaService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A7F88F342069850000CDB7AB /* EnterAddress */ = {
+			isa = PBXGroup;
+			children = (
+				A70E8E022094F91B00372394 /* EnterAddressViewController.swift */,
+				A7F88F362069852800CDB7AB /* EnterAddressViewController.xib */,
+				A7F88F392069F26200CDB7AB /* EnterAddressViewModel.swift */,
+				A7F88F3B2069F80900CDB7AB /* EnterAddressTableViewCell.swift */,
+				A7F88F3C2069F80900CDB7AB /* EnterAddressTableViewCell.xib */,
+			);
+			path = EnterAddress;
+			sourceTree = "<group>";
+		};
+		BC2D2D92EB3EDF33FB7F1287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C040B25385B8D2588C0376E /* Pods_NanoWallet.framework */,
+				AFDA3F28B104EE0B1750C5D6 /* Pods_NanoWalletTests.framework */,
+				F144C85B4600EC2BE12E50C1 /* Pods_GenesisWallet.framework */,
+				B60CFC699E67796611315C50 /* Pods_GenesisWalletTests.framework */,
+				5E0370E4B7BC9FAA56ECE73C /* Pods_NanoBlocks.framework */,
+				EB71C051E62F6E99E1BB05AF /* Pods_NanoBlocksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0B00724D99D613F8805D676 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F740B82EE7FDCDB05E898FF2 /* Pods-NanoWallet.debug.xcconfig */,
+				8852DFE8524A0EC56A7995CE /* Pods-NanoWallet.release.xcconfig */,
+				8DE79A2ADD6F5F6D00CCE145 /* Pods-NanoWalletTests.debug.xcconfig */,
+				230E436E94AB58C7573ED697 /* Pods-NanoWalletTests.release.xcconfig */,
+				981E7C7309DD8C9E8F46969C /* Pods-GenesisWallet.debug.xcconfig */,
+				0FCBF9050B355F6BFF6E7104 /* Pods-GenesisWallet.release.xcconfig */,
+				3A7F45F405FF60CF71071B39 /* Pods-GenesisWalletTests.debug.xcconfig */,
+				9A542ACEB0DA1C591A7DECFA /* Pods-GenesisWalletTests.release.xcconfig */,
+				23F5581ECB86384B9E38413C /* Pods-NanoBlocks.debug.xcconfig */,
+				522873356B808384C150F662 /* Pods-NanoBlocks.release.xcconfig */,
+				A076B94CE64CD2FFBD0AB498 /* Pods-NanoBlocksTests.debug.xcconfig */,
+				604437DB03B55B241DB81390 /* Pods-NanoBlocksTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A74361E21FE64F9100054078 /* NanoBlocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74361F51FE64F9100054078 /* Build configuration list for PBXNativeTarget "NanoBlocks" */;
+			buildPhases = (
+				0CFBAE118275DF2591E06B9B /* [CP] Check Pods Manifest.lock */,
+				A74361DF1FE64F9100054078 /* Sources */,
+				A74361E01FE64F9100054078 /* Frameworks */,
+				A74361E11FE64F9100054078 /* Resources */,
+				885A0314CF3C477935B47A93 /* [CP] Embed Pods Frameworks */,
+				DB677D2FCECB452AFDAE617C /* [CP] Copy Pods Resources */,
+				A7EF84191FED7D7D00C74035 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NanoBlocks;
+			productName = RaiBlocksWallet;
+			productReference = A74361E31FE64F9100054078 /* Nano Blocks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A76D2731204E986000615B7A /* NanoBlocksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76D2739204E986000615B7A /* Build configuration list for PBXNativeTarget "NanoBlocksTests" */;
+			buildPhases = (
+				FE3472891607C7D73C312008 /* [CP] Check Pods Manifest.lock */,
+				A76D272E204E986000615B7A /* Sources */,
+				A76D272F204E986000615B7A /* Frameworks */,
+				A76D2730204E986000615B7A /* Resources */,
+				2821D9E873E38494BCCFB2E7 /* [CP] Embed Pods Frameworks */,
+				20CE0F1CD5144E89E17F967B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A76D2738204E986000615B7A /* PBXTargetDependency */,
+			);
+			name = NanoBlocksTests;
+			productName = NanoWalletTests;
+			productReference = A76D2732204E986000615B7A /* NanoBlocksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A74361DB1FE64F9100054078 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Planar Form";
+				TargetAttributes = {
+					A74361E21FE64F9100054078 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					A76D2731204E986000615B7A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A74361E21FE64F9100054078;
+					};
+				};
+			};
+			buildConfigurationList = A74361DE1FE64F9100054078 /* Build configuration list for PBXProject "NanoBlocks" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+				ko,
+				fr,
+				de,
+				es,
+				sv,
+			);
+			mainGroup = A74361DA1FE64F9000054078;
+			productRefGroup = A74361E41FE64F9100054078 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A74361E21FE64F9100054078 /* NanoBlocks */,
+				A76D2731204E986000615B7A /* NanoBlocksTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A74361E11FE64F9100054078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B1B24620140D0F009E5CB0 /* SendViewController.xib in Resources */,
+				A7F88F40206A34FD00CDB7AB /* toggle.json in Resources */,
+				A7EB8F64206880A8004463FC /* nano_loading_complete.json in Resources */,
+				A7F88F3E2069F80900CDB7AB /* EnterAddressTableViewCell.xib in Resources */,
+				A7EB8F5520662C72004463FC /* nano_loading.json in Resources */,
+				A71CEB9F2054AE2F00FF6B54 /* LockViewController.xib in Resources */,
+				A76AC7B0202AC0CA00C7CEE8 /* EnterAddressEntryViewController.xib in Resources */,
+				A7B327F62001D4AA00E0E360 /* StartViewController.xib in Resources */,
+				A79116FB20172FB100890432 /* AddressItemTableViewCell.xib in Resources */,
+				A7B3280B2004990F00E0E360 /* ImportPassphraseViewController.xib in Resources */,
+				A7B858EF20338B6200698FAE /* ConsoleViewController.xib in Resources */,
+				A7EB8F5B20664B0C004463FC /* weak_pw.txt in Resources */,
+				A7B3280720033C1300E0E360 /* SeedViewController.xib in Resources */,
+				A74361F11FE64F9100054078 /* LaunchScreen.storyboard in Resources */,
+				A7B327FF2003327B00E0E360 /* ImportWalletViewController.xib in Resources */,
+				A79116F72017264000890432 /* AddressBookViewController.xib in Resources */,
+				A76AC7C320301D8500C7CEE8 /* CurrencySelectViewController.xib in Resources */,
+				A7B3280F20049D4B00E0E360 /* PassphraseCollectionViewCell.xib in Resources */,
+				A7975A8E20787D6100B2995D /* Localizable.strings in Resources */,
+				A76AC7B9202AD8C200C7CEE8 /* SettingsTableViewCell.xib in Resources */,
+				A768B9A22021170400620B62 /* ConfirmTxViewController.xib in Resources */,
+				A79116EE2015758A00890432 /* QRScanViewController.xib in Resources */,
+				A74361EE1FE64F9100054078 /* Assets.xcassets in Resources */,
+				A749FD1E2094E34000AB7D9C /* EnterAmountViewController.xib in Resources */,
+				A73AC9EA203FDFE200ED24E9 /* RequestAmountViewController.xib in Resources */,
+				A73FAAF3204F3FF90087E025 /* SwitchTableViewCell.xib in Resources */,
+				A768B99C201F0ABB00620B62 /* NumpadCollectionViewCell.xib in Resources */,
+				A732981B20086B4D00B21C8D /* TransactionTableViewCell.xib in Resources */,
+				A7EB8F6220684645004463FC /* PasswordViewController.xib in Resources */,
+				A7B858FE203408E200698FAE /* PasscodeViewController.xib in Resources */,
+				A7F88F382069852800CDB7AB /* EnterAddressViewController.xib in Resources */,
+				A72EBDA41FFCCF4200407E6D /* AccountsViewController.xib in Resources */,
+				A732981720075B7100B21C8D /* AccountViewController.xib in Resources */,
+				A726C2821FFCD5D400E73C18 /* AccountTableViewCell.xib in Resources */,
+				A7EF84361FEE453700C74035 /* ReceiveViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76D2730204E986000615B7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CFBAE118275DF2591E06B9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NanoBlocks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20CE0F1CD5144E89E17F967B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2821D9E873E38494BCCFB2E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		885A0314CF3C477935B47A93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB677D2FCECB452AFDAE617C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE3472891607C7D73C312008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NanoBlocksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A74361DF1FE64F9100054078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74362201FE66DEB00054078 /* WalletUtil.swift in Sources */,
+				A74362231FE734F300054078 /* BitArray.swift in Sources */,
+				A7EAC9D220A2D7E600EE1F14 /* KeyPair.swift in Sources */,
+				A732982F200ACEB000B21C8D /* PoW.swift in Sources */,
+				A78854DF200F12FA00C9565B /* Networking.swift in Sources */,
+				A7B3280E20049D4B00E0E360 /* PassphraseCollectionViewCell.swift in Sources */,
+				A7EF84311FEE43C300C74035 /* UIKit+Extensions.swift in Sources */,
+				A749FD1B20918D6700AB7D9C /* NanoNodeNinjaService.swift in Sources */,
+				A7B32801200333C500E0E360 /* AppStyle.swift in Sources */,
+				A74FCD8A206CD2D9001C9725 /* PubSubService.swift in Sources */,
+				A7EF84291FEDCC9F00C74035 /* AppCoordinator.swift in Sources */,
+				A7EAC9D0209B9CDA00EE1F14 /* Secure.swift in Sources */,
+				A74FCD88206CB846001C9725 /* StateBlock.swift in Sources */,
+				A7EB8F5D20664BA1004463FC /* PasswordChecker.swift in Sources */,
+				A7EF84351FEE453700C74035 /* ReceiveViewController.swift in Sources */,
+				A7B3280620033C1300E0E360 /* SeedViewController.swift in Sources */,
+				A732982C200AA2E300B21C8D /* AccountInfo.swift in Sources */,
+				A73FAAF2204F3FF90087E025 /* SwitchTableViewCell.swift in Sources */,
+				A7B858EA2032CC6E00698FAE /* CurrencyAPI.swift in Sources */,
+				A749FCF02089980000AB7D9C /* BlockInfo.swift in Sources */,
+				A749FD12208AF09200AB7D9C /* Swift-Big-Number-Core.swift in Sources */,
+				A79116FF20173C4400890432 /* AddressEntry.swift in Sources */,
+				A76AC7B4202AD7C000C7CEE8 /* SettingsViewController.swift in Sources */,
+				A749FD16208DBA8C00AB7D9C /* BlockInfoViewController.swift in Sources */,
+				A76AC7C220301D8500C7CEE8 /* CurrencySelectViewController.swift in Sources */,
+				A7B327F52001D4AA00E0E360 /* StartViewController.swift in Sources */,
+				A79116FA20172FB100890432 /* AddressItemTableViewCell.swift in Sources */,
+				A76AC7AF202AC0CA00C7CEE8 /* EnterAddressEntryViewController.swift in Sources */,
+				A79116F020157A4800890432 /* SendCoordinator.swift in Sources */,
+				A7EF841E1FED915000C74035 /* WalletManager.swift in Sources */,
+				A72EBDA31FFCCF4200407E6D /* AccountsViewController.swift in Sources */,
+				A768B9A92022E10800620B62 /* AccountCoordinator.swift in Sources */,
+				A73065242045321E00A49C03 /* URLHandler.swift in Sources */,
+				A7B327FA200331BD00E0E360 /* TransparentNavigationTransition.swift in Sources */,
+				A7B858EE20338B6200698FAE /* ConsoleViewController.swift in Sources */,
+				A731BE5A20183FAB00CA96CD /* AddressBookCoordinator.swift in Sources */,
+				A73AC9E9203FDFE200ED24E9 /* RequestAmountViewController.swift in Sources */,
+				A70E8E062097B7FF00372394 /* DataExporter.swift in Sources */,
+				A79116FD2017398300890432 /* AddressBookViewModel.swift in Sources */,
+				A7329828200A078A00B21C8D /* Common.swift in Sources */,
+				A7B858F72033F7D700698FAE /* SecurityViewController.swift in Sources */,
+				A76AC7A9202980A900C7CEE8 /* PersistentStore.swift in Sources */,
+				A74361FB1FE6572800054078 /* Foundaton+Extensions.swift in Sources */,
+				A768B9A12021170400620B62 /* ConfirmTxViewController.swift in Sources */,
+				A7B858F32033F34E00698FAE /* UserSettings.swift in Sources */,
+				A73FAAF5204FC0B50087E025 /* RtChk.swift in Sources */,
+				A7EF841B1FED8A5000C74035 /* Keychain.swift in Sources */,
+				A76AC7BB202ADB2100C7CEE8 /* SettingsCoordinator.swift in Sources */,
+				A79116F62017264000890432 /* AddressBookViewController.swift in Sources */,
+				A73298242009F22B00B21C8D /* AccountViewModel.swift in Sources */,
+				A7EB8F6120684645004463FC /* PasswordViewController.swift in Sources */,
+				A768B9A4202194B300620B62 /* Banner.swift in Sources */,
+				A732981A20086B4D00B21C8D /* TransactionTableViewCell.swift in Sources */,
+				A73298222009AFAF00B21C8D /* Block.swift in Sources */,
+				A7B3280A2004990F00E0E360 /* ImportPassphraseViewController.swift in Sources */,
+				A7EF843B1FF0D45A00C74035 /* Lincoln.swift in Sources */,
+				A76AC7B8202AD8C200C7CEE8 /* SettingsTableViewCell.swift in Sources */,
+				A74361E71FE64F9100054078 /* AppDelegate.swift in Sources */,
+				A7329814200756A300B21C8D /* AccountViewController.swift in Sources */,
+				A71CEB9E2054AE2F00FF6B54 /* LockViewController.swift in Sources */,
+				A768B996201F037500620B62 /* EnterAmountViewController.swift in Sources */,
+				A753FBD22060F2FB00E88B77 /* NetworkAdapter.swift in Sources */,
+				A768B993201EF02000620B62 /* ReceiveCoordinator.swift in Sources */,
+				A749FD19208EE4AF00AB7D9C /* BlockInfoViewModel.swift in Sources */,
+				A79116ED2015758A00890432 /* QRScanViewController.swift in Sources */,
+				A7463AAB2071E9E3008A8197 /* IncomingBlock.swift in Sources */,
+				A76AC7C82030C59D00C7CEE8 /* CurrencySelectViewModel.swift in Sources */,
+				A73229CE20AEBD8F00CACB3A /* DisclaimerViewController.swift in Sources */,
+				A7B1B24520140D0F009E5CB0 /* SendViewController.swift in Sources */,
+				A7EF84241FEDAE2D00C74035 /* BIP39.swift in Sources */,
+				A7B858F120338D8100698FAE /* TransparentNavViewController.swift in Sources */,
+				A7B327FE2003327B00E0E360 /* ImportWalletViewController.swift in Sources */,
+				A768B9A720225DAC00620B62 /* TxInfo.swift in Sources */,
+				A7F88F3D2069F80900CDB7AB /* EnterAddressTableViewCell.swift in Sources */,
+				A73EBBB31FFF606F00F77B4D /* CreateWalletCoordinator.swift in Sources */,
+				A749FD1D2091935E00AB7D9C /* VerifiedAccount.swift in Sources */,
+				A7EB8F5720662D75004463FC /* LoadingView.swift in Sources */,
+				A753FBD4206104EC00E88B77 /* CanoeService.swift in Sources */,
+				A7F88F3A2069F26200CDB7AB /* EnterAddressViewModel.swift in Sources */,
+				A7B327F82002A43500E0E360 /* LeftAlignedIconButton.swift in Sources */,
+				A76AC7C62030239C00C7CEE8 /* Currency.swift in Sources */,
+				A768B99B201F0ABB00620B62 /* NumpadCollectionViewCell.swift in Sources */,
+				A71CEBA42054EB0E00FF6B54 /* AboutViewController.swift in Sources */,
+				A76AC7AC202A549E00C7CEE8 /* SimpleBlock.swift in Sources */,
+				A732981F2008769200B21C8D /* AccountsCoordinator.swift in Sources */,
+				A730652220438B8400A49C03 /* EnterAddressEntryViewModel.swift in Sources */,
+				A72BC4ED20A5731000AE3C4A /* BlockHandler.swift in Sources */,
+				A73298262009F29B00B21C8D /* AccountHistory.swift in Sources */,
+				A726C2811FFCD5D400E73C18 /* AccountTableViewCell.swift in Sources */,
+				A7EF84271FEDCC8300C74035 /* Coordinator.swift in Sources */,
+				A70E8E032094F91B00372394 /* EnterAddressViewController.swift in Sources */,
+				A732982A200A0A6D00B21C8D /* AccountsViewModel.swift in Sources */,
+				A7E216C120DCE5EA003B8FCA /* TitleTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76D272E204E986000615B7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BC508720A2DD12006B2810 /* NanoBlocksSecureTests.swift in Sources */,
+				A76D2735204E986000615B7A /* NanoBlocksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A76D2738204E986000615B7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A74361E21FE64F9100054078 /* NanoBlocks */;
+			targetProxy = A76D2737204E986000615B7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A74361EF1FE64F9100054078 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A74361F01FE64F9100054078 /* Base */,
+				A7975A8920787D0800B2995D /* ja */,
+				A7975A8A20787D0E00B2995D /* ko */,
+				A70E8E0720982F7700372394 /* fr */,
+				A70E8E092098301500372394 /* de */,
+				A73229CF20B6238B00CACB3A /* es */,
+				A73229D120B623B400CACB3A /* sv */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A7975A9020787D6100B2995D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7975A8F20787D6100B2995D /* en */,
+				A7975A9120787D6300B2995D /* ja */,
+				A7975A9220787D6400B2995D /* ko */,
+				A70E8E0820982F7800372394 /* fr */,
+				A70E8E0A2098301500372394 /* de */,
+				A73229D020B6238B00CACB3A /* es */,
+				A73229D220B623B400CACB3A /* sv */,
+			);
+			name = Localizable.strings;
+			path = NanoBlocks/Resources/Localization;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A74361F31FE64F9100054078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A74361F41FE64F9100054078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A74361F61FE64F9100054078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23F5581ECB86384B9E38413C /* Pods-NanoBlocks.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY84UMVK4N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/$(TARGET_NAME)/ThirdParty",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/NanoBlocks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Sodium\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.nanoblocks;
+				PRODUCT_MODULE_NAME = NanoBlocks;
+				PRODUCT_NAME = "Nano Blocks";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7s armv7";
+			};
+			name = Debug;
+		};
+		A74361F71FE64F9100054078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 522873356B808384C150F662 /* Pods-NanoBlocks.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY84UMVK4N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/$(TARGET_NAME)/ThirdParty",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/NanoBlocks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Sodium\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.nanoblocks;
+				PRODUCT_MODULE_NAME = NanoBlocks;
+				PRODUCT_NAME = "Nano Blocks";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7s armv7";
+			};
+			name = Release;
+		};
+		A76D273A204E986000615B7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A076B94CE64CD2FFBD0AB498 /* Pods-NanoBlocksTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY84UMVK4N;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.NanoWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nano Blocks.app/Nano Blocks";
+			};
+			name = Debug;
+		};
+		A76D273B204E986000615B7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604437DB03B55B241DB81390 /* Pods-NanoBlocksTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY84UMVK4N;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.NanoWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nano Blocks.app/Nano Blocks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A74361DE1FE64F9100054078 /* Build configuration list for PBXProject "NanoBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74361F31FE64F9100054078 /* Debug */,
+				A74361F41FE64F9100054078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A74361F51FE64F9100054078 /* Build configuration list for PBXNativeTarget "NanoBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74361F61FE64F9100054078 /* Debug */,
+				A74361F71FE64F9100054078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A76D2739204E986000615B7A /* Build configuration list for PBXNativeTarget "NanoBlocksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76D273A204E986000615B7A /* Debug */,
+				A76D273B204E986000615B7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A74361DB1FE64F9100054078 /* Project object */;
+}
