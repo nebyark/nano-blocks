@@ -14,9 +14,13 @@ All designs are from my brother, Tim. Here's his other [stuff](http://www.timkra
 * in-app block viewer
 * multiple languages including English, Japanese, French, German, Spanish, and Swedish. [Contribute here.](https://poeditor.com/join/project/jmtLv86PbQ)
 
+![](https://i.imgur.com/ldm9UeW.jpg)
 
 ## Running the project
 The project should build to a device out-of-the-box. However, if you wish to run on sim, you'll have to create a new `Sodium.framework` build [off of my swift-sodium fork](https://github.com/nebyark/swift-sodium) that includes sim architectures. 
 
 ## Contributing
 Feel free to contribute. [There's a #dev channel in the Nano Blocks Discord](https://discord.gg/n76DkEt). There's plenty to do, including refactoring most views that use .xibs to have their layouts programmatically generated (I started on a few using `SnapKit`).
+
+## About Nano Blocks
+Nano Blocks started in December 2017 when, at the time, no mobile light wallets for Nano existed yet. More on that on [here](https://medium.com/@benkray).
