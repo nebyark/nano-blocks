@@ -129,7 +129,13 @@ class RequestAmountViewController: UIViewController {
     fileprivate func updateQRCode() {
         guard let amount = amountLabel?.text,
             let address = account.address,
-            let rawAmount = Double(amount)?.toRaw else { return}
+            let amountValue = Double(amount) else { return }
+        let rawAmount: String
+        if isShowingSecondary {
+            rawAmount = (amountValue / Currency.secondaryConversionRate).toRaw
+        } else {
+            rawAmount = amountValue.toRaw
+        }
         let xrbStandard = "xrb:\(address)?amount=\(rawAmount)"
         guard let requestData = xrbStandard.data(using: .utf8), let qrImageView = qrImageView else { return }
         qrImageView.image = UIImage
