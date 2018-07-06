@@ -28,7 +28,7 @@ class TransactionTableViewCell: UITableViewCell {
         contentView.backgroundColor = .clear
         layer.cornerRadius = 10.0
         guard let tx = tx, let type = Block.BlockType(rawValue: tx.type) else { return }
-        typeLabel?.text = type == .send ? .localize("send") : .localize("receive")
+        typeLabel?.text = type == .send ? .localize("sent-filter") : .localize("received-filter")
         let secondary = Currency.secondary
         var stringValue = ""
         let value = tx.amount.bNumber.toMxrbValue
