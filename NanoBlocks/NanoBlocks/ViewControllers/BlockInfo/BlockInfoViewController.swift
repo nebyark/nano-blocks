@@ -12,19 +12,23 @@ import SnapKit
 class BlockInfoViewController: TransparentNavViewController {
 
     let viewModel: BlockInfoViewModel
-    let mainStack: UIStackView = {
+
+    lazy var mainStack: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 12.0
         stackView.distribution = .fill
         return stackView
     }()
-    let dateLabel: UILabel = {
+
+    lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17.0, weight: .light)
         label.textColor = AppStyle.Color.lowAlphaWhite
         return label
     }()
+
+    lazy var scrollView: UIScrollView = UIScrollView()
     
     init(viewModel: BlockInfoViewModel) {
         self.viewModel = viewModel
@@ -58,6 +62,11 @@ class BlockInfoViewController: TransparentNavViewController {
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentInset = UIEdgeInsetsMake(0, 0, AppStyle.Size.padding, 0)
+    }
+
     // MARK: - Setup
     
     fileprivate func buildView() {
@@ -67,36 +76,37 @@ class BlockInfoViewController: TransparentNavViewController {
         typeLabel.text = viewModel.info.type.capitalized(with: .current)
         view.addSubview(typeLabel)
         view.addSubview(dateLabel)
-        
-        let scrollView = UIScrollView()
         view.addSubview(scrollView)
-        scrollView.addSubview(mainStack)
-        
+
+        let contentView = UIView()
+        contentView.addSubview(mainStack)
+        scrollView.addSubview(contentView)
+
         let blockStack = buildSubStack("BLOCK", value: viewModel.info.blockHash)
         mainStack.addArrangedSubview(blockStack)
-  
+
         typeLabel.snp.makeConstraints { (make) in
             make.top.equalTo(view.snp.topMargin).offset(AppStyle.Size.padding)
             make.height.equalTo(25.0)
-            make.left.equalTo(AppStyle.Size.padding)
-            make.right.equalTo(-AppStyle.Size.padding)
+            make.leading.equalToSuperview().offset(AppStyle.Size.padding)
+            make.trailing.equalToSuperview().offset(-AppStyle.Size.padding)
         }
         dateLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(typeLabel.snp.centerY)
-            make.right.equalTo(-AppStyle.Size.padding)
+            make.trailing.equalToSuperview().offset(-AppStyle.Size.padding)
         }
         scrollView.snp.makeConstraints { (make) in
             make.top.equalTo(typeLabel.snp.bottom).offset(AppStyle.Size.padding)
-            make.left.equalTo(AppStyle.Size.padding)
-            make.right.equalTo(-AppStyle.Size.padding)
-            make.bottom.equalTo(view.snp.bottomMargin).offset(AppStyle.Size.padding)
+            make.bottom.leading.trailing.equalToSuperview()
+        }
+        contentView.snp.makeConstraints { (make) in
+            make.width.top.bottom.leading.trailing.equalToSuperview()
+
         }
         mainStack.snp.makeConstraints { (make) in
-            make.top.equalTo(scrollView.snp.top)
-            make.bottom.equalTo(scrollView.snp.bottom)
-            make.right.equalTo(scrollView.snp.right)
-            make.width.equalTo(scrollView.snp.width)
-            make.left.equalTo(scrollView.snp.left)
+            make.top.bottom.equalToSuperview()
+            make.leading.equalToSuperview().offset(AppStyle.Size.padding)
+            make.trailing.equalToSuperview().offset(-AppStyle.Size.padding)
         }
     }
     
