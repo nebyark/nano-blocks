@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 protocol SendCoordinatorDelegate: class {
     func sendBlockGenerated(coordinator: Coordinator)
@@ -61,6 +62,9 @@ extension SendCoordinator: SendViewControllerDelegate {
         confirmVC.onSendComplete = { [weak self] in
             guard let me = self else {
                 return
+            }
+            if #available(iOS 10.3, *) {
+                SKStoreReviewController.requestReview()
             }
             me.rootViewController.dismiss(animated: true)
             me.delegate?.sendComplete(coordinator:  me)
