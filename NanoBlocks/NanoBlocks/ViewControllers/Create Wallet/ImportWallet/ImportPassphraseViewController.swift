@@ -66,7 +66,7 @@ class ImportPassphraseViewController: UIViewController {
                 textFields.append(textField)
             }
         }
-        let passphrase: [String] = textFields.flatMap { $0.text }
+        let passphrase: [String] = textFields.compactMap { $0.text }
         guard passphrase.count == totalWords else {
             // Display alert
             Lincoln.log("Not all words provided")

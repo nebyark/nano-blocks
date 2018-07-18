@@ -57,7 +57,7 @@ class AccountViewModel {
     
     init(with account: AccountInfo) {
         self.account = account
-        self.history = account.blockHistory.flatMap { $0 as SimpleBlockBridge }
+        self.history = account.blockHistory.compactMap { $0 as SimpleBlockBridge }
         self.refined = self.history
     }
     
