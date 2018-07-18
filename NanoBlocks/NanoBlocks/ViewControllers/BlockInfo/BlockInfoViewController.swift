@@ -23,7 +23,7 @@ class BlockInfoViewController: TransparentNavViewController {
 
     lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 17.0, weight: .light)
+        label.font = AppStyle.Font.body
         label.textColor = AppStyle.Color.lowAlphaWhite
         return label
     }()
@@ -71,7 +71,7 @@ class BlockInfoViewController: TransparentNavViewController {
     
     fileprivate func buildView() {
         let typeLabel = UILabel()
-        typeLabel.font = .systemFont(ofSize: 25.0, weight: .medium)
+        typeLabel.font = AppStyle.Font.title
         typeLabel.textColor = .white
         typeLabel.text = viewModel.info.type.capitalized(with: .current)
         view.addSubview(typeLabel)

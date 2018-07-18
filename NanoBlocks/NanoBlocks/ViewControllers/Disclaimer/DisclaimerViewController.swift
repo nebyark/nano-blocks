@@ -14,7 +14,7 @@ class DisclaimerViewController: TransparentNavViewController {
     lazy private(set) var headerLabel: UILabel = {
        let l = UILabel()
         l.text = "Disclaimer"
-        l.font = .systemFont(ofSize: 25.0, weight: .medium)
+        l.font = AppStyle.Font.title
         l.textColor = .white
        return l
     }()
@@ -22,7 +22,7 @@ class DisclaimerViewController: TransparentNavViewController {
         let t = UITextView()
         t.backgroundColor = .clear
         t.textColor = .white
-        t.font = .systemFont(ofSize: 16.0, weight: .regular)
+        t.font = AppStyle.Font.body
         return t
     }()
     lazy private(set) var separator: UIView = {
@@ -66,7 +66,7 @@ class DisclaimerViewController: TransparentNavViewController {
     fileprivate func buildView() {
         ["Accept": acceptButton, "Decline": declineButton].forEach {
             $0.value.setTitle($0.key, for: .normal)
-            $0.value.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
+            $0.value.titleLabel?.font = AppStyle.Font.control
             $0.value.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         }
         if showButtons {
