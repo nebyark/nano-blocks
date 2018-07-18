@@ -93,7 +93,6 @@
 		A7B1B24520140D0F009E5CB0 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B1B24320140D0F009E5CB0 /* SendViewController.swift */; };
 		A7B1B24620140D0F009E5CB0 /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B1B24420140D0F009E5CB0 /* SendViewController.xib */; };
 		A7B327F52001D4AA00E0E360 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F32001D4AA00E0E360 /* StartViewController.swift */; };
-		A7B327F62001D4AA00E0E360 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B327F42001D4AA00E0E360 /* StartViewController.xib */; };
 		A7B327F82002A43500E0E360 /* LeftAlignedIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */; };
 		A7B327FA200331BD00E0E360 /* TransparentNavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F9200331BD00E0E360 /* TransparentNavigationTransition.swift */; };
 		A7B327FE2003327B00E0E360 /* ImportWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327FC2003327B00E0E360 /* ImportWalletViewController.swift */; };
@@ -282,7 +281,6 @@
 		A7B1B24320140D0F009E5CB0 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		A7B1B24420140D0F009E5CB0 /* SendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
 		A7B327F32001D4AA00E0E360 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		A7B327F42001D4AA00E0E360 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedIconButton.swift; sourceTree = "<group>"; };
 		A7B327F9200331BD00E0E360 /* TransparentNavigationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationTransition.swift; sourceTree = "<group>"; };
 		A7B327FC2003327B00E0E360 /* ImportWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportWalletViewController.swift; sourceTree = "<group>"; };
@@ -443,7 +441,6 @@
 			children = (
 				A7B327FB2003324200E0E360 /* ImportWallet */,
 				A7B327F32001D4AA00E0E360 /* StartViewController.swift */,
-				A7B327F42001D4AA00E0E360 /* StartViewController.xib */,
 			);
 			path = "Create Wallet";
 			sourceTree = "<group>";
@@ -930,7 +927,6 @@
 				A7EB8F5520662C72004463FC /* nano_loading.json in Resources */,
 				A71CEB9F2054AE2F00FF6B54 /* LockViewController.xib in Resources */,
 				A76AC7B0202AC0CA00C7CEE8 /* EnterAddressEntryViewController.xib in Resources */,
-				A7B327F62001D4AA00E0E360 /* StartViewController.xib in Resources */,
 				A79116FB20172FB100890432 /* AddressItemTableViewCell.xib in Resources */,
 				A7B3280B2004990F00E0E360 /* ImportPassphraseViewController.xib in Resources */,
 				A7B858EF20338B6200698FAE /* ConsoleViewController.xib in Resources */,
