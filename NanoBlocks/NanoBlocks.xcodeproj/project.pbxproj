@@ -93,7 +93,6 @@
 		A7B1B24520140D0F009E5CB0 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B1B24320140D0F009E5CB0 /* SendViewController.swift */; };
 		A7B1B24620140D0F009E5CB0 /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B1B24420140D0F009E5CB0 /* SendViewController.xib */; };
 		A7B327F52001D4AA00E0E360 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F32001D4AA00E0E360 /* StartViewController.swift */; };
-		A7B327F62001D4AA00E0E360 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B327F42001D4AA00E0E360 /* StartViewController.xib */; };
 		A7B327F82002A43500E0E360 /* LeftAlignedIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */; };
 		A7B327FA200331BD00E0E360 /* TransparentNavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327F9200331BD00E0E360 /* TransparentNavigationTransition.swift */; };
 		A7B327FE2003327B00E0E360 /* ImportWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B327FC2003327B00E0E360 /* ImportWalletViewController.swift */; };
@@ -127,7 +126,6 @@
 		A7EF84181FED7D7D00C74035 /* Sodium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7EF84151FED7D6800C74035 /* Sodium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7EF841B1FED8A5000C74035 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF841A1FED8A5000C74035 /* Keychain.swift */; };
 		A7EF841E1FED915000C74035 /* WalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF841D1FED915000C74035 /* WalletManager.swift */; };
-		A7EF84241FEDAE2D00C74035 /* BIP39.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84231FEDAE2D00C74035 /* BIP39.swift */; };
 		A7EF84271FEDCC8300C74035 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84261FEDCC8300C74035 /* Coordinator.swift */; };
 		A7EF84291FEDCC9F00C74035 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84281FEDCC9E00C74035 /* AppCoordinator.swift */; };
 		A7EF84311FEE43C300C74035 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84301FEE43C300C74035 /* UIKit+Extensions.swift */; };
@@ -283,7 +281,6 @@
 		A7B1B24320140D0F009E5CB0 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		A7B1B24420140D0F009E5CB0 /* SendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
 		A7B327F32001D4AA00E0E360 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		A7B327F42001D4AA00E0E360 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedIconButton.swift; sourceTree = "<group>"; };
 		A7B327F9200331BD00E0E360 /* TransparentNavigationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationTransition.swift; sourceTree = "<group>"; };
 		A7B327FC2003327B00E0E360 /* ImportWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportWalletViewController.swift; sourceTree = "<group>"; };
@@ -317,8 +314,6 @@
 		A7EF84151FED7D6800C74035 /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sodium.framework; sourceTree = "<group>"; };
 		A7EF841A1FED8A5000C74035 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		A7EF841D1FED915000C74035 /* WalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManager.swift; sourceTree = "<group>"; };
-		A7EF841F1FEDAD5C00C74035 /* BIP39Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BIP39Words.plist; sourceTree = "<group>"; };
-		A7EF84231FEDAE2D00C74035 /* BIP39.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIP39.swift; sourceTree = "<group>"; };
 		A7EF84261FEDCC8300C74035 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A7EF84281FEDCC9E00C74035 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A7EF84301FEE43C300C74035 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
@@ -446,7 +441,6 @@
 			children = (
 				A7B327FB2003324200E0E360 /* ImportWallet */,
 				A7B327F32001D4AA00E0E360 /* StartViewController.swift */,
-				A7B327F42001D4AA00E0E360 /* StartViewController.xib */,
 			);
 			path = "Create Wallet";
 			sourceTree = "<group>";
@@ -505,7 +499,6 @@
 			children = (
 				A743621F1FE66DEB00054078 /* WalletUtil.swift */,
 				A7EF841D1FED915000C74035 /* WalletManager.swift */,
-				A7EF84231FEDAE2D00C74035 /* BIP39.swift */,
 				A7EAC9D120A2D7E600EE1F14 /* KeyPair.swift */,
 			);
 			path = Wallet;
@@ -715,7 +708,6 @@
 				A7EB8F5320662C54004463FC /* Animations */,
 				A7975A8B20787D1F00B2995D /* Localization */,
 				A7EB8F5A20664B0C004463FC /* weak_pw.txt */,
-				A7EF841F1FEDAD5C00C74035 /* BIP39Words.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -883,7 +875,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Planar Form";
 				TargetAttributes = {
 					A74361E21FE64F9100054078 = {
@@ -935,7 +927,6 @@
 				A7EB8F5520662C72004463FC /* nano_loading.json in Resources */,
 				A71CEB9F2054AE2F00FF6B54 /* LockViewController.xib in Resources */,
 				A76AC7B0202AC0CA00C7CEE8 /* EnterAddressEntryViewController.xib in Resources */,
-				A7B327F62001D4AA00E0E360 /* StartViewController.xib in Resources */,
 				A79116FB20172FB100890432 /* AddressItemTableViewCell.xib in Resources */,
 				A7B3280B2004990F00E0E360 /* ImportPassphraseViewController.xib in Resources */,
 				A7B858EF20338B6200698FAE /* ConsoleViewController.xib in Resources */,
@@ -1180,7 +1171,6 @@
 				A76AC7C82030C59D00C7CEE8 /* CurrencySelectViewModel.swift in Sources */,
 				A73229CE20AEBD8F00CACB3A /* DisclaimerViewController.swift in Sources */,
 				A7B1B24520140D0F009E5CB0 /* SendViewController.swift in Sources */,
-				A7EF84241FEDAE2D00C74035 /* BIP39.swift in Sources */,
 				A7B858F120338D8100698FAE /* TransparentNavViewController.swift in Sources */,
 				A7B327FE2003327B00E0E360 /* ImportWalletViewController.swift in Sources */,
 				A768B9A720225DAC00620B62 /* TxInfo.swift in Sources */,
@@ -1274,6 +1264,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1281,6 +1272,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1332,6 +1324,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1339,6 +1332,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

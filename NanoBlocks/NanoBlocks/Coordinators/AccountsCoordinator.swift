@@ -55,7 +55,7 @@ class AccountsCoordinator: RootViewCoordinator {
     }
     
     fileprivate func subscribeToAccounts() {
-        let accounts = WalletManager.shared.accounts.flatMap { $0.address }
+        let accounts = WalletManager.shared.accounts.compactMap { $0.address }
         self.pubSubService?.subscribe(to: accounts)
     }
 }

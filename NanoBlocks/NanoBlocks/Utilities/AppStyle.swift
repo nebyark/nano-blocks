@@ -9,16 +9,30 @@
 import UIKit
 
 struct AppStyle {
-    
+
     struct Size {
+        /// 30.0
+        static var largePadding: CGFloat = 30.0
         /// 25.0
         static var mediumPadding: CGFloat = 25.0
         /// 20.0
         static var padding: CGFloat = 20.0
         /// 8.0
         static var smallPadding: CGFloat = 8.0
+
+        /// 45.0
+        static var control: CGFloat = 45.0
     }
-    
+
+    struct Font {
+        /// 25.0, medium
+        static var title: UIFont = .systemFont(ofSize: 25.0, weight: .medium)
+        /// 17.0, light
+        static var body: UIFont = .systemFont(ofSize: 17.0, weight: .light)
+        /// 17.0, medium
+        static var control: UIFont = .systemFont(ofSize: 17.0, weight: .medium)
+    }
+
     struct Color {
         // 43, 45, 53
         static var offBlack = #colorLiteral(red: 0.168627451, green: 0.1764705882, blue: 0.2078431373, alpha: 1)

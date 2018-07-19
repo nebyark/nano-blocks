@@ -21,7 +21,7 @@ class TitleTableViewController: TransparentNavViewController {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = self.titleText
-        label.font = .systemFont(ofSize: 25.0, weight: .medium)
+        label.font = AppStyle.Font.title
         return label
     }()
     

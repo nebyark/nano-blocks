@@ -25,12 +25,12 @@ PODS:
   - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.6.0)
+  - Alamofire
   - CocoaMQTT
   - lottie-ios
   - Moya (~> 11.0)
   - NotificationBannerSwift
-  - RealmSwift (~> 3.1.1)
+  - RealmSwift
   - SSZipArchive
 
 SPEC CHECKSUMS:
@@ -48,6 +48,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 14401ade5f8e82aba1ff03e9f88e9de60937ae60
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: 100642d421d8c3bd65475028353c3927a7480525
+PODFILE CHECKSUM: a07bf11ddd3d76fa4269b597992fc150cdfab610
 
 COCOAPODS: 1.4.0
