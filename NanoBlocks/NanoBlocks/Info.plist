@@ -50,6 +50,8 @@
 			</dict>
 		</dict>
 	</dict>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>${PRODUCT_NAME} would like permission to export QR codes to your photo library</string>
 	<key>NSCameraUsageDescription</key>
 	<string>${PRODUCT_NAME} would like to use your camera to scan QR codes</string>
 	<key>NSFaceIDUsageDescription</key>
