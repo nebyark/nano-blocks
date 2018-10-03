@@ -18,6 +18,7 @@ class EnterAddressViewController: TransparentNavViewController {
     @IBOutlet weak var textView: UITextView?
     var viewModel = EnterAddressViewModel()
     var onSelect: ((AddressEntry) -> Void)?
+    private let textViewPlaceholder = "Enter address"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +81,8 @@ class EnterAddressViewController: TransparentNavViewController {
         inputXButton?.tintColor = AppStyle.lightGrey
         nameLabel?.textColor = AppStyle.lightGrey
         textView?.delegate = self
+        self.textView?.text = self.textViewPlaceholder
+        self.textView?.textColor = AppStyle.lightGrey
         messageLabel?.text = .localize("enter-address-search-msg")
     }
     
@@ -104,18 +107,21 @@ class EnterAddressViewController: TransparentNavViewController {
     // MARK: - Actions
     
     fileprivate func reloadView() {
-        let isEmpty = textView?.text.isEmpty ?? true
-        inputXButton?.isHidden = isEmpty || !(tableView?.isHidden ?? false)
-        nameLabel?.isHidden = isEmpty || !(tableView?.isHidden ?? false)
-        textView?.isHidden = !(tableView?.isHidden ?? false)
-        if let address = textView?.text {
-            continueButton?.isEnabled = WalletUtil.derivePublic(from: address) != nil
-            nameLabel?.text = viewModel.addressMap[address] ?? .localize("unknown")
+        guard let textView = self.textView, let tableView = self.tableView else {
+            return
         }
+        let isEmpty = textView.text.isEmpty || textView.text == self.textViewPlaceholder
+        inputXButton?.isHidden = isEmpty || !tableView.isHidden
+        nameLabel?.isHidden = isEmpty || !tableView.isHidden
+        textView.isHidden = !tableView.isHidden
+
+        continueButton?.isEnabled = WalletUtil.derivePublic(from: textView.text) != nil
+        nameLabel?.text = viewModel.addressMap[textView.text] ?? .localize("unknown")
     }
     
     @IBAction func inputXTapped(_ sender: Any) {
-        textView?.text = ""
+        textView?.text = self.textViewPlaceholder
+        textView?.textColor = AppStyle.lightGrey
         reloadView()
     }
     
@@ -130,6 +136,7 @@ class EnterAddressViewController: TransparentNavViewController {
     
     @objc fileprivate func pasteTapped() {
         textView?.text = UIPasteboard.general.string
+        textView?.textColor = .white
         reloadView()
     }
     
@@ -143,7 +150,7 @@ class EnterAddressViewController: TransparentNavViewController {
         if (textField.text == "") {
             viewModel.resetFilter()
         }
-        tableView?.isHidden = textField.text == "" || viewModel.filteredEntries.count == 0
+        tableView?.isHidden = textField.text == "" || textField.text == self.textViewPlaceholder || viewModel.filteredEntries.count == 0
         
         reloadView()
         tableView?.reloadData()
@@ -163,6 +170,7 @@ extension EnterAddressViewController: UITableViewDelegate {
         guard let addressEntry = viewModel[indexPath.row] else { return }
         nameLabel?.text = addressEntry.name
         textView?.text = addressEntry.address
+        textView?.textColor = .white
         searchTextField?.text = ""
         guard let tf = searchTextField else { return }
         textFieldDidChange(tf)
@@ -185,6 +193,21 @@ extension EnterAddressViewController: UITableViewDataSource {
 }
 
 extension EnterAddressViewController: UITextViewDelegate {
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == self.textViewPlaceholder {
+            textView.text = ""
+            textView.textColor = .white
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = self.textViewPlaceholder
+            textView.textColor = AppStyle.lightGrey
+        }
+    }
+
     func textViewDidChange(_ textView: UITextView) {
         reloadView()
     }
