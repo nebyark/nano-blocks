@@ -36,7 +36,7 @@ class AccountTableViewCell: UITableViewCell {
         var valueString = ""
         if useSecondaryCurrency {
             let secondary = Currency.secondary
-            valueString = secondary.convert(accountValue.bNumber)
+            valueString = secondary.convertToFiat(accountValue.bNumber)
             unitLabel?.text = secondary.rawValue.uppercased()
         } else {
             valueString = accountValue.bNumber.toMxrb.trimTrailingZeros()

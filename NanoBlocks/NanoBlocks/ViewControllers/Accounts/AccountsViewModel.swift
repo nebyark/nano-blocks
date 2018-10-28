@@ -29,7 +29,7 @@ struct AccountsViewModel {
             let total = WalletManager.shared.accounts.reduce(BDouble(0.0), { (result, account) in
                 result + account.balance.bNumber
             })
-            balanceValue = secondary.convert(total)
+            balanceValue = secondary.convertToFiat(total)
         }
         isShowingSecondary = !isShowingSecondary
     }
