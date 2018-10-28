@@ -85,6 +85,15 @@ enum Currency: String {
         }
     }
     
+    /// The currency value type, while stripping redundancies (like LAMBO, chf, etc)
+    var typePostfix: String {
+        var base = rawValue.uppercased()
+        if rawValue.uppercased() != symbol.uppercased() {
+            base += " (\(symbol))"
+        }
+        return base
+    }
+    
     /// Converts a Nano (either raw or mxrb) amount to the user's selected 'secondary' currency.
     func convert(_ value: BDouble, isRaw: Bool = true) -> String {
         let value = isRaw ? value.toMxrbValue : value

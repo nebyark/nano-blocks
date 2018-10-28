@@ -25,7 +25,7 @@ struct AccountsViewModel {
             balanceValue = getTotalNano()
         } else {
             let secondary = Currency.secondary
-            currencyValue = secondary.rawValue.uppercased() + (secondary == .lambo ? "" : " (\(secondary.symbol))")
+            currencyValue = secondary.typePostfix
             let total = WalletManager.shared.accounts.reduce(BDouble(0.0), { (result, account) in
                 result + account.balance.bNumber
             })
