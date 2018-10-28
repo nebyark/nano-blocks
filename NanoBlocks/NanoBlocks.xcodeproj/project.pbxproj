@@ -122,8 +122,6 @@
 		A7EB8F6120684645004463FC /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB8F5F20684645004463FC /* PasswordViewController.swift */; };
 		A7EB8F6220684645004463FC /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EB8F6020684645004463FC /* PasswordViewController.xib */; };
 		A7EB8F64206880A8004463FC /* nano_loading_complete.json in Resources */ = {isa = PBXBuildFile; fileRef = A7EB8F63206880A8004463FC /* nano_loading_complete.json */; };
-		A7EF84161FED7D6800C74035 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EF84151FED7D6800C74035 /* Sodium.framework */; };
-		A7EF84181FED7D7D00C74035 /* Sodium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7EF84151FED7D6800C74035 /* Sodium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7EF841B1FED8A5000C74035 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF841A1FED8A5000C74035 /* Keychain.swift */; };
 		A7EF841E1FED915000C74035 /* WalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF841D1FED915000C74035 /* WalletManager.swift */; };
 		A7EF84271FEDCC8300C74035 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF84261FEDCC8300C74035 /* Coordinator.swift */; };
@@ -158,7 +156,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A7EF84181FED7D7D00C74035 /* Sodium.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +308,6 @@
 		A7EB8F5F20684645004463FC /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		A7EB8F6020684645004463FC /* PasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
 		A7EB8F63206880A8004463FC /* nano_loading_complete.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nano_loading_complete.json; sourceTree = "<group>"; };
-		A7EF84151FED7D6800C74035 /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sodium.framework; sourceTree = "<group>"; };
 		A7EF841A1FED8A5000C74035 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		A7EF841D1FED915000C74035 /* WalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManager.swift; sourceTree = "<group>"; };
 		A7EF84261FEDCC8300C74035 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -337,7 +333,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7EF84161FED7D6800C74035 /* Sodium.framework in Frameworks */,
 				B5DA4B9DA32F5691359BC3DE /* Pods_NanoBlocks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +481,6 @@
 		A74362211FE734E600054078 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				A7EF84151FED7D6800C74035 /* Sodium.framework */,
 				A74362221FE734F300054078 /* BitArray.swift */,
 				A749FD11208AF09200AB7D9C /* Swift-Big-Number-Core.swift */,
 				A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */,
@@ -1038,7 +1032,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
+				"${BUILT_PRODUCTS_DIR}/Sodium/Sodium.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1054,7 +1048,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sodium.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1379,11 +1373,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/NanoBlocks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"Sodium\"",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.nanoblocks;
 				PRODUCT_MODULE_NAME = NanoBlocks;
 				PRODUCT_NAME = "Nano Blocks";
@@ -1412,11 +1402,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/NanoBlocks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"Sodium\"",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.nanoblocks;
 				PRODUCT_MODULE_NAME = NanoBlocks;
 				PRODUCT_NAME = "Nano Blocks";

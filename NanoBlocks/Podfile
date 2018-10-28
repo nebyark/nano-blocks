@@ -4,11 +4,11 @@ platform :ios, '10.0'
 target 'NanoBlocks' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
   # Pods for NanoBlocks
   pod 'Alamofire'
   pod 'RealmSwift'
-  pod 'NotificationBannerSwift'
+  pod 'NotificationBannerSwift', '1.6.3'
+  pod 'Sodium', :git => 'https://github.com/nebyark/swift-sodium'
   pod 'Moya', '~> 11.0'
   pod 'lottie-ios'
   pod 'SSZipArchive'
