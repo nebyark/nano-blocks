@@ -42,7 +42,7 @@ class AccountViewModel {
             return account.mxrbBalance.trimTrailingZeros()
         } else {
             let secondary = Currency.secondary
-            currencyValue = secondary.rawValue.uppercased() + (secondary == .lambo ? "" : " (\(secondary.symbol))")
+            currencyValue = secondary.typePostfix
             return secondary.convertToFiat(account.balance.bNumber)
         }
     }
@@ -71,7 +71,7 @@ class AccountViewModel {
             currencyValue = "NANO"
         } else {
             let secondary = Currency.secondary
-            currencyValue = secondary.rawValue.uppercased() + (secondary == .lambo ? "" : " (\(secondary.symbol))")            
+            currencyValue = secondary.typePostfix
         }
         isShowingSecondary = !isShowingSecondary
     }

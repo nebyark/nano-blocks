@@ -11,6 +11,7 @@ import Foundation
 enum Currency: String {
     case aud
     case brl
+    case btc
     case cad
     case chf
     case clp
@@ -43,13 +44,14 @@ enum Currency: String {
     case lambo
     
     static var all: [Currency] {
-        return [.usd, .eur, .jpy, .krw, .lambo, .aud, .brl, .cad, .chf, .clp, .cny, .czk, .dkk, .gbp, .hkd, .huf, .idr, .ils, .inr, .mxn, .myr, .nok, .nzd, .php, .pkr, . pln, .rub, .sek, .sgd, .thb, .twd, .zar]
+        return [.btc, .usd, .eur, .jpy, .krw, .lambo, .aud, .brl, .cad, .chf, .clp, .cny, .czk, .dkk, .gbp, .hkd, .huf, .idr, .ils, .inr, .mxn, .myr, .nok, .nzd, .php, .pkr, . pln, .rub, .sek, .sgd, .thb, .twd, .zar]
     }
     
     var precision: Int {
         switch self {
         case .jpy, .krw: return 0
         case .lambo: return 6
+        case .btc: return 8
         default: return 2
         }
     }
@@ -57,6 +59,7 @@ enum Currency: String {
     var symbol: String {
         switch self {
         case .usd, .sgd, .cad, .hkd, .nzd, .mxn, .clp: return "$"
+        case .btc: return "₿"
         case .eur: return "€"
         case .jpy, .cny: return "¥"
         case .krw: return "₩"
@@ -80,6 +83,15 @@ enum Currency: String {
         case .zar: return "R"
         case .lambo: return "LAMBO"
         }
+    }
+    
+    /// The currency value type, while stripping redundancies (like LAMBO, chf, etc)
+    var typePostfix: String {
+        var base = rawValue.uppercased()
+        if rawValue.uppercased() != symbol.uppercased() {
+            base += " (\(symbol))"
+        }
+        return base
     }
     
     /// Converts a Nano (either raw or mxrb) amount to the user's selected 'secondary' currency.
