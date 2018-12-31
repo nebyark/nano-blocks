@@ -18,6 +18,16 @@ let BLOCK_EXPLORER_URL = "https://nanode.co/block/"
 let DB_NAME: String = "my-little-db"
 let EXPONENT: Int16 = 30
 
+func nanoFormatter(_ digits: Int) -> NumberFormatter {
+    let numberFormatter = NumberFormatter()
+    numberFormatter.roundingMode = .floor
+    numberFormatter.maximumFractionDigits = digits
+    numberFormatter.minimumFractionDigits = 0
+    numberFormatter.minimumIntegerDigits = 1
+
+    return numberFormatter
+}
+
 extension String {
 
     var decimalNumber: NSDecimalNumber {
@@ -40,28 +50,7 @@ extension String {
 
 }
 
-extension Double {
-    
-    var toMxrb: String {
-        let value = self / 1000000000000000000000000000000.0
-        return String(format: "%.6f", value).trimTrailingZeros()
-    }
-    
-    var toRaw: String {
-        let raw = self * 1000000
-        return String(Int(raw)) + "000000000000000000000000"
-    }
-}
-
 extension NSDecimalNumber {
-
-    fileprivate func nanoFormatter(_ digits: Int) -> NumberFormatter {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.roundingMode = .floor
-        numberFormatter.maximumFractionDigits = 6
-        numberFormatter.minimumFractionDigits = 0
-        return numberFormatter
-    }
 
     var mxrbAmount: NSDecimalNumber {
         let divider = NSDecimalNumber(mantissa: 1, exponent: EXPONENT, isNegative: false)
@@ -70,11 +59,7 @@ extension NSDecimalNumber {
 
     var mxrbString: String {
         let result = self.mxrbAmount
-        return self.nanoFormatter(6).string(from: result) ?? "0"
-    }
-
-    var rawValueAsDouble: Double? {
-        return Double(self.rawString.replacingOccurrences(of: Locale.current.decimalSeparator ?? ",", with: "."))
+        return nanoFormatter(6).string(from: result) ?? "0"
     }
 
     var rawValue: NSDecimalNumber {
