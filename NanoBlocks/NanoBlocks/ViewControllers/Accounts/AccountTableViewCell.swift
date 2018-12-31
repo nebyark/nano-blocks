@@ -33,13 +33,13 @@ class AccountTableViewCell: UITableViewCell {
         addressLabel?.text = account?.address
         accountNameLabel?.text = account?.name
         let accountValue = account?.balance ?? "0"
-        var valueString = ""
+        let valueString: String
         if useSecondaryCurrency {
             let secondary = Currency.secondary
-            valueString = secondary.convertToFiat(accountValue.bNumber)
+            valueString = secondary.convert(accountValue.decimalNumber)
             unitLabel?.text = secondary.rawValue.uppercased()
         } else {
-            valueString = accountValue.bNumber.toMxrb.trimTrailingZeros()
+            valueString = account?.formattedBalance ?? "0"
             unitLabel?.text = "NANO"
         }
         balanceLabel?.text = valueString

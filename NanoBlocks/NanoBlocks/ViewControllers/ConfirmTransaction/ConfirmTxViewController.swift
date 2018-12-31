@@ -54,16 +54,15 @@ class ConfirmTxViewController: UIViewController {
     }
     
     fileprivate func setupView() {
-        guard let amountValue = BDouble(txInfo.amount) else { return }
         contentView?.layer.cornerRadius = 10.0
         contentView?.clipsToBounds = true
         let gradient = AppStyle.buttonGradient
         gradient.masksToBounds = true
         gradient.frame = confirmButton?.bounds ?? .zero
         confirmButton?.layer.insertSublayer(gradient, at: 0)
-        balanceLabel?.text = "\(txInfo.balance.trimTrailingZeros()) NANO"
-        amountLabel?.text = "\(txInfo.amount.trimTrailingZeros()) NANO"
-        let secondaryAmount = Currency.secondary.convertToFiat(amountValue, isRaw: false)
+        balanceLabel?.text = "\(txInfo.rawBalance.decimalNumber.mxrbString.formattedAmount) NANO"
+        amountLabel?.text = "\(txInfo.amount.formattedAmount) NANO"
+        let secondaryAmount = Currency.secondary.convert(txInfo.amount.decimalNumber, isRaw: false)
         secondaryAmountLabel?.text = "\(secondaryAmount) \(Currency.secondary.rawValue.uppercased())"
         recipientNameLabel?.text = txInfo.recipientName
         recipientAddressLabel?.text = txInfo.recipientAddress
@@ -99,17 +98,14 @@ class ConfirmTxViewController: UIViewController {
     }
     
     fileprivate func handleSend() {
-        guard let balanceValue = BDouble(txInfo.balance), let amountValue = BDouble(txInfo.amount), amountValue > 0.0 else { return }
-        guard let keyPair = WalletManager.shared.keyPair(at: txInfo.accountInfo.index),
-            let account = keyPair.xrbAccount else { return }
-        // Generate block
-        let remainingRaw = balanceValue.toRaw.rounded()
-        var block = StateBlock(.send)
-        block.previous = txInfo.accountInfo.frontier.uppercased()
-        block.link = txInfo.recipientAddress
-        block.balanceValue = remainingRaw
-        block.representative = txInfo.accountInfo.representative
-        guard block.build(with: keyPair) else { return }
+        guard
+            let keyPair = WalletManager.shared.keyPair(at: self.txInfo.accountInfo.index),
+            let block = self.txInfo.createBlock(with: keyPair),
+            let account = self.txInfo.accountInfo.address
+        else {
+            Banner.show("Error generating block", style: .danger)
+            return
+        }
         
         Lincoln.log("Sending \(txInfo.amount) NANO to '\(txInfo.recipientAddress)'", inConsole: true)
         UIView.animate(withDuration: 0.3) {

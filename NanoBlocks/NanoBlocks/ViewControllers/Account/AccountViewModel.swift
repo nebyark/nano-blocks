@@ -36,17 +36,22 @@ class AccountViewModel {
     private(set) var refined: [SimpleBlockBridge] = []
     private(set) var blockCheck: Set<String> = []
     private(set) var balance: AccountBalance?
-    private(set) var isShowingSecondary: Bool = false
     var balanceValue: String {
-        if !isShowingSecondary {
-            return account.mxrbBalance.trimTrailingZeros()
+        if !Currency.isSecondarySelected {
+            return account.formattedBalance
         } else {
             let secondary = Currency.secondary
-            currencyValue = secondary.typePostfix
-            return secondary.convertToFiat(account.balance.bNumber)
+            return secondary.convert(account.balance.decimalNumber)
         }
     }
-    private(set) var currencyValue: String = ""
+
+    var currencyValue: String {
+        if Currency.isSecondarySelected {
+            return Currency.secondary.typePostfix
+        } else {
+            return CURRENCY_NAME
+        }
+    }
     private(set) var refineType: RefineType = .latestFirst
     var onNewBlockBroadcasted: (() -> Void)?
     var updateView: (() -> Void)?
@@ -67,13 +72,7 @@ class AccountViewModel {
     }
     
     func toggleCurrency() {
-        if isShowingSecondary {
-            currencyValue = "NANO"
-        } else {
-            let secondary = Currency.secondary
-            currencyValue = secondary.typePostfix
-        }
-        isShowingSecondary = !isShowingSecondary
+        Currency.setSecondary(!Currency.isSecondarySelected)
     }
     
     func initHistory() {
@@ -106,21 +105,28 @@ class AccountViewModel {
         isFetching = true
         NetworkAdapter.blockInfo(hashes: [source]) { [weak self] (info, error) in
             self?.isFetching = false
-            guard let me = self,
-                let amount = info.first?.amount,
-                let balance = BInt(me.account.balance),
-                let amt = BInt(amount) else { return }
+            guard
+                let me = self,
+                let amount = info.first?.amount
+            else {
+                return
+            }
+
+            let balance = me.account.balance.decimalNumber
+            let amt = amount.decimalNumber
+
             var block = shouldOpen ? StateBlock(.open) : StateBlock(.receive)
             let randomRep = WalletManager.shared.getRandomRep()?.account ?? account
             block.previous = previous
             block.link = source
-            block.balanceValue = balance + amt
+            block.rawDecimalBalance = balance.adding(amt)
             if me.account.representative.isEmpty {
                 block.representative = randomRep
             } else {
                 block.representative = me.account.representative
             }
-            guard me.account.balance.bNumber + amount.bNumber >= me.account.balance.bNumber else {
+            let accountBalance = me.account.balance.decimalNumber
+            guard accountBalance.adding(amount.decimalNumber).compare(accountBalance) == .orderedDescending  else {
                 Banner.show("Account balance should be greater than previous balance", style: .danger)
                 return
             }

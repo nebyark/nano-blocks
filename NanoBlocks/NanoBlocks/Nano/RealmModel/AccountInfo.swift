@@ -12,7 +12,7 @@ class AccountInfo: Object {
     @objc dynamic var frontier: String = ZERO_AMT
     @objc dynamic var openBlock: String = ""
     @objc dynamic var representativeBlock: String = ""
-    @objc dynamic var balance: String = ""
+    @objc dynamic var balance: String = "0"
     @objc dynamic var modifiedTimestamp: String = ""
     @objc dynamic var blockCount: Int = 0
     @objc dynamic var representative: String = ""
@@ -23,7 +23,11 @@ class AccountInfo: Object {
     let blockHistory = List<SimpleBlock>()
     
     var mxrbBalance: String {
-        return balance.bNumber.toMxrb
+        return balance.decimalNumber.mxrbString
+    }
+
+    var formattedBalance: String {
+        return self.mxrbBalance.formattedAmount
     }
     
     static func fromJSON(_ json: [String: Any]?, account: String) -> AccountInfo? {

@@ -120,12 +120,12 @@ class BlockInfoViewController: TransparentNavViewController {
         }
         
         // Amount
-        let amountStack = buildSubStack("AMOUNT", value: viewModel.info.amount.bNumber.toMxrb.trimTrailingZeros() + " NANO")
+        let amountStack = buildSubStack("AMOUNT", value: viewModel.info.amount.decimalNumber.mxrbString.formattedAmount + " NANO")
         mainStack.addArrangedSubview(amountStack)
         
         dateLabel.text = viewModel.localizedDate
         contents.sorted { $0.key < $1.key }.forEach {
-            let value = $0.key == "balance" ? $0.value.bNumber.toMxrb + " NANO" : $0.value
+            let value = $0.key == "balance" ? $0.value.decimalNumber.mxrbString.formattedAmount + " NANO" : $0.value
             mainStack.addArrangedSubview(buildSubStack($0.key, value: value))
         }
     }

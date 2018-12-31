@@ -47,7 +47,6 @@
 		A74362231FE734F300054078 /* BitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74362221FE734F300054078 /* BitArray.swift */; };
 		A7463AAB2071E9E3008A8197 /* IncomingBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7463AAA2071E9E3008A8197 /* IncomingBlock.swift */; };
 		A749FCF02089980000AB7D9C /* BlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FCEF2089980000AB7D9C /* BlockInfo.swift */; };
-		A749FD12208AF09200AB7D9C /* Swift-Big-Number-Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD11208AF09200AB7D9C /* Swift-Big-Number-Core.swift */; };
 		A749FD16208DBA8C00AB7D9C /* BlockInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD14208DBA8C00AB7D9C /* BlockInfoViewController.swift */; };
 		A749FD19208EE4AF00AB7D9C /* BlockInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD18208EE4AF00AB7D9C /* BlockInfoViewModel.swift */; };
 		A749FD1B20918D6700AB7D9C /* NanoNodeNinjaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749FD1A20918D6700AB7D9C /* NanoNodeNinjaService.swift */; };
@@ -226,7 +225,6 @@
 		A74362221FE734F300054078 /* BitArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitArray.swift; sourceTree = "<group>"; };
 		A7463AAA2071E9E3008A8197 /* IncomingBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingBlock.swift; sourceTree = "<group>"; };
 		A749FCEF2089980000AB7D9C /* BlockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfo.swift; sourceTree = "<group>"; };
-		A749FD11208AF09200AB7D9C /* Swift-Big-Number-Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift-Big-Number-Core.swift"; sourceTree = "<group>"; };
 		A749FD14208DBA8C00AB7D9C /* BlockInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoViewController.swift; sourceTree = "<group>"; };
 		A749FD18208EE4AF00AB7D9C /* BlockInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoViewModel.swift; sourceTree = "<group>"; };
 		A749FD1A20918D6700AB7D9C /* NanoNodeNinjaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoNodeNinjaService.swift; sourceTree = "<group>"; };
@@ -482,7 +480,6 @@
 			isa = PBXGroup;
 			children = (
 				A74362221FE734F300054078 /* BitArray.swift */,
-				A749FD11208AF09200AB7D9C /* Swift-Big-Number-Core.swift */,
 				A7B327F72002A43500E0E360 /* LeftAlignedIconButton.swift */,
 			);
 			path = ThirdParty;
@@ -1116,7 +1113,6 @@
 				A73FAAF2204F3FF90087E025 /* SwitchTableViewCell.swift in Sources */,
 				A7B858EA2032CC6E00698FAE /* CurrencyAPI.swift in Sources */,
 				A749FCF02089980000AB7D9C /* BlockInfo.swift in Sources */,
-				A749FD12208AF09200AB7D9C /* Swift-Big-Number-Core.swift in Sources */,
 				A79116FF20173C4400890432 /* AddressEntry.swift in Sources */,
 				A76AC7B4202AD7C000C7CEE8 /* SettingsViewController.swift in Sources */,
 				A749FD16208DBA8C00AB7D9C /* BlockInfoViewController.swift in Sources */,

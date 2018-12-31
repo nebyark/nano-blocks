@@ -9,35 +9,35 @@
 import Foundation
 
 struct AccountsViewModel {
-    
-    private(set) var balanceValue: String = ""
-    private(set) var currencyValue: String
-    private(set) var isShowingSecondary: Bool = false
-    
-    init() {
-        currencyValue = "NANO"
-        balanceValue = getTotalNano()
+
+    fileprivate var totalNano: NSDecimalNumber {
+        let total = WalletManager.shared.accounts.reduce(NSDecimalNumber(decimal: 0.0), { (result, account) in
+            result.adding(account.balance.decimalNumber)
+        })
+        return total
     }
-    
-    mutating func toggleCurrency() {
-        if isShowingSecondary {
-            currencyValue = "NANO"
-            balanceValue = getTotalNano()
+
+    var currencyValue: String {
+        if Currency.isSecondarySelected == true {
+            return Currency.secondary.typePostfix
         } else {
-            let secondary = Currency.secondary
-            currencyValue = secondary.typePostfix
-            let total = WalletManager.shared.accounts.reduce(BDouble(0.0), { (result, account) in
-                result + account.balance.bNumber
-            })
-            balanceValue = secondary.convertToFiat(total)
+            return CURRENCY_NAME
         }
-        isShowingSecondary = !isShowingSecondary
+    }
+
+    var balanceValue: String {
+        if !Currency.isSecondarySelected {
+            return self.getTotalNano()
+        } else {
+            return Currency.secondary.convert(self.totalNano)
+        }
+    }
+
+    mutating func toggleCurrency() {
+        Currency.setSecondary(!Currency.isSecondarySelected)
     }
     
     func getTotalNano() -> String {
-        let total = WalletManager.shared.accounts.reduce(BDouble(0.0), { (result, account) in
-            result + account.balance.bNumber
-        })
-        return total.toMxrb.trimTrailingZeros()
+        return self.totalNano.mxrbString.formattedAmount
     }
 }

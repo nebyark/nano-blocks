@@ -164,6 +164,7 @@ final class WalletManager {
         Lincoln.log("Account created '\(accountAddress)'", inConsole: true)
         // Create account
         PersistentStore.addAccount(name: name, address: accountAddress, index: Int(index))
+        PersistentStore.addAddressEntry(name, address: accountAddress)
         updateAccounts()
     }
     

@@ -155,6 +155,7 @@ class AccountViewController: UIViewController {
         sortButton?.setTitle(viewModel.refineType.title, for: .normal)
         sendButton?.setTitle(.localize("send"), for: .normal)
         receiveButton?.setTitle(.localize("receive"), for: .normal)
+        unitsLabel?.text = self.viewModel.currencyValue
     }
     
     // MARK: - Actions
@@ -302,7 +303,7 @@ class AccountViewController: UIViewController {
         var block = StateBlock(.change)
         block.previous = viewModel.account.frontier
         block.link = ZERO_AMT
-        block.balanceValue = BInt(viewModel.account.balance)
+        block.rawDecimalBalance = viewModel.account.balance.decimalNumber
         block.representative = rep
         guard block.build(with: keyPair) else { return }
         Banner.show("Waiting for work on change block...", style: .success)
@@ -401,7 +402,7 @@ extension AccountViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(TransactionTableViewCell.self, for: indexPath)
-        cell.prepare(with: viewModel[indexPath.section], useSecondaryCurrency: viewModel.isShowingSecondary)
+        cell.prepare(with: viewModel[indexPath.section], useSecondaryCurrency: Currency.isSecondarySelected)
         return cell
     }
 }

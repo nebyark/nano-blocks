@@ -30,13 +30,12 @@ class TransactionTableViewCell: UITableViewCell {
         guard let tx = tx, let type = Block.BlockType(rawValue: tx.type) else { return }
         typeLabel?.text = type == .send ? .localize("sent-filter") : .localize("received-filter")
         let secondary = Currency.secondary
-        var stringValue = ""
-        let value = tx.amount.bNumber.toMxrbValue
+        let stringValue: String
         if useSecondaryCurrency {
-            let converted = secondary.convertToFiat(tx.amount.bNumber)
+            let converted = secondary.convert(tx.amount.decimalNumber)
             stringValue = "\(converted) " + secondary.rawValue.uppercased()
         } else {
-            stringValue = "\(value.decimalExpansion(precisionAfterComma: 6).trimTrailingZeros()) NANO"
+            stringValue = "\(tx.amount.decimalNumber.mxrbString.formattedAmount) NANO"
         }
         amountLabel?.text = stringValue
         let alias = PersistentStore.getAddressEntries().first(where: { $0.address == tx.account })?.name
