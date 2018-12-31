@@ -39,11 +39,11 @@ class AccountViewModel {
     private(set) var isShowingSecondary: Bool = false
     var balanceValue: String {
         if !isShowingSecondary {
-            return account.mxrbBalance.trimTrailingZeros()
+            return account.formattedBalance
         } else {
             let secondary = Currency.secondary
             currencyValue = secondary.typePostfix
-            return secondary.convertToFiat(account.balance.bNumber)
+            return secondary.convert(account.balance.decimalNumber)
         }
     }
     private(set) var currencyValue: String = ""
@@ -126,7 +126,8 @@ class AccountViewModel {
             } else {
                 block.representative = me.account.representative
             }
-            guard me.account.balance.bNumber + amount.bNumber >= me.account.balance.bNumber else {
+            let accountBalance = me.account.balance.decimalNumber
+            guard accountBalance.adding(amount.decimalNumber).compare(accountBalance) == .orderedDescending  else {
                 Banner.show("Account balance should be greater than previous balance", style: .danger)
                 return
             }

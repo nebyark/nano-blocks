@@ -26,18 +26,18 @@ struct AccountsViewModel {
         } else {
             let secondary = Currency.secondary
             currencyValue = secondary.typePostfix
-            let total = WalletManager.shared.accounts.reduce(BDouble(0.0), { (result, account) in
-                result + account.balance.bNumber
+            let total = WalletManager.shared.accounts.reduce(NSDecimalNumber(decimal: 0.0), { (result, account) in
+                result.adding(account.balance.decimalNumber)
             })
-            balanceValue = secondary.convertToFiat(total)
+            balanceValue = secondary.convert(total)
         }
         isShowingSecondary = !isShowingSecondary
     }
     
     func getTotalNano() -> String {
-        let total = WalletManager.shared.accounts.reduce(BDouble(0.0), { (result, account) in
-            result + account.balance.bNumber
+        let total = WalletManager.shared.accounts.reduce(NSDecimalNumber(decimal: 0.0), { (result, account) in
+            result.adding(account.balance.decimalNumber)
         })
-        return total.toMxrb.trimTrailingZeros()
+        return total.mxrbString
     }
 }

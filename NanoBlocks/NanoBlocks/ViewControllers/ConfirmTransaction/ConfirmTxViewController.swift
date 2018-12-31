@@ -54,16 +54,15 @@ class ConfirmTxViewController: UIViewController {
     }
     
     fileprivate func setupView() {
-        guard let amountValue = BDouble(txInfo.amount) else { return }
         contentView?.layer.cornerRadius = 10.0
         contentView?.clipsToBounds = true
         let gradient = AppStyle.buttonGradient
         gradient.masksToBounds = true
         gradient.frame = confirmButton?.bounds ?? .zero
         confirmButton?.layer.insertSublayer(gradient, at: 0)
-        balanceLabel?.text = "\(txInfo.rawBalance.decimalNumber.mxrbString) NANO"
-        amountLabel?.text = "\(txInfo.amount.trimTrailingZeros()) NANO"
-        let secondaryAmount = Currency.secondary.convertToFiat(amountValue, isRaw: false)
+        balanceLabel?.text = "\(txInfo.rawBalance.decimalNumber.mxrbString.formattedAmount) NANO"
+        amountLabel?.text = "\(txInfo.amount.formattedAmount) NANO"
+        let secondaryAmount = Currency.secondary.convert(txInfo.amount.decimalNumber, isRaw: false)
         secondaryAmountLabel?.text = "\(secondaryAmount) \(Currency.secondary.rawValue.uppercased())"
         recipientNameLabel?.text = txInfo.recipientName
         recipientAddressLabel?.text = txInfo.recipientAddress
