@@ -201,6 +201,11 @@ extension AddressBookViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(AddressItemTableViewCell.self, for: indexPath)
         cell.nameLabel?.text = accountEntry.name
         cell.addressLabel?.text = accountEntry.address
+        if WalletManager.shared.accounts.contains(where: {$0.address == accountEntry.address }) {
+            cell.iconImageView?.isHidden = false
+        } else {
+            cell.iconImageView?.isHidden = true
+        }
         
         return cell
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class AddressItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var iconImageView: UIImageView?
     @IBOutlet weak var nameLabel: UILabel?
     @IBOutlet weak var addressLabel: UILabel?
     
@@ -17,6 +18,11 @@ class AddressItemTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.iconImageView?.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
