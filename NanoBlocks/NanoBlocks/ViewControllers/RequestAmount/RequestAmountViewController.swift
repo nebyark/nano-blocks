@@ -17,6 +17,7 @@ class RequestAmountViewController: UIViewController {
     @IBOutlet weak var qrImageView: UIImageView?
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var amountLabel: UILabel?
+    fileprivate var amount: NSDecimalNumber = 0.0
     fileprivate var isShowingSecondary: Bool = false
     fileprivate let rows: CGFloat = 4
     fileprivate let cols: CGFloat = 3
@@ -93,17 +94,17 @@ class RequestAmountViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func currencyButtonTapped(_ sender: Any) {
-        guard let value = Double(amountLabel?.text ?? "0") else { return }
         isShowingSecondary = !isShowingSecondary
         if isShowingSecondary {
-            let rate = value * Currency.secondaryConversionRate
             let secondary = Currency.secondary
+            let converted = secondary.convert(self.amount, isRaw: false)
             currencyButton?.setTitle(secondary.rawValue.uppercased(), for: .normal)
-            amountLabel?.text = rate.chopDecimal(to: secondary.precision).trimTrailingZeros()
+            amountLabel?.text = converted
         } else {
-            let rate = value / Currency.secondaryConversionRate
             currencyButton?.setTitle("NANO", for: .normal)
-            amountLabel?.text = rate.chopDecimal(to: 6).trimTrailingZeros()
+            // [bk] temp hack until this view is refactored
+            let amountText = self.amount.stringValue.formattedAmount.replacingOccurrences(of: ",", with: "")
+            amountLabel?.text = amountText
         }
     }
     
@@ -112,12 +113,15 @@ class RequestAmountViewController: UIViewController {
     }
     
     @IBAction func shareTapped(_ sender: Any) {
-        guard let address = account.address, let amount = amountLabel?.text, var value = Double(amount) else { return }
+        guard let address = account.address, let amount = amountLabel?.text else { return }
+        let value: NSDecimalNumber
         if isShowingSecondary {
-            value = value / Currency.secondaryConversionRate
+            value = amount.decimalNumber.dividing(by: NSDecimalNumber(decimal: Decimal(Currency.secondaryConversionRate)))
+        } else {
+            value = amount.decimalNumber
         }
         var items: [Any] = []
-        let shareText: String = "Amount to send: \(value.chopDecimal(to: 6)) NANO\nAddress: \(address)"
+        let shareText: String = "Amount to send: \(value.stringValue.formattedAmount) NANO\nAddress: \(address)"
         if let image = qrImageView?.image?.maskWithColor(.black) {
             items.append(image)
         }
@@ -127,9 +131,17 @@ class RequestAmountViewController: UIViewController {
     }
     
     fileprivate func updateQRCode() {
-        guard let amount = amountLabel?.text,
-            let address = account.address,
-            let rawAmount = Double(amount)?.toRaw else { return}
+        guard
+            let address = account.address
+        else {
+            return
+        }
+        let rawAmount: String
+        if isShowingSecondary {
+            rawAmount = self.amount.dividing(by: NSDecimalNumber(decimal: Decimal(Currency.secondaryConversionRate))).rawString
+        } else {
+            rawAmount = self.amount.rawString
+        }
         let xrbStandard = "xrb:\(address)?amount=\(rawAmount)"
         guard let requestData = xrbStandard.data(using: .utf8), let qrImageView = qrImageView else { return }
         qrImageView.image = UIImage
@@ -151,13 +163,20 @@ extension RequestAmountViewController: UICollectionViewDelegateFlowLayout {
 extension RequestAmountViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        guard let amountText = amountLabel?.text else { return }
+        // TODO: clean up numberpad
+        guard
+            let amountText = amountLabel?.text,
+            amountText.decimalNumber.decimalValue < 1_000_000.0 || indexPath.item == 11,
+            amountText.split(separator: ".").last?.count ?? 0 < 6 || indexPath.item == 11
+        else {
+            return
+        }
         if indexPath.item < 9 {
             if Double(amountText) == 0, !amountText.contains(".") {
                 amountLabel?.text = ""
             }
             let temp: String = "\(amountLabel?.text ?? "")\(indexPath.item + 1)"
-            if let _ = Double(temp) {
+            if let _ = self.numberTest(temp) {
                 amountLabel?.text = temp
                 impact.impactOccurred()
             } else {
@@ -165,7 +184,7 @@ extension RequestAmountViewController: UICollectionViewDelegate {
             }
         } else if indexPath.item == 9 {
             let temp = "\(amountText)."
-            if let _ = Double(temp) {
+            if let _ = self.numberTest(temp) {
                 amountLabel?.text = temp
                 impact.impactOccurred()
             } else {
@@ -173,7 +192,7 @@ extension RequestAmountViewController: UICollectionViewDelegate {
             }
         } else if indexPath.item == 10 {
             let temp = "\(amountText)0"
-            if let _ = Double(temp), amountText != "0" {
+            if let _ = self.numberTest(temp), amountText != "0" {
                 amountLabel?.text = temp
                 impact.impactOccurred()
             } else {
@@ -185,10 +204,17 @@ extension RequestAmountViewController: UICollectionViewDelegate {
         if amountLabel?.text == "" {
             amountLabel?.text = "0"
         }
+
+        let value = NSDecimalNumber(string: amountLabel?.text)
+        amount = isShowingSecondary ? value.dividing(by: NSDecimalNumber(decimal: Decimal(Currency.secondaryConversionRate))) : value
         
         updateQRCode()
     }
-    
+
+    fileprivate func numberTest(_ numberString: String) -> Double? {
+        return Double(numberString.replacingOccurrences(of: ",", with: ""))
+    }
+
     func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         return true
     }
