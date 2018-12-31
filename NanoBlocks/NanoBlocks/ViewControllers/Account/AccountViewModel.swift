@@ -36,17 +36,22 @@ class AccountViewModel {
     private(set) var refined: [SimpleBlockBridge] = []
     private(set) var blockCheck: Set<String> = []
     private(set) var balance: AccountBalance?
-    private(set) var isShowingSecondary: Bool = false
     var balanceValue: String {
-        if !isShowingSecondary {
+        if !Currency.isSecondarySelected {
             return account.formattedBalance
         } else {
             let secondary = Currency.secondary
-            currencyValue = secondary.typePostfix
             return secondary.convert(account.balance.decimalNumber)
         }
     }
-    private(set) var currencyValue: String = ""
+
+    var currencyValue: String {
+        if Currency.isSecondarySelected {
+            return Currency.secondary.typePostfix
+        } else {
+            return CURRENCY_NAME
+        }
+    }
     private(set) var refineType: RefineType = .latestFirst
     var onNewBlockBroadcasted: (() -> Void)?
     var updateView: (() -> Void)?
@@ -67,13 +72,7 @@ class AccountViewModel {
     }
     
     func toggleCurrency() {
-        if isShowingSecondary {
-            currencyValue = "NANO"
-        } else {
-            let secondary = Currency.secondary
-            currencyValue = secondary.typePostfix
-        }
-        isShowingSecondary = !isShowingSecondary
+        Currency.setSecondary(!Currency.isSecondarySelected)
     }
     
     func initHistory() {

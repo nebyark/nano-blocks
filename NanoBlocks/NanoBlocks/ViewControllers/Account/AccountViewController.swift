@@ -155,6 +155,7 @@ class AccountViewController: UIViewController {
         sortButton?.setTitle(viewModel.refineType.title, for: .normal)
         sendButton?.setTitle(.localize("send"), for: .normal)
         receiveButton?.setTitle(.localize("receive"), for: .normal)
+        unitsLabel?.text = self.viewModel.currencyValue
     }
     
     // MARK: - Actions
@@ -401,7 +402,7 @@ extension AccountViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(TransactionTableViewCell.self, for: indexPath)
-        cell.prepare(with: viewModel[indexPath.section], useSecondaryCurrency: viewModel.isShowingSecondary)
+        cell.prepare(with: viewModel[indexPath.section], useSecondaryCurrency: Currency.isSecondarySelected)
         return cell
     }
 }

@@ -119,7 +119,15 @@ enum Currency: String {
         UserDefaults.standard.set(rate, forKey: .kSecondaryConversionRate)
         UserDefaults.standard.synchronize()
     }
-    
+
+    static func setSecondary(_ selected: Bool) {
+        if selected {
+            UserDefaults.standard.set(true, forKey: .kSecondarySelected)
+        } else {
+            UserDefaults.standard.removeObject(forKey: .kSecondarySelected)
+        }
+    }
+
     static var secondary: Currency {
         let currRaw = UserDefaults.standard.value(forKey: .kSecondaryCurrency) as? String ?? ""
         return Currency(rawValue: currRaw) ?? .usd
@@ -128,9 +136,14 @@ enum Currency: String {
     static var secondaryConversionRate: Double {
         return UserDefaults.standard.value(forKey: .kSecondaryConversionRate) as? Double ?? 1.0
     }
+
+    static var isSecondarySelected: Bool {
+        return UserDefaults.standard.value(forKey: .kSecondarySelected) != nil
+    }
 }
 
 extension String {
     static let kSecondaryCurrency: String = "kSecondaryCurrency"
     static let kSecondaryConversionRate: String = "kSecondaryConversionRate"
+    static let kSecondarySelected: String = "kSecondarySelected"
 }

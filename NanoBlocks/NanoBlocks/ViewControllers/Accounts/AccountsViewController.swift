@@ -129,7 +129,7 @@ extension AccountsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(AccountTableViewCell.self, for: indexPath)
         let account = WalletManager.shared.account(at: indexPath.section)
-        cell.prepare(with: account, useSecondaryCurrency: viewModel.isShowingSecondary)
+        cell.prepare(with: account, useSecondaryCurrency: Currency.isSecondarySelected)
         return cell
     }
 }
