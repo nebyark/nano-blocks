@@ -302,7 +302,7 @@ class AccountViewController: UIViewController {
         var block = StateBlock(.change)
         block.previous = viewModel.account.frontier
         block.link = ZERO_AMT
-        block.balanceValue = BInt(viewModel.account.balance)
+        block.rawDecimalBalance = viewModel.account.balance.decimalNumber
         block.representative = rep
         guard block.build(with: keyPair) else { return }
         Banner.show("Waiting for work on change block...", style: .success)

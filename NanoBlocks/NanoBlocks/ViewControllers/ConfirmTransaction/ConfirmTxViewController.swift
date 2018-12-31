@@ -61,7 +61,7 @@ class ConfirmTxViewController: UIViewController {
         gradient.masksToBounds = true
         gradient.frame = confirmButton?.bounds ?? .zero
         confirmButton?.layer.insertSublayer(gradient, at: 0)
-        balanceLabel?.text = "\(txInfo.balance.trimTrailingZeros()) NANO"
+        balanceLabel?.text = "\(txInfo.rawBalance.decimalNumber.mxrbString) NANO"
         amountLabel?.text = "\(txInfo.amount.trimTrailingZeros()) NANO"
         let secondaryAmount = Currency.secondary.convertToFiat(amountValue, isRaw: false)
         secondaryAmountLabel?.text = "\(secondaryAmount) \(Currency.secondary.rawValue.uppercased())"
@@ -99,15 +99,18 @@ class ConfirmTxViewController: UIViewController {
     }
     
     fileprivate func handleSend() {
-        guard let balanceValue = BDouble(txInfo.balance), let amountValue = BDouble(txInfo.amount), amountValue > 0.0 else { return }
-        guard let keyPair = WalletManager.shared.keyPair(at: txInfo.accountInfo.index),
-            let account = keyPair.xrbAccount else { return }
+        guard
+            self.txInfo.rawBalance.decimalNumber.decimalValue > 0.0,
+            let keyPair = WalletManager.shared.keyPair(at: txInfo.accountInfo.index),
+            let account = keyPair.xrbAccount
+        else {
+            return
+        }
         // Generate block
-        let remainingRaw = balanceValue.toRaw.rounded()
         var block = StateBlock(.send)
         block.previous = txInfo.accountInfo.frontier.uppercased()
         block.link = txInfo.recipientAddress
-        block.balanceValue = remainingRaw
+        block.rawDecimalBalance = txInfo.rawBalance.decimalNumber
         block.representative = txInfo.accountInfo.representative
         guard block.build(with: keyPair) else { return }
         

@@ -106,15 +106,21 @@ class AccountViewModel {
         isFetching = true
         NetworkAdapter.blockInfo(hashes: [source]) { [weak self] (info, error) in
             self?.isFetching = false
-            guard let me = self,
-                let amount = info.first?.amount,
-                let balance = BInt(me.account.balance),
-                let amt = BInt(amount) else { return }
+            guard
+                let me = self,
+                let amount = info.first?.amount
+            else {
+                return
+            }
+
+            let balance = me.account.balance.decimalNumber
+            let amt = amount.decimalNumber
+
             var block = shouldOpen ? StateBlock(.open) : StateBlock(.receive)
             let randomRep = WalletManager.shared.getRandomRep()?.account ?? account
             block.previous = previous
             block.link = source
-            block.balanceValue = balance + amt
+            block.rawDecimalBalance = balance.adding(amt)
             if me.account.representative.isEmpty {
                 block.representative = randomRep
             } else {

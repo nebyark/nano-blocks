@@ -24,7 +24,7 @@ struct StateBlock: BlockAdapter {
     var signature: String = ""
     var work: String = ""
     var intent: Intent
-    var balanceValue: BInt? = nil
+    var rawDecimalBalance: NSDecimalNumber?
     
     init(_ intent: Intent) {
         self.intent = intent
@@ -42,15 +42,19 @@ struct StateBlock: BlockAdapter {
     /// b.representative = <either current or a new rep>
     /// b.build(with: <account keyPair>
     mutating func build(with signingKeys: KeyPair) -> Bool {
-        guard var linkData = link.hexData,
+        guard
+            var linkData = self.link.hexData,
             let encodedAccount = signingKeys.xrbAccount,
             let repData = WalletUtil.derivePublic(from: representative)?.hexData,
             let accountData = WalletUtil.derivePublic(from: encodedAccount)?.hexData,
-            let previousData = previous.hexData,
-            let decimalBalance = balanceValue?.asString(radix: 10) else { return false }
-        let finalBalance = balanceValue?
-            .asString(radix: 16)
-            .leftPadding(toLength: 32, withPad: "0") ?? ZERO_AMT
+            let previousData = self.previous.hexData,
+            let rawDecimalBalance = self.rawDecimalBalance,
+            let hexBalance = rawDecimalBalance.hexString
+        else {
+            return false
+        }
+
+        let finalBalance = hexBalance.leftPadding(toLength: 32, withPad: "0")
         if intent == .send, let destinationData = WalletUtil.derivePublic(from: link)?.hexData {
             linkData = destinationData
         }
@@ -68,7 +72,7 @@ struct StateBlock: BlockAdapter {
             linkData
             ], outputLength: 32) else { return false }
         guard let sig = NaCl.sign(digest, secret: signingKeys.secretKey) else { return false }
-        balance = decimalBalance
+        balance = rawDecimalBalance.stringValue
         account = encodedAccount
         signature = sig.hexString.uppercased()
 
