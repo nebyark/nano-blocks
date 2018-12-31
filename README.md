@@ -17,7 +17,7 @@ All designs are from my brother, Tim. Here's his other [stuff](http://www.timkra
 ![](https://i.imgur.com/ldm9UeW.jpg)
 
 ## Running the project
-The project should build to a device out-of-the-box. However, if you wish to run on sim, you'll have to create a new `Sodium.framework` build [off of my swift-sodium fork](https://github.com/nebyark/swift-sodium) that includes sim architectures. 
+The project should build out-of-box to a simulator. You'll have to modify the team signing settings (don't commit these changes) to get the project to build to a device.
 
 ## Contributing
 Feel free to contribute. [There's a #dev channel in the Nano Blocks Discord](https://discord.gg/n76DkEt). There's plenty to do, including refactoring most views that use .xibs to have their layouts programmatically generated (I started on a few using `SnapKit`).
