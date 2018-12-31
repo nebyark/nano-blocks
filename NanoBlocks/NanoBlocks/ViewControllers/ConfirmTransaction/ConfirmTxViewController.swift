@@ -99,19 +99,13 @@ class ConfirmTxViewController: UIViewController {
     
     fileprivate func handleSend() {
         guard
-            self.txInfo.rawBalance.decimalNumber.decimalValue > 0.0,
-            let keyPair = WalletManager.shared.keyPair(at: txInfo.accountInfo.index),
-            let account = keyPair.xrbAccount
+            let keyPair = WalletManager.shared.keyPair(at: self.txInfo.accountInfo.index),
+            let block = self.txInfo.createBlock(with: keyPair),
+            let account = self.txInfo.accountInfo.address
         else {
+            Banner.show("Error generating block", style: .danger)
             return
         }
-        // Generate block
-        var block = StateBlock(.send)
-        block.previous = txInfo.accountInfo.frontier.uppercased()
-        block.link = txInfo.recipientAddress
-        block.rawDecimalBalance = txInfo.rawBalance.decimalNumber
-        block.representative = txInfo.accountInfo.representative
-        guard block.build(with: keyPair) else { return }
         
         Lincoln.log("Sending \(txInfo.amount) NANO to '\(txInfo.recipientAddress)'", inConsole: true)
         UIView.animate(withDuration: 0.3) {

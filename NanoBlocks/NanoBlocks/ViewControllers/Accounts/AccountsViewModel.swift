@@ -38,6 +38,6 @@ struct AccountsViewModel {
     }
     
     func getTotalNano() -> String {
-        return self.totalNano.mxrbString
+        return self.totalNano.mxrbString.formattedAmount
     }
 }

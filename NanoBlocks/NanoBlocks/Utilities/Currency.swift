@@ -104,7 +104,6 @@ enum Currency: String {
         numberFormatter.minimumFractionDigits = self.precision
         numberFormatter.numberStyle = .decimal
 
-
         let numberValue = NSNumber(value: convertedValue.doubleValue)
         return numberFormatter.string(from: numberValue) ?? "--"
     }

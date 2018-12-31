@@ -55,7 +55,7 @@ class EnterAmountViewController: UIViewController {
         continueButton.layer.insertSublayer(gradient, below: continueButton.imageView!.layer)
         continueButton.setImage(#imageLiteral(resourceName: "xrb_check").withRenderingMode(.alwaysTemplate), for: .normal)
         continueButton.tintColor = .white
-        balanceLabel?.text = String.localize("available-balance-arg", arg: "\(account.mxrbBalance)".trimTrailingZeros()).uppercased()
+        balanceLabel?.text = String.localize("available-balance-arg", arg: account.formattedBalance).uppercased()
         balanceLabel?.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(balanceTapped))
         balanceLabel?.addGestureRecognizer(gesture)
@@ -98,7 +98,7 @@ class EnterAmountViewController: UIViewController {
     // MARK: - Actions
     
     @objc fileprivate func balanceTapped() {
-        amountLabel?.text = account.mxrbBalance.trimTrailingZeros()
+        amountLabel?.text = account.formattedBalance
         amount = account.mxrbBalance.decimalNumber
     }
     
@@ -109,12 +109,16 @@ class EnterAmountViewController: UIViewController {
     @IBAction func currencyButtonTapped(_ sender: Any) {
         isShowingSecondary = !isShowingSecondary
         if isShowingSecondary {
-            balanceLabel?.text = String.localize("available-balance-arg", arg: "\(Currency.secondary.convert(self.amount, isRaw: false))").uppercased()
+            let secondary = Currency.secondary
+            let converted = secondary.convert(self.amount, isRaw: false)
+            balanceLabel?.text = String.localize("available-balance-arg", arg: converted).uppercased()
+            currencyButton?.setTitle(secondary.rawValue.uppercased(), for: .normal)
+            amountLabel?.text = converted
         } else {
             currencyButton?.setTitle("NANO", for: .normal)
             let amountText = amount.stringValue
             amountLabel?.text = amountText
-            balanceLabel?.text = String.localize("available-balance-arg", arg: "\(account.mxrbBalance.trimTrailingZeros())").uppercased()
+            balanceLabel?.text = String.localize("available-balance-arg", arg: account.formattedBalance).uppercased()
         }
     }
     
