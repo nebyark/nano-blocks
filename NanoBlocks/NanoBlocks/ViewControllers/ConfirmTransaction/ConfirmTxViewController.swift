@@ -120,7 +120,7 @@ class ConfirmTxViewController: UIViewController {
                     self?.dismiss(animated: true)
                 }
             case .failure(let error):
-                Banner.show(.localize("send-error-arg", arg: error.description), style: .danger)
+                Banner.show(error.description, style: .danger)
                 UIView.animate(withDuration: 0.3) {
                     self?.contentView?.alpha = 1.0
                 }

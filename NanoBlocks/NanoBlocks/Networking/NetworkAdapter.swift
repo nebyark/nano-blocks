@@ -36,7 +36,7 @@ public struct NetworkAdapter {
             case .fork: return "Fork detected"
             case .oldBlock: return "Old block detected"
             case .badResponse: return "Bad response"
-            default: return ""
+            case .unknown(message: let msg): return msg
             }
         }
         // TODO: get other error messages
