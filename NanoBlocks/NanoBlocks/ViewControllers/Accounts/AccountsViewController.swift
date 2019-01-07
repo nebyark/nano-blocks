@@ -32,15 +32,16 @@ class AccountsViewController: UIViewController {
         setupTableView()
         setupNavBar()
         navigationController?.delegate = self
+
+        WalletManager.shared.accounts.forEach { account in
+            self.fetchAccountInfo(for: account)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        WalletManager.shared.updateAccounts()
-        tableView?.reloadData()
-        viewModel = AccountsViewModel()
-        totalBalanceLabel?.text = viewModel.balanceValue
-        unitsLabel?.text = viewModel.currencyValue
+
+        self.updateAccounts()
     }
     
     // MARK: - Setup
@@ -91,7 +92,27 @@ class AccountsViewController: UIViewController {
     }
     
     // MARK: - Actions
-    
+
+    private func fetchAccountInfo(for account: AccountInfo) {
+        guard let address = account.address else { return }
+        NetworkAdapter.getLedger(account: address) { [weak self] info in
+            if let info = info {
+                PersistentStore.write {
+                    account.copyProperties(from: info)
+                }
+                self?.updateAccounts()
+            }
+        }
+    }
+
+    private func updateAccounts() {
+        WalletManager.shared.updateAccounts()
+        tableView?.reloadData()
+        viewModel = AccountsViewModel()
+        totalBalanceLabel?.text = viewModel.balanceValue
+        unitsLabel?.text = viewModel.currencyValue
+    }
+
     @objc func settingsTapped() {
         delegate?.settingsTapped()
     }
@@ -106,6 +127,10 @@ class AccountsViewController: UIViewController {
             self?.delegate?.accountAdded()
             self?.tableView?.reloadData()
             self?.setupNavBar()
+
+            if let account = WalletManager.shared.accounts.last {
+                self?.fetchAccountInfo(for: account)
+            }
         })
     }
     

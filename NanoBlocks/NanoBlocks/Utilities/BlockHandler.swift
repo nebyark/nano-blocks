@@ -13,6 +13,7 @@ struct BlockHandler {
         case proofOfWork
         case process(String?)
         case unknown
+        case apiError(NetworkAdapter.APIError)
         case alreadyInProgress
         
         var description: String {
@@ -24,6 +25,7 @@ struct BlockHandler {
                 } else {
                     return "Something happened when processing the block"
                 }
+            case .apiError(let error): return error.message
             case .unknown: return "Unknown"
             case .alreadyInProgress: return "Broadcast already in progress"
             }
@@ -59,11 +61,13 @@ struct BlockHandler {
                 defer {
                     processing.remove(workInput)
                 }
-                guard let blockHash = blockHash else {
-                    completion(.failure(.process(error?.localizedDescription)))
-                    return
+                if let error = error {
+                    completion(.failure(.apiError(error)))
+                } else if let blockHash = blockHash {
+                    completion(.success(blockHash))
+                } else {
+                    completion(.failure(.unknown))
                 }
-                completion(.success(blockHash))
             }
         }
     }
