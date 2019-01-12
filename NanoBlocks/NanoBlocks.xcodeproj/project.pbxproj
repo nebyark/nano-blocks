@@ -184,6 +184,8 @@
 		A71CEB9C2054AE2F00FF6B54 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		A71CEB9D2054AE2F00FF6B54 /* LockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockViewController.xib; sourceTree = "<group>"; };
 		A71CEBA22054EB0E00FF6B54 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A723C1D821EA92DB00D5840E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A723C1D921EA92DB00D5840E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A726C27F1FFCD5D400E73C18 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		A726C2801FFCD5D400E73C18 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		A72BC4EC20A5731000AE3C4A /* BlockHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHandler.swift; sourceTree = "<group>"; };
@@ -269,10 +271,8 @@
 		A79116FC2017398300890432 /* AddressBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookViewModel.swift; sourceTree = "<group>"; };
 		A79116FE20173C4400890432 /* AddressEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEntry.swift; sourceTree = "<group>"; };
 		A7975A8920787D0800B2995D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A7975A8A20787D0E00B2995D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A7975A8F20787D6100B2995D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A7975A9120787D6300B2995D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A7975A9220787D6400B2995D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A7B1B24320140D0F009E5CB0 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		A7B1B24420140D0F009E5CB0 /* SendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
 		A7B327F32001D4AA00E0E360 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -889,11 +889,11 @@
 				en,
 				Base,
 				ja,
-				ko,
 				fr,
 				de,
 				es,
 				sv,
+				nl,
 			);
 			mainGroup = A74361DA1FE64F9000054078;
 			productRefGroup = A74361E41FE64F9100054078 /* Products */;
@@ -1212,11 +1212,11 @@
 			children = (
 				A74361F01FE64F9100054078 /* Base */,
 				A7975A8920787D0800B2995D /* ja */,
-				A7975A8A20787D0E00B2995D /* ko */,
 				A70E8E0720982F7700372394 /* fr */,
 				A70E8E092098301500372394 /* de */,
 				A73229CF20B6238B00CACB3A /* es */,
 				A73229D120B623B400CACB3A /* sv */,
+				A723C1D821EA92DB00D5840E /* nl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1226,11 +1226,11 @@
 			children = (
 				A7975A8F20787D6100B2995D /* en */,
 				A7975A9120787D6300B2995D /* ja */,
-				A7975A9220787D6400B2995D /* ko */,
 				A70E8E0820982F7800372394 /* fr */,
 				A70E8E0A2098301500372394 /* de */,
 				A73229D020B6238B00CACB3A /* es */,
 				A73229D220B623B400CACB3A /* sv */,
+				A723C1D921EA92DB00D5840E /* nl */,
 			);
 			name = Localizable.strings;
 			path = NanoBlocks/Resources/Localization;

@@ -1,0 +1,146 @@
+
+/*Localizable.strings
+ NanoWallet
+
+ Created by Ben Kray on 4/6/18.
+ Translations supplied by dodvip123
+ Copyright © 2018 Planar Form. All rights reserved.
+
+ COMMON*/
+"nano-blocks" = "Nano Blocks";
+"seed" = "Seed";
+"passphrase" = "Wachtwoordzin";
+"lowest-balance" = "Laagste saldo";
+"total-balance" = "Totale saldo";
+"send" = "Verstuur";
+"receive" = "Ontvang";
+"share" = "Deel";
+"request-amount" = "Verzoek bedrag";
+"cancel" = "Annuleer";
+
+/*LANDING PAGE*/
+"welcome-1" = "Welkom bij Nano Blocks. Om verder te gaan kunt u een nieuwe wallet creëren of een bestaande wallet importeren.";
+"welcome-2" = "Aan elke wallet zijn mogelijk meerdere accounts gekoppeld.";
+"new-wallet" = "Nieuwe wallet";
+"import-wallet" = "Importeer wallet";
+
+/*IMPORT WALLET*/
+"import-wallet-cap" = "Importeer Wallet";
+"import-wallet-subtitle" = "U kunt een reeds bestaande wallet importeren uit de bijbehorende seed.";
+
+/*SEED*/
+"seed-subtitle" = "Gelieve de seed van uw wallet in te voeren.";
+
+/*ACCOUNT*/
+"accounts" = "Accounts";
+"latest-sort" = "Laatste Eerst";
+"oldest-sort" = "Oudste Eerst";
+"smallest-sort" = "Laagste Eerst";
+"largest-sort" = "Hoogste Eerst";
+"received-filter" = "Ontvangen";
+"sent-filter" = "Verzonden";
+"edit-name" = "Bewerk Account Naam";
+"edit-representative" = "Bewerk Representative";
+"repair-account" = "Herstel account";
+
+/*SEND*/
+"enter-name" = "Voer naam in";
+"send-to-arg" = "Verzend naar: %@";
+"enter-amount" = "Voer bedrag in";
+"recipient" = "Ontvanger";
+"enter-address" = "Voer adres in";
+"scan-qr" = "Scan QR code";
+"available-balance-arg" = "Beschikbaar saldo : %@";
+"enter-address-search-msg" = "Zoek een adres of voer hieronder manueel een adres in.";
+"unknown" = "Onbekend";
+"insufficient-funds" = "Ontoereikend saldo";
+
+/*CONFIRM TX*/
+"balance" = "Saldo";
+"confirm" = "Bevestigen";
+
+/*SETTINGS*/
+"settings" = "Instellingen";
+"currency" = "Munteenheid";
+"address-book" = "Adresboek";
+"console" = "Console";
+
+/*SECURITY*/
+"security" = "Beveiliging";
+"about" = "Over";
+"clear-wallet-data" = "Wis wallet gegevens";
+"clear-wallet-data-title" = "Weet u zeker dat u uw wallet gegevens wilt wissen?";
+"clear-wallet-data-msg" = "Alle wallet gegevens zullen gewist worden, inclusief de seed. Indien u deze wallet in de toekomst wilt herstellen, zorg dan dat u de seed ergens anders hebt opgeslagen.";
+"require-biometrics-send" = "Vereis biometrie bij verzenden";
+"require-biometrics-launch" = "Vereis biometrie bij openen app";
+"change-password" = "Verander wachtwoord";
+"show-seed" = "Weergeef seed";
+"authenticate" = "Authentificeren";
+"password" = "Wachtwoord";
+"password-info" = "Wachtwoord info";
+"password-info-msg" = "Een wachtwoord is vereist om de wallet te versleutelen/decoderen en om te voorkomen dat onbevoegde gebruikers toegang krijgen tot de app.";
+"seed-backup-msg" = "Hieronder staat de seed van uw wallet. We raden u ten zeerste aan om een back-up van uw seed te maken en het nooit op te slaan als gewone tekst.";
+
+/*CONSOLE*/
+"export" = "Exporteer";
+"clear" = "Verwijder";
+
+/*ADDRESS BOOK*/
+"new-entry" = "Nieuwe invoer";
+"name" = "Naam";
+"address" = "Adres";
+"save" = "Opslaan";
+"search" = "Zoek";
+
+/*QR SCAN*/
+"qr-scan-tip" = "Scan QR code binnen het voorziene kader";
+
+/*BANNER*/
+"address-copied-clipboard" = "Adres gekopieerd naar klembord";
+"arg-copied-clipboard" = "%@ gekopieerd naar klembord";
+"please-enter-amount" = "Gelieve een bedrag in te voeren";
+"no-pastable-item" = "Niks gevonden om te plakken";
+"seed-copied" = "Seed gekopieerd naar klembord (zal verwijderd worden in 1 minuut)";
+"weak-password" = "Uw wachtwoord is gevonden in de lijst van top 10 000 zwakke wachtwoorden. Gelieve een ander wachtwoord te kiezen";
+"enter-password-both-field" = "Gelieve wachtwoord in beide velden in te voeren";
+"password-mismatch" = "Wachtwoorden komen niet overeen";
+"no-password-entered" = "Geen wachtwoord ingevoerd";
+"unable-to-authenticate" = "Niet in staat te authentificeren";
+"dev-address-copied" = "🍻 Adres ontwikkelaar gekopieerd naar klembord";
+"send-cancelled" = "Verzenden geannuleerd";
+"proof-of-work-error" = "Proof of work fout";
+"send-error-arg" = "Verzend Fout: %@";
+"invalid-nano-address" = "Ongeldig Nano adres";
+"no-name-provided" = "Geen naam opgegeven";
+"address-already-exists" = "Nano adres bestaat al";
+"no-cam-access" = "Geen toegang tot camera verstrekt";
+"arg-entry-saved" = "'%@' opgeslagen in adresboek";
+"enter-recipient-address" = "Gelieve adres ontvanger in te voeren";
+"opening-account" = "Account openen";
+"open-account-error-arg" = "Open Account fout: %@";
+"receive-error-arg" = "Ontvangen fout: %@";
+"arg-pending-receivables" = "%@ openstaande vorderingen";
+"arg-pending-receivable" = "%@ openstaande vorderingen";
+"no-rep-change" = "Geen wijziging representative doorgevoerd";
+"change-rep-error-arg" = "Wijziging Representative Error: %@";
+"rep-changed" = "Representative gewijzigd";
+"seed-set-error" = "Er is een fout opgetreden tijdens het instellen van de seed van uw wallet";
+"pending-receivable-for-arg" = "Openstaande vordering voor %@";
+"new-encrypt-error" = "Fout bij het versleutelen van uw wallet met nieuw wachtwoord";
+"password-change-success" = "Wachtwoord wallet is gewijzigd";
+"enter-amount-title" = "Voer bedrag in";
+"reset-password" = "Reset wachtwoord";
+"enter-address-title" = "Voer adres in";
+"confirm-password" = "Bevestig wachtwoord";
+"blog" = "Blog";
+"twitter" = "Twitter";
+"dev-donation-address" = "Donatie Adres Ontwikkelaar";
+
+/*Add Account*/
+"add-account" = "Voeg account toe";
+
+/*Create Password*/
+"create-password" = "Creëer wachtwoord";
+
+/*No account name provided*/
+"no-account-name-provided" = "Geen account naam opgegeven";
