@@ -186,6 +186,8 @@
 		A71CEBA22054EB0E00FF6B54 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A723C1D821EA92DB00D5840E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A723C1D921EA92DB00D5840E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A723C1DA21EA942A00D5840E /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A723C1DB21EA942B00D5840E /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A726C27F1FFCD5D400E73C18 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		A726C2801FFCD5D400E73C18 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		A72BC4EC20A5731000AE3C4A /* BlockHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHandler.swift; sourceTree = "<group>"; };
@@ -894,6 +896,7 @@
 				es,
 				sv,
 				nl,
+				da,
 			);
 			mainGroup = A74361DA1FE64F9000054078;
 			productRefGroup = A74361E41FE64F9100054078 /* Products */;
@@ -1217,6 +1220,7 @@
 				A73229CF20B6238B00CACB3A /* es */,
 				A73229D120B623B400CACB3A /* sv */,
 				A723C1D821EA92DB00D5840E /* nl */,
+				A723C1DA21EA942A00D5840E /* da */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1231,6 +1235,7 @@
 				A73229D020B6238B00CACB3A /* es */,
 				A73229D220B623B400CACB3A /* sv */,
 				A723C1D921EA92DB00D5840E /* nl */,
+				A723C1DB21EA942B00D5840E /* da */,
 			);
 			name = Localizable.strings;
 			path = NanoBlocks/Resources/Localization;
