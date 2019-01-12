@@ -1,11 +1,13 @@
-/* 
-  Localizable.strings
-  NanoWallet
 
-  Created by Ben Kray on 4/6/18.
-  Copyright © 2018 Planar Form. All rights reserved.
-*/
+/*Localizable.strings
+ NanoWallet
 
+ Created by Ben Kray on 4/6/18.
+ Translations supplied by soundedIceCube
+ Copyright © 2018 Planar Form. All rights reserved.
+
+ COMMON*/
+/*Fuzzy*/
 "nano-blocks" = "Nano Blocks";
 "seed" = "Clé privée";
 "passphrase" = "Phrase secrète";
@@ -18,7 +20,7 @@
 "cancel" = "Annuler";
 
 /*LANDING PAGE*/
-"welcome-1" = "Bienvenue dans le portefeuille Nano. Pour continuer, vous devez créer un nouveau portefeuille ou en importer un existant.";
+"welcome-1" = "Bienvenue dans le Nano Blocks. Pour continuer, vous devez créer un nouveau portefeuille ou en importer un existant.";
 "welcome-2" = "Chaque portefeuille peut avoir de multiple comptes associés avec lui.";
 "new-wallet" = "Nouveau portefeuille";
 "import-wallet" = "Importation du portefeuille";
@@ -134,4 +136,12 @@
 "blog" = "Blog";
 "twitter" = "Twitter";
 "dev-donation-address" = "Adresse de donation du développeur";
-"add-account" = "Ajouter un Compte";
+
+/*Add Account*/
+"add-account" = "Ajouter un compte";
+
+/*Create Password*/
+"create-password" = "Créer un mot de passe";
+
+/*No account name provided*/
+"no-account-name-provided" = "aucun nom de compte fourni";

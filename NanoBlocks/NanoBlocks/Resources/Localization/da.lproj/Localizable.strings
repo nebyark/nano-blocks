@@ -1,0 +1,146 @@
+
+/*Localizable.strings
+ NanoWallet
+
+ Created by Ben Kray on 4/6/18.
+ Translations provided by Mads Bjerre
+ Copyright © 2018 Planar Form. All rights reserved.
+
+ COMMON*/
+"nano-blocks" = "Nano Blokke";
+"seed" = "Frø";
+"passphrase" = "adgangssætning";
+"lowest-balance" = "Laveste balance";
+"total-balance" = "Saldo";
+"send" = "Send";
+"receive" = "Modtag";
+"share" = "Del";
+"request-amount" = "Anmod beløb";
+"cancel" = "Afbryd";
+
+/*LANDING PAGE*/
+"welcome-1" = "Velkommen til Nano Bloks. Hvis du ønsker at fortsætte, skal du oprette en ny wallet eller importerer en allerede eksisterende end.";
+"welcome-2" = "Hver pung har mulighed for at have flere brugere forbundet til den.";
+"new-wallet" = "Ny pung";
+"import-wallet" = "Importer pung";
+
+/*IMPORT WALLET*/
+"import-wallet-cap" = "Importer pung";
+"import-wallet-subtitle" = "Du kan importerer en allerede eksisterende pung fra det tilsvarende frø";
+
+/*SEED*/
+"seed-subtitle" = "Indtast venligst din pungs frø";
+
+/*ACCOUNT*/
+"accounts" = "Brugere";
+"latest-sort" = "Nyeste først";
+"oldest-sort" = "Ældste først";
+"smallest-sort" = "Mindeste først";
+"largest-sort" = "Støreste først";
+"received-filter" = "Modtaget";
+"sent-filter" = "Sendt";
+"edit-name" = "Rediger bruger navn";
+"edit-representative" = "Ændre repræsentant";
+"repair-account" = "";
+
+/*SEND*/
+"enter-name" = "Indtast navn";
+"send-to-arg" = "Send til: %@";
+"enter-amount" = "Indtast beløb";
+"recipient" = "Modtager";
+"enter-address" = "Indtast adresse";
+"scan-qr" = "Scan QR kode";
+"available-balance-arg" = "Beløb til rådighed: %@";
+"enter-address-search-msg" = "Søg efter en adresse eller indtast en manuel i feltet herunder.";
+"unknown" = "Ukendt";
+"insufficient-funds" = "Utilstrækkelig beløb";
+
+/*CONFIRM TX*/
+"balance" = "Saldo";
+"confirm" = "Bekræft";
+
+/*SETTINGS*/
+"settings" = "Indstillinger";
+"currency" = "Valuta";
+"address-book" = "kontaktliste";
+"console" = "Konsol";
+
+/*SECURITY*/
+"security" = "Sikkerhed";
+"about" = "Om";
+"clear-wallet-data" = "Nulstil wallet data";
+"clear-wallet-data-title" = "Er du sikker på at du vil nulstille pung data?";
+"clear-wallet-data-msg" = "Alt pung data vil blive tilintetgjort, også dit frø. Hvis De ønsker at gendanne deres pung i fremtiden bedes De have gemt deres frø et andet sted.";
+"require-biometrics-send" = "Kræv biometrisk sikkerhed ved sending ";
+"require-biometrics-launch" = "Kræv biometrisk sikkerhedved opstart";
+"change-password" = "Ændre adgangskode";
+"show-seed" = "Vis frø";
+"authenticate" = "Godkend";
+"password" = "Adgangskode";
+"password-info" = "Adgangskode information";
+"password-info-msg" = "En adgangskode er påkrævet for at kryptere / dekryptere pungen og for at beskytte appen imod uberettigetede brugere.";
+"seed-backup-msg" = "Herunder findes dit frø. Det er stærkt anbefalet at De laver en sikkerhedskopi og aldrig opbevare det som almindelig tekst";
+
+/*CONSOLE*/
+"export" = "Eksporter";
+"clear" = "Nulstil";
+
+/*ADDRESS BOOK*/
+"new-entry" = "Ny indgang";
+"name" = "Navn";
+"address" = "Adresse";
+"save" = "Gem";
+"search" = "Søh";
+
+/*QR SCAN*/
+"qr-scan-tip" = "Place scanning reticle over QR code";
+
+/*BANNER*/
+"address-copied-clipboard" = "Adresse kopieret til udklipsholder";
+"arg-copied-clipboard" = "%@ kopieret il udklipsholder";
+"please-enter-amount" = "Indtast veneligst et beløb";
+"no-pastable-item" = "Kunne ikke finde noget indhold at sætte ind";
+"seed-copied" = "Frø kopieret til udklipsholder (fjernes om et minut)";
+"weak-password" = "Din adgangskode blev fundet i ''top 10 tusinde svageste adgangskoder. Vælg venligst en ny kode'";
+"enter-password-both-field" = "Indtast venligst koden i begge felter";
+"password-mismatch" = "Password matcher ikke";
+"no-password-entered" = "Intet password indtastet";
+"unable-to-authenticate" = "Ikke i stand til at verificere";
+"dev-address-copied" = "🍻 Udvikler adresse kopieret til udklipsholderen";
+"send-cancelled" = "Transaktion afbrydt";
+"proof-of-work-error" = "Bevis for arbejde fejl";
+"send-error-arg" = "Send fejl: %@";
+"invalid-nano-address" = "Ugyldig nano adresse";
+"no-name-provided" = "Intet navn angivet";
+"address-already-exists" = "Nano adresse findes allerede";
+"no-cam-access" = "Adgang til kamera blev nægtet";
+"arg-entry-saved" = "'%@' blev gemt i kontaktlisten";
+"enter-recipient-address" = "Indtast venligst modtagers adresse";
+"opening-account" = "Åbner konto";
+"open-account-error-arg" = "Åben konto fejl: %@";
+"receive-error-arg" = "Modtager fejl: %@";
+"arg-pending-receivables" = "%@ pending receivables";
+"arg-pending-receivable" = "%@ pending receivable";
+"no-rep-change" = "No representative change to be made";
+"change-rep-error-arg" = "Change Rep Error: %@";
+"rep-changed" = "Representative changed";
+"seed-set-error" = "En fejl opstod under opsætningen af din pungs frø";
+"pending-receivable-for-arg" = "";
+"new-encrypt-error" = "Fejl når pung krypteres med ny adgangskode";
+"password-change-success" = "Pung adgangskode er ændret";
+"enter-amount-title" = "Skriv beløb";
+"reset-password" = "Nulstil adgangskode";
+"enter-address-title" = "Indtast adresse";
+"confirm-password" = "Bekræft adgangskode";
+"blog" = "Blog";
+"twitter" = "Twitter";
+"dev-donation-address" = "Udvikler donations adresse";
+
+/*Add Account*/
+"add-account" = "Add account";
+
+/*Create Password*/
+"create-password" = "Create Password";
+
+/*No account name provided*/
+"no-account-name-provided" = "No account name provided";
