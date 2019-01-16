@@ -24,7 +24,7 @@ func nanoFormatter(_ digits: Int) -> NumberFormatter {
     numberFormatter.maximumFractionDigits = digits
     numberFormatter.minimumFractionDigits = 0
     numberFormatter.minimumIntegerDigits = 1
-    numberFormatter.decimalSeparator = "."
+    numberFormatter.locale = Locale(identifier: "en_US")
 
     return numberFormatter
 }
@@ -41,7 +41,7 @@ extension String {
         formatter.maximumFractionDigits = 6
         formatter.minimumFractionDigits = 0
         formatter.minimumIntegerDigits = 1
-        formatter.decimalSeparator = "."
+        formatter.locale = Locale(identifier: "en_US")
 
         guard let value = Double(self) else {
             return "--"
