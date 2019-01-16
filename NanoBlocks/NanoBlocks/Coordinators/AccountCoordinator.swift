@@ -14,6 +14,7 @@ class AccountCoordinator: RootViewCoordinator {
     private(set) var navController: UINavigationController
     fileprivate var accountVC: AccountViewController?
     let account: AccountInfo
+    var onDismiss: ((Coordinator) -> Void)?
     
     init(in navController: UINavigationController, account: AccountInfo) {
         self.rootViewController = navController
@@ -63,6 +64,11 @@ extension AccountCoordinator: AccountViewControllerDelegate {
             self?.accountVC?.initiateChangeBlock(newRep: address)
         }
         rootViewController.present(UINavigationController(rootViewController: editRepVC), animated: true)
+    }
+
+    func backTapped() {
+        navController.popViewController(animated: true)
+        self.onDismiss?(self)
     }
 }
 
