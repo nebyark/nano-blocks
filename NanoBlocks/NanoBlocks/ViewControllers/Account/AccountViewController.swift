@@ -35,8 +35,8 @@ class AccountViewController: UIViewController {
     init(account: AccountInfo) {
         self.viewModel = AccountViewModel(with: account)
         super.init(nibName: nil, bundle: nil)
-        self.viewModel.onNewBlockBroadcasted = {
-            self.onNewBlockBroadcasted()
+        self.viewModel.onNewBlockBroadcasted = { [weak self] in
+            self?.onNewBlockBroadcasted()
         }
     }
     
@@ -166,22 +166,22 @@ class AccountViewController: UIViewController {
     
     @IBAction func refineTapped(_ sender: Any) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let latestAction = UIAlertAction(title: .localize("latest-sort"), style: .default) { (_) in
+        let latestAction = UIAlertAction(title: .localize("latest-sort"), style: .default) { [unowned self] _ in
             self.viewModel.refine(.latestFirst)
         }
-        let oldestAction = UIAlertAction(title: .localize("oldest-sort"), style: .default) { (_) in
+        let oldestAction = UIAlertAction(title: .localize("oldest-sort"), style: .default) { [unowned self] _ in
             self.viewModel.refine(.oldestFirst)
         }
-        let smallestAction = UIAlertAction(title: .localize("smallest-sort"), style: .default) { (_) in
+        let smallestAction = UIAlertAction(title: .localize("smallest-sort"), style: .default) { [unowned self] _ in
             self.viewModel.refine(.smallestFirst)
         }
-        let largestAction = UIAlertAction(title: .localize("largest-sort"), style: .default) { (_) in
+        let largestAction = UIAlertAction(title: .localize("largest-sort"), style: .default) { [unowned self] _ in
             self.viewModel.refine(.largestFirst)
         }
-        let sendAction = UIAlertAction(title: .localize("sent-filter"), style: .default) { (_) in
+        let sendAction = UIAlertAction(title: .localize("sent-filter"), style: .default) { [unowned self] _ in
             self.viewModel.refine(.sent)
         }
-        let receiveAction = UIAlertAction(title: .localize("received-filter"), style: .default) { (_) in
+        let receiveAction = UIAlertAction(title: .localize("received-filter"), style: .default) { [unowned self] _ in
             self.viewModel.refine(.received)
         }
         let cancelAction = UIAlertAction(title: .localize("cancel"), style: .cancel, handler: nil)
@@ -199,8 +199,8 @@ class AccountViewController: UIViewController {
     @objc fileprivate func overflowPressed() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: .localize("cancel"), style: .cancel, handler: nil)
-        let editName = UIAlertAction(title: .localize("edit-name"), style: .default) { (_) in
-            self.showTextDialogue(.localize("edit-name"), placeholder: "Account name", keyboard: .default, completion: { (textField) in
+        let editName = UIAlertAction(title: .localize("edit-name"), style: .default) { [unowned self] _ in
+            self.showTextDialogue(.localize("edit-name"), placeholder: "Account name", keyboard: .default) { (textField) in
                 guard let text = textField.text, !text.isEmpty else {
                     Banner.show("No account name provided", style: .warning)
                     return
@@ -209,14 +209,14 @@ class AccountViewController: UIViewController {
                     self.viewModel.account.name = textField.text
                 }
                 self.setupNavBar()
-            })
+            }
         }
-        let editRepresentative = UIAlertAction(title: .localize("edit-representative"), style: .default) { (_) in
+        let editRepresentative = UIAlertAction(title: .localize("edit-representative"), style: .default) { [unowned self] _ in
             self.delegate?.editRepTapped(account: self.viewModel.account)
         }
-        let repair = UIAlertAction(title: .localize("repair-account"), style: .default) { (_) in
-            self.viewModel.repair() {
-                self.tableView.reloadData()
+        let repair = UIAlertAction(title: .localize("repair-account"), style: .default) { [weak self] _ in
+            self?.viewModel.repair() {
+                self?.tableView.reloadData()
             }
         }
         alertController.addAction(editName)
@@ -234,12 +234,15 @@ class AccountViewController: UIViewController {
     
     fileprivate func getPendingAndHistory(_ getPending: Bool = true) {
         guard viewModel.account.frontier != ZERO_AMT else {
-            viewModel.getAccountInfo() {
-                guard self.viewModel.account.pending > 0 else {
-                    self.refreshControl?.endRefreshing()
+            viewModel.getAccountInfo() { [weak self] in
+                guard
+                    let this = self,
+                    this.viewModel.account.pending > 0
+                else {
+                    self?.refreshControl?.endRefreshing()
                     return
                 }
-                self.getPendingAndHistory()
+                this.getPendingAndHistory()
             }
             return
         }
@@ -285,9 +288,14 @@ class AccountViewController: UIViewController {
     }
     
     func initiateChangeBlock(newRep: String?) {
-        guard let rep = newRep,
+        guard
+            let rep = newRep,
             let keyPair = WalletManager.shared.keyPair(at: viewModel.account.index),
-            let account = keyPair.xrbAccount else { return }
+            let account = keyPair.xrbAccount
+        else {
+            return
+        }
+
         if rep == viewModel.account.representative {
             Banner.show(.localize("no-rep-change"), style: .warning)
             return
@@ -359,14 +367,14 @@ extension AccountViewController: UITableViewDelegate {
             self.delegate?.transactionTapped(txInfo: tx)
         }
         let saveAddress = UIAlertAction(title: "Save Address", style: .default) { (_) in
-            self.showTextDialogue(.localize("enter-name"), placeholder: .localize("name"), keyboard: .default, completion: { (textField) in
+            self.showTextDialogue(.localize("enter-name"), placeholder: .localize("name"), keyboard: .default) { (textField) in
                 guard let text = textField.text, !text.isEmpty else {
                     Banner.show(.localize("no-name-provided"), style: .warning)
                     return
                 }
                 PersistentStore.addAddressEntry(text, address: tx.account)
                 Banner.show(.localize("arg-entry-saved", arg: text), style: .success)
-            })
+            }
         }
         let cancel = UIAlertAction(title: .localize("cancel"), style: .cancel, handler: nil)
         actionSheet.addAction(viewDetails)

@@ -82,8 +82,13 @@ class AccountViewModel {
     
     /// Completion returns count of pending blocks
     func getPending(shouldOpen: Bool = false, completion: ((Int) -> Void)? = nil) {
-        guard let keyPair = WalletManager.shared.keyPair(at: account.index),
-            let acc = keyPair.xrbAccount else { return }
+        guard
+            let keyPair = WalletManager.shared.keyPair(at: account.index),
+            let acc = keyPair.xrbAccount
+        else {
+            completion?(0)
+            return
+        }
         // fetch pending
         isFetching = true
         NetworkAdapter.getPending(for: acc) { [weak self] (pending) in
@@ -169,11 +174,15 @@ class AccountViewModel {
     
     func getHistory(completion: @escaping () -> Void) {
         guard let acc: String = WalletManager.shared.keyPair(at: account.index)?.xrbAccount else { return }
-        NetworkAdapter.getAccountHistory(account: acc, count: account.blockCount) { (chain) in
-            self.history = chain
-            self.refined = chain
-            PersistentStore.updateBlockHistory(for: self.account, history: chain)
-            completion()
+        NetworkAdapter.getAccountHistory(account: acc, count: account.blockCount) { [weak self] (chain) in
+            defer {
+                completion()
+            }
+            if let account = self?.account {
+                self?.history = chain
+                self?.refined = chain
+                PersistentStore.updateBlockHistory(for: account, history: chain)
+            }
         }
     }
     
