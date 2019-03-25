@@ -16,7 +16,7 @@ enum NanoNodeNinjaService {
 
 extension NanoNodeNinjaService: TargetType {
     var baseURL: URL {
-        return URL(string: "https://nanonode.ninja")!
+        return URL(string: "https://mynano.ninja")!
     }
     var path: String {
         switch self {
