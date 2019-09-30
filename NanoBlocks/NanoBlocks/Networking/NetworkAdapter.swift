@@ -88,7 +88,7 @@ public struct NetworkAdapter {
         })
     }
     
-    static func getAccountHistory(account: String, count: Int, completion: @escaping ([SimpleBlock]) -> Void) {
+    static func getAccountHistory(account: String, count: Int = -1, completion: @escaping ([SimpleBlock]) -> Void) {
         request(target: .accountHistory(address: account, count: count), success: { (response) in
             if let json = try? response.mapJSON() as? [String: Any],
                 let blocks = json["history"] as? [[String: String]] {

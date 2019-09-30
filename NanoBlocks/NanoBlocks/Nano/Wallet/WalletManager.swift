@@ -12,7 +12,17 @@ final class WalletManager {
     
     static let shared: WalletManager = WalletManager()
     private(set) var verifiedReps: [VerifiedAccount] = []
-    private(set) var accounts: [AccountInfo] = PersistentStore.getAccounts()
+    private(set) var accounts: [AccountInfo] = {
+        let accounts = PersistentStore.getAccounts()
+        accounts.forEach { account in
+            if account.address?.contains("xrb_") == true {
+                PersistentStore.write {
+                    account.address = account.address?.replacingOccurrences(of: "xrb_", with: "nano_")
+                }
+            }
+        }
+        return accounts
+    }()
     fileprivate var sd: Data?
     
     var isLocked: Bool {

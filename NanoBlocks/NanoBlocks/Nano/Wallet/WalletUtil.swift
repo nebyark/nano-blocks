@@ -121,7 +121,7 @@ struct WalletUtil {
         guard let encodedP = encodedPubKey, let encodedC = encodedChecksum else {
             throw WalletUtilError.encoding
         }
-        return "xrb_" + encodedP + encodedC
+        return "nano_" + encodedP + encodedC
     }
     
     /// Encodes a bit array using Base 32 encoding with 5-bit chunks.

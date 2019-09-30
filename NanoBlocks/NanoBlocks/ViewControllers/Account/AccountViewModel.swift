@@ -169,7 +169,7 @@ class AccountViewModel {
     
     func getHistory(completion: @escaping () -> Void) {
         guard let acc: String = WalletManager.shared.keyPair(at: account.index)?.xrbAccount else { return }
-        NetworkAdapter.getAccountHistory(account: acc, count: account.blockCount) { (chain) in
+        NetworkAdapter.getAccountHistory(account: acc) { (chain) in
             self.history = chain
             self.refined = chain
             PersistentStore.updateBlockHistory(for: self.account, history: chain)
