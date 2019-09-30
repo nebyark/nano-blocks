@@ -70,7 +70,7 @@ class EnterAmountViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftBarItem
 
         title = .localize("enter-amount-title")
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     fileprivate func setupKeyboard() {

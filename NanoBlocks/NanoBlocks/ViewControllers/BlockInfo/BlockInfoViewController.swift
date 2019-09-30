@@ -64,7 +64,7 @@ class BlockInfoViewController: TransparentNavViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentInset = UIEdgeInsetsMake(0, 0, AppStyle.Size.padding, 0)
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: AppStyle.Size.padding, right: 0)
     }
 
     // MARK: - Setup

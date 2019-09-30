@@ -14,7 +14,7 @@ class TitleTableViewController: TransparentNavViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.tableFooterView = UIView()
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         return tableView
     }()
     

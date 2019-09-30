@@ -7,9 +7,9 @@ target 'NanoBlocks' do
   # Pods for NanoBlocks
   pod 'Alamofire'
   pod 'RealmSwift'
-  pod 'NotificationBannerSwift', '1.6.3'
+  pod 'NotificationBannerSwift', '~> 2.5.1'
   pod 'Sodium', :git => 'https://github.com/nebyark/swift-sodium'
-  pod 'Moya', '~> 11.0'
+  pod 'Moya', '~> 13.0'
   pod 'lottie-ios'
   pod 'SSZipArchive'
   pod 'CocoaMQTT'

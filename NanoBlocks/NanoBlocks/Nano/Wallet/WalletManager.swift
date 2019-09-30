@@ -68,9 +68,6 @@ final class WalletManager {
     func lockWallet() {
         let dateUntilUnlock = Int(Date().timeIntervalSince1970 + 1800)
         Keychain.standard.set(value: Data(dateUntilUnlock), key: KeychainKey.lockUntilDate)
-        if sd != nil {
-            NaCl.zero(&sd)
-        }
     }
     
     /// Reset the failed attempt count to 10.

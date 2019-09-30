@@ -88,7 +88,7 @@ class PasswordViewController: TransparentNavViewController {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        if self.isMovingFromParentViewController && !isAuthenticated {
+        if self.isMovingFromParent && !isAuthenticated {
             // User is going back
             onDismiss?()
         }

@@ -52,7 +52,7 @@ class StartViewController: UIViewController {
         let button = LeftAlignedIconButton(type: .custom)
         button.setTitle(.localize("new-wallet"), for: .normal)
         button.setImage(#imageLiteral(resourceName: "nav_plus").withRenderingMode(.alwaysTemplate), for: .normal)
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, 12.0, 0, 12.0)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 12.0, bottom: 0, right: 12.0)
         button.titleLabel?.font = AppStyle.Font.control
         button.setTitleColor(UIColor(rgb: 4.0, green: 154.0, blue: 255.0, alpha: 1.0), for: .normal)
         button.backgroundColor = .white
@@ -67,7 +67,7 @@ class StartViewController: UIViewController {
         button.layer.borderWidth = 1.0
         button.setImage(#imageLiteral(resourceName: "welcome_import").withRenderingMode(.alwaysTemplate) , for: .normal)
         button.titleLabel?.font = AppStyle.Font.control
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, 12.0, 0, 12.0)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 12.0, bottom: 0, right: 12.0)
         button.tintColor = .white
         button.addTarget(self, action: #selector(importWalletTapped(_:)), for: .touchUpInside)
         return button
@@ -179,7 +179,7 @@ class StartViewController: UIViewController {
 }
 
 extension StartViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         customInteractor = CustomInteractor(attachTo: toVC)
         return TransparentNavigationTransition(operation: operation)
     }

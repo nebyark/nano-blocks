@@ -828,7 +828,6 @@
 				A74361E01FE64F9100054078 /* Frameworks */,
 				A74361E11FE64F9100054078 /* Resources */,
 				885A0314CF3C477935B47A93 /* [CP] Embed Pods Frameworks */,
-				DB677D2FCECB452AFDAE617C /* [CP] Copy Pods Resources */,
 				A7EF84191FED7D7D00C74035 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -849,7 +848,6 @@
 				A76D272F204E986000615B7A /* Frameworks */,
 				A76D2730204E986000615B7A /* Resources */,
 				2821D9E873E38494BCCFB2E7 /* [CP] Embed Pods Frameworks */,
-				20CE0F1CD5144E89E17F967B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -979,28 +977,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		20CE0F1CD5144E89E17F967B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2821D9E873E38494BCCFB2E7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -1011,7 +994,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NanoBlocksTests/Pods-NanoBlocksTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		885A0314CF3C477935B47A93 /* [CP] Embed Pods Frameworks */ = {
@@ -1020,7 +1003,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
@@ -1053,22 +1036,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB677D2FCECB452AFDAE617C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NanoBlocks/Pods-NanoBlocks-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE3472891607C7D73C312008 /* [CP] Check Pods Manifest.lock */ = {
@@ -1370,6 +1338,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/$(TARGET_NAME)/ThirdParty",
+					"$(PROJECT_DIR)/NanoBlocks/ThirdParty",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/NanoBlocks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1380,7 +1349,7 @@
 				PRODUCT_NAME = "Nano Blocks";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7s armv7";
 			};
@@ -1399,6 +1368,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/$(TARGET_NAME)/ThirdParty",
+					"$(PROJECT_DIR)/NanoBlocks/ThirdParty",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/NanoBlocks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1408,7 +1378,7 @@
 				PRODUCT_MODULE_NAME = NanoBlocks;
 				PRODUCT_NAME = "Nano Blocks";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7s armv7";
 			};
@@ -1426,7 +1396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.NanoWalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nano Blocks.app/Nano Blocks";
 			};
@@ -1444,7 +1414,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planarform.NanoWalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nano Blocks.app/Nano Blocks";
 			};

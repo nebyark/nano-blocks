@@ -57,9 +57,9 @@ class CustomInteractor: UIPercentDrivenInteractiveTransition {
 }
 
 class TransparentNavigationTransition: NSObject, UIViewControllerAnimatedTransitioning {
-    let operation: UINavigationControllerOperation
+    let operation: UINavigationController.Operation
     
-    init(operation: UINavigationControllerOperation) {
+    init(operation: UINavigationController.Operation) {
         self.operation = operation
     }
     

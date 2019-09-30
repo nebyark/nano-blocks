@@ -34,7 +34,7 @@ extension UIImage {
             filter = maskFilter
         }
         
-        let context = CIContext(options: [kCIContextUseSoftwareRenderer: true])
+        let context = CIContext(options: [CIContextOption.useSoftwareRenderer: true])
         objc_sync_enter(context)
         defer { objc_sync_exit(context) }
         guard let outputImage = filter?.outputImage else { return nil }
@@ -106,7 +106,7 @@ extension UITableView {
     func dequeueReusableCell<T: Identifiable>(_ cellType: T.Type, for indexPath: IndexPath) -> T {
         let cell = dequeueReusableCell(withIdentifier: T.identifier, for: indexPath)
         
-        if rowHeight == UITableViewAutomaticDimension {
+        if rowHeight == UITableView.automaticDimension {
             // resize frame
             cell.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
             cell.layoutIfNeeded()
@@ -211,7 +211,7 @@ extension UIView {
         
         maskLayer.path = path
         if (invert) {
-            maskLayer.fillRule = kCAFillRuleEvenOdd
+            maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
         }
         viewToMask.layer.mask = maskLayer;
     }
@@ -233,7 +233,7 @@ extension UIView {
 }
 
 extension UIEdgeInsets {
-    static let noSeparator: UIEdgeInsets = UIEdgeInsetsMake(0, 10000, 0, 0)
+    static let noSeparator: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10000, bottom: 0, right: 0)
 }
 
 extension UIButton {

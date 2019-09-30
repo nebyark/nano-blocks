@@ -60,7 +60,7 @@ class RequestAmountViewController: UIViewController {
         leftBarItem.tintColor = .white
         navigationItem.leftBarButtonItem = leftBarItem
         title = .localize("request-amount")
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     fileprivate func setupKeyboard() {

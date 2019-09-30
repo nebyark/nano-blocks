@@ -60,7 +60,7 @@ class AccountsViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.delegate = self
         tableView?.estimatedRowHeight = 80
-        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.rowHeight = UITableView.automaticDimension
         tableView?.register(AccountTableViewCell.self)
         tableView?.tableFooterView = UIView()
         tableView?.separatorStyle = .none
@@ -178,7 +178,7 @@ extension AccountsViewController: UITableViewDelegate {
 }
 
 extension AccountsViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         customInteractor = CustomInteractor(attachTo: toVC)
         return TransparentNavigationTransition(operation: operation)
     }

@@ -27,52 +27,70 @@ struct NaCl: Secure {
     }
     
     static func randomBytes(_ length: Int = 32) -> Data? {
-        return Sodium().randomBytes.buf(length: length)
+        if let bytes = Sodium().randomBytes.buf(length: length) {
+            return Data(bytes)
+        }
+        return nil
     }
     
     static func sign(_ data: Data, secret: Data) -> Data? {
-        return Sodium().sign.signature(message: data, secretKey: secret)
+        if let signature = Sodium().sign.signature(message: [UInt8](data), secretKey: [UInt8](secret)) {
+            return Data(signature)
+        }
+        return nil
     }
     
     static func hash(_ data: Data, outputLength: Int = 32) -> Data? {
-        return Sodium().genericHash.hash(message: data, outputLength: outputLength)
+        if let hash = Sodium().genericHash.hash(message: [UInt8](data), outputLength: outputLength) {
+            return Data(hash)
+        }
+        return nil
     }
     
     static func digest(_ items: [Data], outputLength: Int = 32) -> Data? {
         let sodium = Sodium()
         guard let stream = sodium.genericHash.initStream(outputLength: outputLength) else { return nil }
         let success = items.reduce(true) { (previous, data) in
-            return previous && stream.update(input: data)
+            return previous && stream.update(input: [UInt8](data))
         }
-        guard success else { return nil }
-        return stream.final()
+        guard success, let hash = stream.final() else { return nil }
+        return Data(hash)
     }
     
     static func hash(_ data: Data, salt: Data) -> Data? {
         let sodium = Sodium()
         let ops = sodium.pwHash.OpsLimitInteractive
         let mem = sodium.pwHash.MemLimitInteractive
-        return sodium.pwHash.hash(outputLength: 32, passwd: data, salt: salt, opsLimit: ops, memLimit: mem)
+        if let hash = sodium.pwHash.hash(outputLength: 32, passwd: [UInt8](data), salt: [UInt8](salt), opsLimit: ops, memLimit: mem) {
+            return Data(hash)
+        }
+        return nil
     }
     
     static func decrypt(_ ciphered: Data, secret: Data) -> Data? {
-        return Sodium().secretBox.open(nonceAndAuthenticatedCipherText: ciphered, secretKey: secret)
+        if let message = Sodium().secretBox.open(nonceAndAuthenticatedCipherText: [UInt8](ciphered), secretKey: [UInt8](secret)) {
+            return Data(message)
+        }
+        return nil
     }
     
     static func encrypt(_ message: Data, secret: Data) -> Data? {
-        return Sodium().secretBox.seal(message: message, secretKey: secret)
+        if let encrypted: Bytes = Sodium().secretBox.seal(message: [UInt8](message), secretKey: [UInt8](secret)) {
+            return Data(encrypted)
+        }
+        return nil
     }
     
     static func keyPair(from secret: Data) -> KeyPair? {
         let pair = Sodium().sign.keyPair(secret: secret)
         guard let pub = pair?.publicKey, let secret = pair?.secretKey else { return nil }
-        return KeyPair(publicKey: pub, secretKey: secret)
+        return KeyPair(publicKey: Data(pub), secretKey: Data(secret))
     }
     
     static func verify(_ data: Data, signature: Data, publicKey: Data) -> Bool {
-        return Sodium().sign.verify(message: data, publicKey: publicKey, signature: signature)
+        return Sodium().sign.verify(message: [UInt8](data), publicKey: [UInt8](publicKey), signature: [UInt8](signature))
     }
-    static func zero(_ data: inout Data?) {
+    static func zero(_ data: inout Array<UInt8>?) {
         guard var data = data else { return }
         Sodium().utils.zero(&data)
     }

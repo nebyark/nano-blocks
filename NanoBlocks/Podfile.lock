@@ -4,34 +4,49 @@ PODS:
   - CocoaMQTT (1.1.3):
     - CocoaAsyncSocket (~> 7.6.3)
   - lottie-ios (2.5.2)
-  - MarqueeLabel/Swift (3.2.0)
-  - Moya (11.0.2):
-    - Moya/Core (= 11.0.2)
-  - Moya/Core (11.0.2):
+  - MarqueeLabel (4.0.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - NotificationBannerSwift (1.6.3):
-    - MarqueeLabel/Swift
-    - SnapKit (~> 4.0)
+    - Result (~> 4.1)
+  - NotificationBannerSwift (2.5.1):
+    - MarqueeLabel (~> 4.0.0)
+    - SnapKit (~> 5.0.0)
   - Realm (3.7.6):
     - Realm/Headers (= 3.7.6)
   - Realm/Headers (3.7.6)
   - RealmSwift (3.7.6):
     - Realm (= 3.7.6)
-  - Result (3.2.4)
-  - SnapKit (4.2.0)
-  - Sodium (0.6)
+  - Result (4.1.0)
+  - SnapKit (5.0.1)
+  - Sodium (0.8.0)
   - SSZipArchive (2.1.4)
 
 DEPENDENCIES:
   - Alamofire
   - CocoaMQTT
   - lottie-ios
-  - Moya (~> 11.0)
-  - NotificationBannerSwift (= 1.6.3)
+  - Moya (~> 13.0)
+  - NotificationBannerSwift (~> 2.5.1)
   - RealmSwift
   - Sodium (from `https://github.com/nebyark/swift-sodium`)
   - SSZipArchive
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CocoaAsyncSocket
+    - CocoaMQTT
+    - lottie-ios
+    - MarqueeLabel
+    - Moya
+    - NotificationBannerSwift
+    - Realm
+    - RealmSwift
+    - Result
+    - SnapKit
+    - SSZipArchive
 
 EXTERNAL SOURCES:
   Sodium:
@@ -39,7 +54,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Sodium:
-    :commit: 4b32f5d12c587e4252e039d60f9a1498526ece5b
+    :commit: 586f2483a4dac0b221c1c9c71fa2cdbe22a20e3c
     :git: https://github.com/nebyark/swift-sodium
 
 SPEC CHECKSUMS:
@@ -47,16 +62,16 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaMQTT: b506d38ad3bbe1c55a4f8ee8c9fd02c35da1a7d8
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
-  MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
-  Moya: a725035953bc1c0eb1be505ab903984501d82440
-  NotificationBannerSwift: b231e4c3244848ef300e1c53ce027b9756b9b06f
+  MarqueeLabel: b55b26e690b6ad41faedd95cbf5eae6f1d1735b4
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  NotificationBannerSwift: e55dd801b0d78f1a7bacb10d722a935ec95f94a3
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  Sodium: 3cd000dc8d21be5d448fbb4366a7b1c9392b1ae6
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Sodium: 63c0ca312a932e6da481689537d4b35568841bdc
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
 
-PODFILE CHECKSUM: eec7b56f011a52391eafd5f708b967129c88fac2
+PODFILE CHECKSUM: a5b0384519950ee8f35e4ad64f60da837148a725
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.7.2

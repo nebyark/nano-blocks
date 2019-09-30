@@ -50,7 +50,7 @@ public struct NetworkAdapter {
     static func blockInfo(hashes: [String], completion: @escaping ([BlockInfo], APIError?) -> Void) {
         request(target: .blockInfo(hashes: hashes), success:  { (response) in
             guard let json = try? response.mapJSON() as? [String: Any],
-                let blocks = json?["blocks"] as? [String: [String: Any]] else {
+                let blocks = json["blocks"] as? [String: [String: Any]] else {
                 completion([], APIError.badResponse)
                 return
             }
@@ -66,8 +66,8 @@ public struct NetworkAdapter {
                 return
             }
             Lincoln.log("Process Response: \(json ?? [:])", inConsole: true)
-            let hash = json?["hash"]
-            let error = APIError.parseError(json?["error"])
+            let hash = json["hash"]
+            let error = APIError.parseError(json["error"])
             completion?(hash, error)
         })
     }
@@ -75,7 +75,7 @@ public struct NetworkAdapter {
     static func createAccountForSub(_ walletID: String, username: String, password: String, completion: @escaping (String?) -> Void) {
         request(target: .createServerAccount(walletID: walletID, username: username, password: password), success: { (response) in
             guard let json = try? response.mapJSON() as? [String: String] else { completion(nil); return }
-            completion(json?["status"])
+            completion(json["status"])
         })
     }
     
@@ -91,7 +91,7 @@ public struct NetworkAdapter {
     static func getAccountHistory(account: String, count: Int, completion: @escaping ([SimpleBlock]) -> Void) {
         request(target: .accountHistory(address: account, count: count), success: { (response) in
             if let json = try? response.mapJSON() as? [String: Any],
-                let blocks = json?["history"] as? [[String: String]] {
+                let blocks = json["history"] as? [[String: String]] {
                 let accountHistory = blocks.map { SimpleBlock.fromJSON($0) }
                 completion(accountHistory)
             }
@@ -102,7 +102,7 @@ public struct NetworkAdapter {
         Lincoln.log("Fetching work on '\(hash)'", inConsole: true)
         request(target: .generateWork(hash: hash), success: { (response) in
             let json = try? response.mapJSON() as? [String: String]
-            completion(json??["work"])
+            completion(json?["work"])
         })
     }
     

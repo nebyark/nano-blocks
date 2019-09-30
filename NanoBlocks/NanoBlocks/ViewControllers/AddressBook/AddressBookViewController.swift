@@ -89,7 +89,7 @@ class AddressBookViewController: UIViewController {
         tableView?.tableFooterView = UIView()
         tableView?.estimatedRowHeight = 55.0
         tableView?.allowsSelectionDuringEditing = true
-        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.rowHeight = UITableView.automaticDimension
         tableView?.register(AddressItemTableViewCell.self)
     }
     
@@ -183,7 +183,7 @@ extension AddressBookViewController: UITableViewDelegate {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             viewModel.removeEntry(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)

@@ -134,7 +134,7 @@ class AccountViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(TransactionTableViewCell.self)
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none

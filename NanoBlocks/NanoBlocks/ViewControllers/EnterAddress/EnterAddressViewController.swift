@@ -53,7 +53,7 @@ class EnterAddressViewController: TransparentNavViewController {
     
     fileprivate func setupTableView() {
         tableView?.register(EnterAddressTableViewCell.self)
-        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.rowHeight = UITableView.automaticDimension
         tableView?.estimatedRowHeight = 50.0
         tableView?.separatorColor = AppStyle.lightGrey
         tableView?.isHidden = true
@@ -71,7 +71,7 @@ class EnterAddressViewController: TransparentNavViewController {
         pasteItem.tintColor = .white
         title = .localize("enter-address-title")
         navigationItem.rightBarButtonItem = pasteItem
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     fileprivate func setupView() {
